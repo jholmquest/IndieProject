@@ -10,3 +10,10 @@ Tracking Time Spent Working
 #Week 2
 
 2021-01-31 11:00am - 12:00pm: Setup indie project
+
+2021-01-31 3:00pm - 4:30pm | 5:30pm - 6:30pm: week 2 exercise
+#Week 3
+
+2021-02-02 12:00pm - 12:30pm: readings
+
+2021-02-04 6:00pm - 6:30pm: activity, preliminary exercise work
