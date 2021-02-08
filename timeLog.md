@@ -17,3 +17,11 @@ Tracking Time Spent Working
 2021-02-02 12:00pm - 12:30pm: readings
 
 2021-02-04 6:00pm - 6:30pm: activity, preliminary exercise work
+
+2021-02-06 12:00pm - 12:30pm reviewed jUnit, signed up for presentation
+
+2021-02-06 3:00pm - 4:00pm worked on exercise
+
+2021-02-07 12:00pm - 2:30pm finished exercise
+
+2021-02-07 6:00pm - 6:15pm created basic user stories
