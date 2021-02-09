@@ -25,3 +25,9 @@ Tracking Time Spent Working
 2021-02-07 12:00pm - 2:30pm finished exercise
 
 2021-02-07 6:00pm - 6:15pm created basic user stories
+
+2021-02-08 6:00pm - 6:30pm basic work plan made
+
+2021-02-09 11:00am - 11:45am drew up some screen designs
+
+2021-02-09 12:15pm - 12:45pm updated actual repository
