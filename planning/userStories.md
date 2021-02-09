@@ -22,3 +22,7 @@ As a hobby user I want categories that are easy to use and intuitive
 As a hobby user I want to store images of the insects I collect
 
 As any user I want to be able to see where I collected insects in the past
+
+As any user I want to be able to update information on insects collected (especially as professional)
+
+As a professional user I want to be able to confirm scientific names
