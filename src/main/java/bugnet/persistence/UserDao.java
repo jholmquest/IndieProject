@@ -10,6 +10,11 @@ import org.hibernate.Transaction;
 import javax.persistence.criteria.*;
 import java.util.*;
 
+/**
+ * CRUD for user
+ *
+ * @author James Holmquest
+ */
 public class UserDao {
 
     private final Logger logger = LogManager.getLogger(this.getClass());
@@ -29,5 +34,22 @@ public class UserDao {
         session.close();
         logger.info(users);
         return users;
+    }
+
+    /**
+     * inserts a user
+     * @param user user to be inserted
+     * @return id of new user
+     */
+    public int createUser(User user) {
+
+        int id = 0;
+        Session session = sessionFactory.openSession();
+        CriteriaBuilder build = session.getCriteriaBuilder();
+        Transaction transaction = session.beginTransaction();
+        id = (int)session.save(user);
+        transaction.commit();
+        session.close();
+        return id;
     }
 }
