@@ -17,6 +17,9 @@ public class UserDaoTest {
 
     }
 
+    /**
+     * verifies successful get all users
+     */
     @Test
     void getAllSuccess() {
         List<User> users = dao.getAllUsers();
