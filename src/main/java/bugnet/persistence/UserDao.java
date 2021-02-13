@@ -25,6 +25,7 @@ public class UserDao {
      * @return list of all users
      */
     public List<User> getAllUsers() {
+        logger.debug("getting all users");
 
         Session session = sessionFactory.openSession();
         CriteriaBuilder builder = session.getCriteriaBuilder();
@@ -32,7 +33,7 @@ public class UserDao {
         Root<User> root = query.from(User.class);
         List<User> users = session.createQuery(query).getResultList();
         session.close();
-        logger.info(users);
+        logger.debug("list of users " + users);
         return users;
     }
 
@@ -42,6 +43,7 @@ public class UserDao {
      * @return id of new user
      */
     public int createUser(User user) {
+        logger.debug("inserting user " + user);
 
         int id = 0;
         Session session = sessionFactory.openSession();
@@ -50,6 +52,20 @@ public class UserDao {
         id = (int)session.save(user);
         transaction.commit();
         session.close();
+
+        logger.debug("inserted user with id " + id);
         return id;
+    }
+
+    /**
+     * updates a user in the db with new values
+     * @param user new user info
+     */
+    public void updateUser(User user) {
+        logger.debug("updating user " + user);
+
+        Session session = sessionFactory.openSession();
+        session.saveOrUpdate(user);
+        session.close();
     }
 }
