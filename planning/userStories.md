@@ -12,3 +12,17 @@ Enjoys collecting bugs in their spare time, but does not require as detailed inf
 Give them option for less strict categories, mainly text fields that can be filled out as desired.
 Don't overwhelm with specific fields, leaving empty fields feels bad so better to not show them.
 Having this up and working would be the absolute minimum.
+
+As any user I want to be able to register an account
+
+As a professional user I want many separate categories for organizational purposes
+
+As a hobby user I want categories that are easy to use and intuitive
+
+As a hobby user I want to store images of the insects I collect
+
+As any user I want to be able to see where I collected insects in the past
+
+As any user I want to be able to update information on insects collected (especially as professional)
+
+As a professional user I want to be able to confirm scientific names
