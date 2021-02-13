@@ -35,3 +35,9 @@ Tracking Time Spent Working
 2021-02-09 11:00am - 11:45am drew up some screen designs
 
 2021-02-09 12:15pm - 12:45pm updated actual repository
+
+2021-02-11 10:30am - 11:00am videos
+
+2021-02-13 12:00pm - 12:15pm setup db view
+
+2021-02-13 1:00pm - 2:00pm worked on exercise
