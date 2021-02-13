@@ -38,6 +38,28 @@ public class UserDao {
     }
 
     /**
+     * Searches for a user with a specific username
+     *
+     * @param username username being searched for
+     * @return user info
+     */
+    public User getUserByUsername(String username) {
+        logger.debug("Searching for user with username " + username);
+
+        Session session = sessionFactory.openSession();
+        CriteriaBuilder builder = session.getCriteriaBuilder();
+        CriteriaQuery<User> query = builder.createQuery(User.class);
+        Root<User> root = query.from(User.class);
+        Expression<String> propertyPath = root.get("username");
+        query.where(builder.equal(propertyPath, username));
+        User user = session.createQuery(query).getSingleResult();
+        session.close();
+
+        logger.debug("Result of search " + user);
+        return user;
+    }
+
+    /**
      * inserts a user
      * @param user user to be inserted
      * @return id of new user
