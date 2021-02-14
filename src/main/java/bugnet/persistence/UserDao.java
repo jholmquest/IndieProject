@@ -90,7 +90,9 @@ public class UserDao {
         logger.debug("updating user " + user);
 
         Session session = sessionFactory.openSession();
+        Transaction transaction = session.beginTransaction();
         session.saveOrUpdate(user);
+        transaction.commit();
         session.close();
     }
 
