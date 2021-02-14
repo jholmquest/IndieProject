@@ -15,6 +15,8 @@ public class UserDaoTest {
     void setUp() {
         dao = new UserDao();
 
+        Database database = Database.getInstance();
+        database.runSQL("cleanUser.sql");
     }
 
     /**
@@ -23,6 +25,12 @@ public class UserDaoTest {
     @Test
     void getAllSuccess() {
         List<User> users = dao.getAllUsers();
-        assertEquals(2, users.size());
+        assertEquals(3, users.size());
+    }
+
+    @Test
+    void getByUsernameTest() {
+        User testUser = dao.getUserByUsername("holmquest");
+        assertEquals(3, testUser.getId());
     }
 }
