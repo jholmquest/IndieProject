@@ -22,6 +22,7 @@ public class UserDao {
 
     /**
      * Gets all users
+     *
      * @return list of all users
      */
     public List<User> getAllUsers() {
@@ -61,6 +62,7 @@ public class UserDao {
 
     /**
      * inserts a user
+     *
      * @param user user to be inserted
      * @return id of new user
      */
@@ -69,9 +71,9 @@ public class UserDao {
 
         int id = 0;
         Session session = sessionFactory.openSession();
-        CriteriaBuilder build = session.getCriteriaBuilder();
+        CriteriaBuilder builder = session.getCriteriaBuilder();
         Transaction transaction = session.beginTransaction();
-        id = (int)session.save(user);
+        id = (int) session.save(user);
         transaction.commit();
         session.close();
 
@@ -81,6 +83,7 @@ public class UserDao {
 
     /**
      * updates a user in the db with new values
+     *
      * @param user new user info
      */
     public void updateUser(User user) {
@@ -93,6 +96,7 @@ public class UserDao {
 
     /**
      * deletes a user
+     *
      * @param user user to be deleted
      */
     public void delete(User user) {
