@@ -1,0 +1,20 @@
+[DEBUG] 2021-02-14 13:20:18.527 [main] UserDao - getting all users
+[DEBUG] 2021-02-14 13:20:19.277 [main] UserDao - list of users [bugnet.entity.User@2bebd114, bugnet.entity.User@72ecbcb3, bugnet.entity.User@4a50c746]
+[DEBUG] 2021-02-14 13:20:19.402 [main] UserDao - Searching for user with username holmquest
+[DEBUG] 2021-02-14 13:20:19.451 [main] UserDao - Result of search bugnet.entity.User@59c43561
+[DEBUG] 2021-02-14 13:20:19.451 [main] UserDao - updating user bugnet.entity.User@59c43561
+[DEBUG] 2021-02-14 13:20:19.495 [main] UserDao - Searching for user with username holmquest
+[DEBUG] 2021-02-14 13:20:19.503 [main] UserDao - Result of search bugnet.entity.User@11f23038
+[DEBUG] 2021-02-14 13:20:19.582 [main] UserDao - inserting user bugnet.entity.User@34c7232c
+[DEBUG] 2021-02-14 13:20:19.623 [main] UserDao - inserted user with id 12
+[DEBUG] 2021-02-14 13:20:19.623 [main] UserDao - getting all users
+[DEBUG] 2021-02-14 13:20:19.643 [main] UserDao - list of users [bugnet.entity.User@687389a6, bugnet.entity.User@8641b7d, bugnet.entity.User@37c7766e, bugnet.entity.User@3fb450d7]
+[DEBUG] 2021-02-14 13:20:19.707 [main] UserDao - Searching for user with username holmquest
+[DEBUG] 2021-02-14 13:20:19.721 [main] UserDao - Result of search bugnet.entity.User@6d7ad0f5
+[DEBUG] 2021-02-14 13:20:19.833 [main] UserDao - Searching for user with username holmquest
+[DEBUG] 2021-02-14 13:20:19.863 [main] UserDao - Result of search bugnet.entity.User@64656b9e
+[DEBUG] 2021-02-14 13:20:19.863 [main] UserDao - deleting user bugnet.entity.User@64656b9e
+[DEBUG] 2021-02-14 13:20:19.903 [main] UserDao - Searching for user with username holmquest
+[DEBUG] 2021-02-14 13:20:19.913 [main] UserDao - Result of search null
+[DEBUG] 2021-02-14 13:20:19.914 [main] UserDao - getting all users
+[DEBUG] 2021-02-14 13:20:19.930 [main] UserDao - list of users [bugnet.entity.User@2b6fb197, bugnet.entity.User@2eb0cefe]
