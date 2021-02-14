@@ -53,7 +53,7 @@ public class UserDao {
         Root<User> root = query.from(User.class);
         Expression<String> propertyPath = root.get("username");
         query.where(builder.equal(propertyPath, username));
-        User user = session.createQuery(query).getSingleResult();
+        User user = session.createQuery(query).uniqueResult();
         session.close();
 
         logger.debug("Result of search " + user);

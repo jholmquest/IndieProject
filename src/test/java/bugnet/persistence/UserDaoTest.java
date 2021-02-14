@@ -46,7 +46,7 @@ public class UserDaoTest {
         User deletedUser = dao.getUserByUsername("holmquest");
         dao.delete(deletedUser);
         List<User> users = dao.getAllUsers();
-        assertEquals(2, users.size());
+        assertNull(dao.getUserByUsername("holmquest"));
     }
 
     @Test
