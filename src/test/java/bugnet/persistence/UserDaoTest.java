@@ -11,6 +11,9 @@ public class UserDaoTest {
 
     UserDao dao;
 
+    /**
+     * cleans db, makes a new dao
+     */
     @BeforeEach
     void setUp() {
         dao = new UserDao();
@@ -28,27 +31,43 @@ public class UserDaoTest {
         assertEquals(3, users.size());
     }
 
+    /**
+     * verifies successful get of a single user by username;
+     * important for login
+     */
     @Test
     void getByUsernameTest() {
         User testUser = dao.getUserByUsername("holmquest");
         assertEquals(3, testUser.getId());
     }
 
+    /**
+     * verifies creation of a user
+     */
     @Test
     void createUserTest() {
         User newUser = new User(4, "createdUser", "eaohgeago");
         int newId = dao.createUser(newUser);
         assertEquals(newUser.getId(), newId);
+        List<User> users = dao.getAllUsers();
+        assertEquals(4, users.size());
     }
 
+    /**
+     * verifies deletion of a user
+     */
     @Test
     void deleteUserTest() {
         User deletedUser = dao.getUserByUsername("holmquest");
         dao.delete(deletedUser);
-        List<User> users = dao.getAllUsers();
         assertNull(dao.getUserByUsername("holmquest"));
+        List<User> users = dao.getAllUsers();
+        assertEquals(2, users.size());
     }
 
+    /**
+     * verifies update of user info
+     */
     @Test
     void updateUserTest() {
         User userToUpdate = dao.getUserByUsername("holmquest");
