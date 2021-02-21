@@ -63,4 +63,6 @@ public class SpecimenDaoTest {
         List<Specimen> specimens = dao.getAllSpecimens();
         assertEquals(4, specimens.size());
     }
+
+
 }

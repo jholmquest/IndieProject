@@ -40,6 +40,15 @@ public class SpecimenDao {
         return specimens;
     }
 
+    public Specimen getSpecimenById(int id) {
+        logger.debug("getting specimen of id " + id);
+
+        Session session = sessionFactory.openSession();
+        Specimen specimen = session.get(Specimen.class, id);
+        session.close();
+        return specimen;
+    }
+
     /**
      * inserts a specimen
      *
