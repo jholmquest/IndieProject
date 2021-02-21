@@ -41,3 +41,14 @@ Tracking Time Spent Working
 2021-02-13 12:00pm - 12:15pm setup db view
 
 2021-02-13 1:00pm - 2:00pm worked on exercise
+
+2021-02-14 12:00pm - 1:30pm finished exercise
+
+#Week 5
+2021-02-15 3:00pm - 4:30pm experiment with enum
+
+2021-02-16 11:00am - 1:30pm put together presentation
+
+2021-02-20 11:00am - 12:00pm went through readings for week5
+
+2021-02-21 12:00pm - 3:00pm did week 5 exercise
