@@ -71,4 +71,15 @@ public class SpecimenDaoTest {
         Specimen specimen = dao.getSpecimenById(1);
         assertEquals("beetle", specimen.getBugName());
     }
+
+    /**
+     * verifies deleting specimen working
+     */
+    @Test
+    void deleteTest() {
+        Specimen specimen = dao.getSpecimenById(1);
+        dao.delete(specimen);
+        Specimen deletedSpecimen = dao.getSpecimenById(1);
+        assertNull(deletedSpecimen);
+    }
 }
