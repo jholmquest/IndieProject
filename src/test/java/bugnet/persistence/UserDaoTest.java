@@ -79,12 +79,18 @@ public class UserDaoTest {
         assertEquals("updated", updatedUser.getPassword());
     }
 
+    /**
+     * Verifies inserting user and specimen simulatenously works
+     */
     @Test
     void createUserWithSpecimenTest() {
         User newUser = new User("createdUser", "eaohgeago");
         Specimen newSpecimen = new Specimen("testbug", "here", new Date(), "hello world", newUser);
         newUser.addSpecimen(newSpecimen);
-        assertEquals(1, newUser.getSpecimens().size());
-        dao.createUser(newUser);
+        int id = dao.createUser(newUser);
+        User insertedUser = dao.getUserByUsername("createdUser");
+        assertNotNull(insertedUser);
+        assertEquals(id, insertedUser.getId());
+        assertEquals(1, insertedUser.getSpecimens().size());
     }
 }
