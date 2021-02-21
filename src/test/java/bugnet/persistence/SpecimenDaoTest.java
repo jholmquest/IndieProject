@@ -47,8 +47,7 @@ public class SpecimenDaoTest {
         UserDao userDao = new UserDao();
         User user = userDao.getUserByUsername("holmquest");
         userDao.delete(user);
-        List<Specimen> specimens = dao.getAllSpecimens();
-        assertEquals(1, specimens.size());
+        assertNull(dao.getSpecimenById(1));
     }
 
     /**
@@ -64,5 +63,12 @@ public class SpecimenDaoTest {
         assertEquals(4, specimens.size());
     }
 
-
+    /**
+     * verifies selecting by id works
+     */
+    @Test
+    void getByIdTest() {
+        Specimen specimen = dao.getSpecimenById(1);
+        assertEquals("beetle", specimen.getBugName());
+    }
 }

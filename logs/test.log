@@ -33,3 +33,8 @@
 [DEBUG] 2021-02-21 13:11:54.382 [main] SpecimenDao - inserted specimen with id 4
 [DEBUG] 2021-02-21 13:11:54.383 [main] SpecimenDao - getting all specimens
 [DEBUG] 2021-02-21 13:11:54.483 [main] SpecimenDao - list of specimens [bugnet.entity.Specimen@30508066, bugnet.entity.Specimen@13f40d71, bugnet.entity.Specimen@73a845cb, bugnet.entity.Specimen@18a98913]
+[DEBUG] 2021-02-21 13:18:21.489 [main] SpecimenDao - getting specimen of id 1
+[DEBUG] 2021-02-21 13:19:25.103 [main] UserDao - Searching for user with username holmquest
+[DEBUG] 2021-02-21 13:19:25.574 [main] UserDao - Result of search bugnet.entity.User@279126f5
+[DEBUG] 2021-02-21 13:19:25.575 [main] UserDao - deleting user bugnet.entity.User@279126f5
+[DEBUG] 2021-02-21 13:19:25.817 [main] SpecimenDao - getting specimen of id 1
