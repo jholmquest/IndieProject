@@ -58,9 +58,9 @@ public class SpecimenDaoTest {
         UserDao userDao = new UserDao();
         User user = userDao.getUserByUsername("testuser");
         Specimen newSpecimen = new Specimen(4, "testbug", "here", new Date(), "hello world", user);
-        dao.createSpecimen(newSpecimen);
-        List<Specimen> specimens = dao.getAllSpecimens();
-        assertEquals(4, specimens.size());
+        int id = dao.createSpecimen(newSpecimen);
+        Specimen createdSpecimen = dao.getSpecimenById(id);
+        assertEquals(newSpecimen.getBugName(), createdSpecimen.getBugName());
     }
 
     /**

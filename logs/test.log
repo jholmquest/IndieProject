@@ -43,3 +43,13 @@
 [DEBUG] 2021-02-21 13:23:00.298 [main] SpecimenDao - getting specimen of id 1
 [DEBUG] 2021-02-21 13:23:00.582 [main] SpecimenDao - deleting specimen bugnet.entity.Specimen@b379bc6
 [DEBUG] 2021-02-21 13:23:00.641 [main] SpecimenDao - getting specimen of id 1
+[DEBUG] 2021-02-21 13:28:48.222 [main] UserDao - Searching for user with username testuser
+[DEBUG] 2021-02-21 13:28:49.059 [main] UserDao - Result of search bugnet.entity.User@3e53c4ad
+[DEBUG] 2021-02-21 13:28:49.060 [main] SpecimenDao - inserting specimen bugnet.entity.Specimen@7ea42c82
+[DEBUG] 2021-02-21 13:28:49.120 [main] SpecimenDao - inserted specimen with id 5
+[DEBUG] 2021-02-21 13:28:49.120 [main] SpecimenDao - getting specimen of id 5
+[DEBUG] 2021-02-21 13:29:35.194 [main] UserDao - Searching for user with username testuser
+[DEBUG] 2021-02-21 13:29:35.681 [main] UserDao - Result of search bugnet.entity.User@279126f5
+[DEBUG] 2021-02-21 13:29:35.682 [main] SpecimenDao - inserting specimen bugnet.entity.Specimen@71531dd7
+[DEBUG] 2021-02-21 13:29:35.753 [main] SpecimenDao - inserted specimen with id 6
+[DEBUG] 2021-02-21 13:29:35.754 [main] SpecimenDao - getting specimen of id 6
