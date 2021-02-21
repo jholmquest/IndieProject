@@ -37,9 +37,8 @@ public class Specimen {
     public Specimen() {
     }
 
-    public Specimen(int id, String bugName, String collectedLocation,
+    public Specimen(String bugName, String collectedLocation,
                     Date collectedDate, String bugNotes, User user) {
-        this.id = id;
         this.bugName = bugName;
         this.collectedLocation = collectedLocation;
         this.collectedDate = collectedDate;

@@ -1,5 +1,6 @@
 package bugnet.persistence;
 
+import bugnet.entity.Specimen;
 import bugnet.entity.User;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -20,6 +21,7 @@ public class UserDaoTest {
 
         Database database = Database.getInstance();
         database.runSQL("cleanUser.sql");
+        database.runSQL("cleanSpecimen.sql");
     }
 
     /**
@@ -46,7 +48,7 @@ public class UserDaoTest {
      */
     @Test
     void createUserTest() {
-        User newUser = new User(4, "createdUser", "eaohgeago");
+        User newUser = new User("createdUser", "eaohgeago");
         int newId = dao.createUser(newUser);
         assertEquals(newUser.getId(), newId);
         List<User> users = dao.getAllUsers();
@@ -75,5 +77,14 @@ public class UserDaoTest {
         dao.updateUser(userToUpdate);
         User updatedUser = dao.getUserByUsername("holmquest");
         assertEquals("updated", updatedUser.getPassword());
+    }
+
+    @Test
+    void createUserWithSpecimenTest() {
+        User newUser = new User("createdUser", "eaohgeago");
+        Specimen newSpecimen = new Specimen("testbug", "here", new Date(), "hello world", newUser);
+        newUser.addSpecimen(newSpecimen);
+        assertEquals(1, newUser.getSpecimens().size());
+        dao.createUser(newUser);
     }
 }

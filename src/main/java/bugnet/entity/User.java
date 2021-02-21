@@ -35,12 +35,10 @@ public class User {
 
     /**
      * Instantiates a user with parameters
-     * @param id user id
      * @param username user username
      * @param password user password
      */
-    public User(int id, String username, String password) {
-        this.id = id;
+    public User(String username, String password) {
         this.username = username;
         this.password = password;
     }
