@@ -27,3 +27,9 @@
 [DEBUG] 2021-02-21 13:03:49.347 [main] SpecimenDao - list of specimens [bugnet.entity.Specimen@19ad75e5]
 [DEBUG] 2021-02-21 13:03:49.710 [main] SpecimenDao - getting all specimens
 [DEBUG] 2021-02-21 13:03:49.735 [main] SpecimenDao - list of specimens [bugnet.entity.Specimen@5fb5ad40, bugnet.entity.Specimen@615439f7, bugnet.entity.Specimen@632cf7d3]
+[DEBUG] 2021-02-21 13:11:53.552 [main] UserDao - Searching for user with username testuser
+[DEBUG] 2021-02-21 13:11:54.269 [main] UserDao - Result of search bugnet.entity.User@279126f5
+[DEBUG] 2021-02-21 13:11:54.271 [main] SpecimenDao - inserting specimen bugnet.entity.Specimen@71531dd7
+[DEBUG] 2021-02-21 13:11:54.382 [main] SpecimenDao - inserted specimen with id 4
+[DEBUG] 2021-02-21 13:11:54.383 [main] SpecimenDao - getting all specimens
+[DEBUG] 2021-02-21 13:11:54.483 [main] SpecimenDao - list of specimens [bugnet.entity.Specimen@30508066, bugnet.entity.Specimen@13f40d71, bugnet.entity.Specimen@73a845cb, bugnet.entity.Specimen@18a98913]

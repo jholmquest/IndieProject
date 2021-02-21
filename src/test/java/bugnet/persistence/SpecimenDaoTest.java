@@ -5,6 +5,7 @@ import bugnet.entity.Specimen;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.Date;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -48,5 +49,18 @@ public class SpecimenDaoTest {
         userDao.delete(user);
         List<Specimen> specimens = dao.getAllSpecimens();
         assertEquals(1, specimens.size());
+    }
+
+    /**
+     * verifies inserting works
+     */
+    @Test
+    void insertTest() {
+        UserDao userDao = new UserDao();
+        User user = userDao.getUserByUsername("testuser");
+        Specimen newSpecimen = new Specimen(4, "testbug", "here", new Date(), "hello world", user);
+        dao.createSpecimen(newSpecimen);
+        List<Specimen> specimens = dao.getAllSpecimens();
+        assertEquals(4, specimens.size());
     }
 }
