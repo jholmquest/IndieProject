@@ -33,4 +33,65 @@ public class Specimen {
             foreignKey = @ForeignKey(name = "specimen_user_id_fk")
     )
     private User user;
+
+    public Specimen() {
+    }
+
+    public Specimen(int id, String bugName, String collectedLocation,
+                    Date collectedDate, String bugNotes, User user) {
+        this.id = id;
+        this.bugName = bugName;
+        this.collectedLocation = collectedLocation;
+        this.collectedDate = collectedDate;
+        this.bugNotes = bugNotes;
+        this.user = user;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getBugName() {
+        return bugName;
+    }
+
+    public void setBugName(String bugName) {
+        this.bugName = bugName;
+    }
+
+    public String getCollectedLocation() {
+        return collectedLocation;
+    }
+
+    public void setCollectedLocation(String collectedLocation) {
+        this.collectedLocation = collectedLocation;
+    }
+
+    public Date getCollectedDate() {
+        return collectedDate;
+    }
+
+    public void setCollectedDate(Date collectedDate) {
+        this.collectedDate = collectedDate;
+    }
+
+    public String getBugNotes() {
+        return bugNotes;
+    }
+
+    public void setBugNotes(String bugNotes) {
+        this.bugNotes = bugNotes;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
 }

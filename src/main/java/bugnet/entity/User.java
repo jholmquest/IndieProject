@@ -1,8 +1,8 @@
 package bugnet.entity;
 
 import org.hibernate.annotations.GenericGenerator;
-
 import javax.persistence.*;
+import java.util.*;
 
 /**
  * class representing a user
@@ -23,6 +23,9 @@ public class User {
 
     @Column(name = "password")
     private String password;
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
+    private Set<Specimen> specimens = new HashSet<>();
 
     /**
      * Instantiate a new user
@@ -64,5 +67,23 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public Set<Specimen> getSpecimens() {
+        return specimens;
+    }
+
+    public void setSpecimens(Set<Specimen> specimens) {
+        this.specimens = specimens;
+    }
+
+    public void addSpecimen(Specimen specimen) {
+        specimens.add(specimen);
+        specimen.setUser(this);
+    }
+
+    public void removeSpecimen(Specimen specimen) {
+        specimens.remove(specimen);
+        specimen.setUser(null);
     }
 }
