@@ -43,43 +43,83 @@ public class User {
         this.password = password;
     }
 
+    /**
+     * gets user's id
+     * @return users id
+     */
     public int getId() {
         return id;
     }
 
+    /**
+     * sets user's id
+     * @param id user's id
+     */
     public void setId(int id) {
         this.id = id;
     }
 
+    /**
+     * gets username
+     * @return username
+     */
     public String getUsername() {
         return username;
     }
 
+    /**
+     * sets username
+     * @param username username
+     */
     public void setUsername(String username) {
         this.username = username;
     }
 
+    /**
+     * gets password
+     * @return password
+     */
     public String getPassword() {
         return password;
     }
 
+    /**
+     * sets password
+     * @param password password
+     */
     public void setPassword(String password) {
         this.password = password;
     }
 
+    /**
+     * gets specimens collected by user
+     * @return specimens collected by user
+     */
     public Set<Specimen> getSpecimens() {
         return specimens;
     }
 
+    /**
+     * sets specimens collected by user
+     * @param specimens specimens collected by user
+     */
     public void setSpecimens(Set<Specimen> specimens) {
         this.specimens = specimens;
     }
 
+    /**
+     * adds specimen to list of specimens
+     * @param specimen new specimen
+     */
     public void addSpecimen(Specimen specimen) {
         specimens.add(specimen);
         specimen.setUser(this);
     }
 
+    /**
+     * removes a specific specimen
+     * @param specimen specimen to be removed
+     */
     public void removeSpecimen(Specimen specimen) {
         specimens.remove(specimen);
         specimen.setUser(null);
