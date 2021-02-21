@@ -170,3 +170,60 @@
 [DEBUG] 2021-02-21 14:40:32.263 [main] UserDao - inserted user with id 30
 [DEBUG] 2021-02-21 14:40:32.265 [main] UserDao - Searching for user with username createdUser
 [DEBUG] 2021-02-21 14:40:32.556 [main] UserDao - Result of search bugnet.entity.User@4409cae6
+[DEBUG] 2021-02-21 14:45:51.765 [main] SpecimenDao - getting specimen of id 1
+[DEBUG] 2021-02-21 14:45:51.977 [main] SpecimenDao - updating specimen bugnet.entity.Specimen@3709748f
+[DEBUG] 2021-02-21 14:45:52.007 [main] SpecimenDao - getting specimen of id 1
+[DEBUG] 2021-02-21 14:47:58.963 [main] SpecimenDao - getting specimen of id 1
+[DEBUG] 2021-02-21 14:47:59.316 [main] SpecimenDao - updating specimen bugnet.entity.Specimen@3709748f
+[DEBUG] 2021-02-21 14:47:59.356 [main] SpecimenDao - getting specimen of id 1
+[DEBUG] 2021-02-21 14:49:02.164 [main] SpecimenDao - getting specimen of id 1
+[DEBUG] 2021-02-21 14:49:02.496 [main] SpecimenDao - updating specimen bugnet.entity.Specimen@3709748f
+[DEBUG] 2021-02-21 14:49:02.542 [main] SpecimenDao - getting specimen of id 1
+[DEBUG] 2021-02-21 14:49:49.956 [main] SpecimenDao - getting specimen of id 1
+[DEBUG] 2021-02-21 14:49:50.489 [main] SpecimenDao - updating specimen bugnet.entity.Specimen@3709748f
+[DEBUG] 2021-02-21 14:49:50.546 [main] SpecimenDao - getting specimen of id 1
+[DEBUG] 2021-02-21 14:50:58.619 [main] SpecimenDao - getting specimen of id 1
+[DEBUG] 2021-02-21 14:50:58.883 [main] SpecimenDao - updating specimen bugnet.entity.Specimen@3709748f
+[DEBUG] 2021-02-21 14:50:58.943 [main] SpecimenDao - getting specimen of id 1
+[DEBUG] 2021-02-21 14:51:44.318 [main] UserDao - Searching for user with username holmquest
+[DEBUG] 2021-02-21 14:51:44.833 [main] UserDao - Result of search bugnet.entity.User@2017f6e6
+[DEBUG] 2021-02-21 14:51:44.840 [main] UserDao - deleting user bugnet.entity.User@2017f6e6
+[DEBUG] 2021-02-21 14:51:44.932 [main] SpecimenDao - getting specimen of id 1
+[DEBUG] 2021-02-21 14:51:45.190 [main] SpecimenDao - getting specimen of id 1
+[DEBUG] 2021-02-21 14:51:45.579 [main] SpecimenDao - getting all specimens
+[DEBUG] 2021-02-21 14:51:45.645 [main] SpecimenDao - list of specimens [bugnet.entity.Specimen@782fd504, bugnet.entity.Specimen@1537c744, bugnet.entity.Specimen@37314843]
+[DEBUG] 2021-02-21 14:51:45.820 [main] SpecimenDao - getting specimen of id 1
+[DEBUG] 2021-02-21 14:51:45.914 [main] SpecimenDao - updating specimen bugnet.entity.Specimen@5f193335
+[DEBUG] 2021-02-21 14:51:45.944 [main] SpecimenDao - getting specimen of id 1
+[DEBUG] 2021-02-21 14:51:46.155 [main] UserDao - Searching for user with username testuser
+[DEBUG] 2021-02-21 14:51:46.175 [main] UserDao - Result of search bugnet.entity.User@677349fb
+[DEBUG] 2021-02-21 14:51:46.176 [main] SpecimenDao - inserting specimen bugnet.entity.Specimen@24197b13
+[DEBUG] 2021-02-21 14:51:46.219 [main] SpecimenDao - inserted specimen with id 15
+[DEBUG] 2021-02-21 14:51:46.219 [main] SpecimenDao - getting specimen of id 15
+[DEBUG] 2021-02-21 14:51:46.516 [main] SpecimenDao - getting specimen of id 1
+[DEBUG] 2021-02-21 14:51:46.561 [main] SpecimenDao - deleting specimen bugnet.entity.Specimen@7ac48f05
+[DEBUG] 2021-02-21 14:51:46.577 [main] SpecimenDao - getting specimen of id 1
+[DEBUG] 2021-02-21 14:54:25.569 [main] UserDao - inserting user bugnet.entity.User@b5b9333
+[DEBUG] 2021-02-21 14:54:25.953 [main] UserDao - inserted user with id 31
+[DEBUG] 2021-02-21 14:54:25.955 [main] UserDao - Searching for user with username createdUser
+[DEBUG] 2021-02-21 14:54:26.619 [main] UserDao - Result of search bugnet.entity.User@19ad75e5
+[DEBUG] 2021-02-21 14:54:26.923 [main] UserDao - getting all users
+[DEBUG] 2021-02-21 14:54:27.012 [main] UserDao - list of users [bugnet.entity.User@359ceb13, bugnet.entity.User@1068176, bugnet.entity.User@5bf4764d]
+[DEBUG] 2021-02-21 14:54:27.184 [main] UserDao - Searching for user with username holmquest
+[DEBUG] 2021-02-21 14:54:27.214 [main] UserDao - Result of search bugnet.entity.User@74e497ae
+[DEBUG] 2021-02-21 14:54:27.215 [main] UserDao - updating user bugnet.entity.User@74e497ae
+[DEBUG] 2021-02-21 14:54:27.294 [main] UserDao - Searching for user with username holmquest
+[DEBUG] 2021-02-21 14:54:27.313 [main] UserDao - Result of search bugnet.entity.User@6aff97d6
+[DEBUG] 2021-02-21 14:54:27.501 [main] UserDao - inserting user bugnet.entity.User@2baac4a7
+[DEBUG] 2021-02-21 14:54:27.534 [main] UserDao - inserted user with id 32
+[DEBUG] 2021-02-21 14:54:27.534 [main] UserDao - getting all users
+[DEBUG] 2021-02-21 14:54:27.600 [main] UserDao - list of users [bugnet.entity.User@5002fde9, bugnet.entity.User@6f96dd64, bugnet.entity.User@4d7cac24, bugnet.entity.User@409732fb]
+[DEBUG] 2021-02-21 14:54:27.897 [main] UserDao - Searching for user with username holmquest
+[DEBUG] 2021-02-21 14:54:27.930 [main] UserDao - Result of search bugnet.entity.User@1d99ee1b
+[DEBUG] 2021-02-21 14:54:28.063 [main] UserDao - Searching for user with username holmquest
+[DEBUG] 2021-02-21 14:54:28.084 [main] UserDao - Result of search bugnet.entity.User@15369d73
+[DEBUG] 2021-02-21 14:54:28.084 [main] UserDao - deleting user bugnet.entity.User@15369d73
+[DEBUG] 2021-02-21 14:54:28.108 [main] UserDao - Searching for user with username holmquest
+[DEBUG] 2021-02-21 14:54:28.125 [main] UserDao - Result of search null
+[DEBUG] 2021-02-21 14:54:28.126 [main] UserDao - getting all users
+[DEBUG] 2021-02-21 14:54:28.138 [main] UserDao - list of users [bugnet.entity.User@2a484710, bugnet.entity.User@661e1399]

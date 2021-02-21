@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Test;
 import java.util.Date;
 import java.util.List;
 
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
 
@@ -81,5 +82,17 @@ public class SpecimenDaoTest {
         dao.delete(specimen);
         Specimen deletedSpecimen = dao.getSpecimenById(1);
         assertNull(deletedSpecimen);
+    }
+
+    /**
+     * verifies updating specimen working
+     */
+    @Test
+    void updateTest() {
+        Specimen specimenToUpdate = dao.getSpecimenById(1);
+        specimenToUpdate.setBugName("updated beetle");
+        dao.updateSpecimen(specimenToUpdate);
+        Specimen updatedSpecimen = dao.getSpecimenById(1);
+        assertEquals(updatedSpecimen.getBugName(), specimenToUpdate.getBugName());
     }
 }
