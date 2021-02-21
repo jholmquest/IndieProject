@@ -18,3 +18,12 @@
 [DEBUG] 2021-02-14 13:20:19.913 [main] UserDao - Result of search null
 [DEBUG] 2021-02-14 13:20:19.914 [main] UserDao - getting all users
 [DEBUG] 2021-02-14 13:20:19.930 [main] UserDao - list of users [bugnet.entity.User@2b6fb197, bugnet.entity.User@2eb0cefe]
+[DEBUG] 2021-02-21 13:00:28.735 [main] SpecimenDao - getting all specimens
+[DEBUG] 2021-02-21 13:00:29.496 [main] SpecimenDao - list of specimens [bugnet.entity.Specimen@5dbab232, bugnet.entity.Specimen@52f8a6f4, bugnet.entity.Specimen@5012c571]
+[DEBUG] 2021-02-21 13:03:48.184 [main] UserDao - Searching for user with username holmquest
+[DEBUG] 2021-02-21 13:03:49.127 [main] UserDao - Result of search bugnet.entity.User@2e952845
+[DEBUG] 2021-02-21 13:03:49.138 [main] UserDao - deleting user bugnet.entity.User@2e952845
+[DEBUG] 2021-02-21 13:03:49.311 [main] SpecimenDao - getting all specimens
+[DEBUG] 2021-02-21 13:03:49.347 [main] SpecimenDao - list of specimens [bugnet.entity.Specimen@19ad75e5]
+[DEBUG] 2021-02-21 13:03:49.710 [main] SpecimenDao - getting all specimens
+[DEBUG] 2021-02-21 13:03:49.735 [main] SpecimenDao - list of specimens [bugnet.entity.Specimen@5fb5ad40, bugnet.entity.Specimen@615439f7, bugnet.entity.Specimen@632cf7d3]
