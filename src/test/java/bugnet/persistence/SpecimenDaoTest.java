@@ -5,12 +5,10 @@ import bugnet.entity.Specimen;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Tests the methods in SpecimenDao
@@ -58,11 +56,12 @@ public class SpecimenDaoTest {
     void insertTest() {
         UserDao userDao = new UserDao();
         User user = userDao.getUserByUsername("testuser");
-        Specimen newSpecimen = new Specimen("testbug", "here", new Date(), "hello world", user);
+        LocalDate date = LocalDate.now();
+        Specimen newSpecimen = new Specimen("testbug", "here", date, "hello world", user);
         user.addSpecimen(newSpecimen);
         int id = dao.createSpecimen(newSpecimen);
         Specimen createdSpecimen = dao.getSpecimenById(id);
-        assertEquals(newSpecimen.getBugName(), createdSpecimen.getBugName());
+        assertTrue(createdSpecimen.equals(newSpecimen));
     }
 
     /**
@@ -94,6 +93,6 @@ public class SpecimenDaoTest {
         specimenToUpdate.setBugName("updated beetle");
         dao.updateSpecimen(specimenToUpdate);
         Specimen updatedSpecimen = dao.getSpecimenById(1);
-        assertEquals(updatedSpecimen.getBugName(), specimenToUpdate.getBugName());
+        assertTrue(updatedSpecimen.equals(specimenToUpdate));
     }
 }

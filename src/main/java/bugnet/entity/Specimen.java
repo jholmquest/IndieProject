@@ -1,7 +1,8 @@
 package bugnet.entity;
 
 import org.hibernate.annotations.GenericGenerator;
-import java.util.Date;
+import java.time.LocalDate;
+import java.util.Objects;
 import javax.persistence.*;
 
 /**
@@ -23,7 +24,7 @@ public class Specimen {
     private String collectedLocation;
 
     @Column(name = "date")
-    private Date collectedDate;
+    private LocalDate collectedDate;
 
     @Column(name = "notes")
     private String bugNotes;
@@ -49,7 +50,7 @@ public class Specimen {
      * @param user user who collected insect
      */
     public Specimen(String bugName, String collectedLocation,
-                    Date collectedDate, String bugNotes, User user) {
+                    LocalDate collectedDate, String bugNotes, User user) {
         this.bugName = bugName;
         this.collectedLocation = collectedLocation;
         this.collectedDate = collectedDate;
@@ -109,7 +110,7 @@ public class Specimen {
      * gets date insect collected
      * @return date insect collected
      */
-    public Date getCollectedDate() {
+    public LocalDate getCollectedDate() {
         return collectedDate;
     }
 
@@ -117,7 +118,7 @@ public class Specimen {
      * sets date insect collected
      * @param collectedDate
      */
-    public void setCollectedDate(Date collectedDate) {
+    public void setCollectedDate(LocalDate collectedDate) {
         this.collectedDate = collectedDate;
     }
 
@@ -151,5 +152,23 @@ public class Specimen {
      */
     public void setUser(User user) {
         this.user = user;
+    }
+
+    /**
+     * compares entities
+     * @param o another object for comparison
+     * @return whether the objects are equivalent
+     */
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Specimen specimen = (Specimen) o;
+        return id == specimen.id && Objects.equals(bugName, specimen.bugName) && Objects.equals(collectedLocation, specimen.collectedLocation) && Objects.equals(collectedDate, specimen.collectedDate) && Objects.equals(bugNotes, specimen.bugNotes) && Objects.equals(user, specimen.user);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, bugName, collectedLocation, collectedDate, bugNotes, user);
     }
 }

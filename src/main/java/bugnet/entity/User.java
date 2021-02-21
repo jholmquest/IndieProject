@@ -124,4 +124,22 @@ public class User {
         specimens.remove(specimen);
         specimen.setUser(null);
     }
+
+    /**
+     * compares entities
+     * @param o another object for comparison
+     * @return whether the objects are equivalent
+     */
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        User user = (User) o;
+        return id == user.id && Objects.equals(username, user.username) && Objects.equals(password, user.password);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, username, password);
+    }
 }

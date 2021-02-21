@@ -4,8 +4,11 @@ import bugnet.entity.Specimen;
 import bugnet.entity.User;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.time.LocalDate;
 import java.util.*;
 
 public class UserDaoTest {
@@ -76,7 +79,7 @@ public class UserDaoTest {
         userToUpdate.setPassword("updated");
         dao.updateUser(userToUpdate);
         User updatedUser = dao.getUserByUsername("holmquest");
-        assertEquals("updated", updatedUser.getPassword());
+        assertTrue(updatedUser.equals(userToUpdate));
     }
 
     /**
@@ -85,12 +88,11 @@ public class UserDaoTest {
     @Test
     void createUserWithSpecimenTest() {
         User newUser = new User("createdUser", "eaohgeago");
-        Specimen newSpecimen = new Specimen("testbug", "here", new Date(), "hello world", newUser);
+        Specimen newSpecimen = new Specimen("testbug", "here", LocalDate.now(), "hello world", newUser);
         newUser.addSpecimen(newSpecimen);
-        int id = dao.createUser(newUser);
+        dao.createUser(newUser);
         User insertedUser = dao.getUserByUsername("createdUser");
         assertNotNull(insertedUser);
-        assertEquals(id, insertedUser.getId());
-        assertEquals(1, insertedUser.getSpecimens().size());
+        assertTrue(insertedUser.equals(newUser));
     }
 }
