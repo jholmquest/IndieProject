@@ -6,8 +6,12 @@ import org.hibernate.Transaction;
 
 import javax.persistence.criteria.CriteriaBuilder;
 
+/**
+ * Contains common Dao functions to reduce duplicate code
+ *
+ * @author James Holmquest
+ */
 public interface BaseDao {
-
 
     SessionFactory sessionFactory = SessionFactoryProvider.getSessionFactory();
 
