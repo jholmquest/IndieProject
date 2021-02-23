@@ -17,7 +17,7 @@ import java.util.List;
  *
  * @author James Holmquest
  */
-public class SpecimenDao {
+public class SpecimenDao implements BaseDao {
 
     private final Logger logger = LogManager.getLogger(this.getClass());
     SessionFactory sessionFactory = SessionFactoryProvider.getSessionFactory();
@@ -47,27 +47,6 @@ public class SpecimenDao {
         Specimen specimen = session.get(Specimen.class, id);
         session.close();
         return specimen;
-    }
-
-    /**
-     * inserts a specimen
-     *
-     * @param specimen specimen to be inserted
-     * @return id of new specimen
-     */
-    public int createSpecimen(Specimen specimen) {
-        logger.debug("inserting specimen " + specimen);
-
-        int id;
-        Session session = sessionFactory.openSession();
-        CriteriaBuilder builder = session.getCriteriaBuilder();
-        Transaction transaction = session.beginTransaction();
-        id = (int) session.save(specimen);
-        transaction.commit();
-        session.close();
-
-        logger.debug("inserted specimen with id " + id);
-        return id;
     }
 
     /**

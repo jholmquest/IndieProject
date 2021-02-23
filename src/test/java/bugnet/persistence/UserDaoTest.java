@@ -52,7 +52,7 @@ public class UserDaoTest {
     @Test
     void createUserTest() {
         User newUser = new User("createdUser", "eaohgeago");
-        int newId = dao.createUser(newUser);
+        int newId = dao.create(newUser);
         assertEquals(newUser.getId(), newId);
         List<User> users = dao.getAllUsers();
         assertEquals(4, users.size());
@@ -90,7 +90,7 @@ public class UserDaoTest {
         User newUser = new User("createdUser", "eaohgeago");
         Specimen newSpecimen = new Specimen("testbug", "here", LocalDate.now(), "hello world", newUser);
         newUser.addSpecimen(newSpecimen);
-        dao.createUser(newUser);
+        dao.create(newUser);
         User insertedUser = dao.getUserByUsername("createdUser");
         assertNotNull(insertedUser);
         assertTrue(insertedUser.equals(newUser));

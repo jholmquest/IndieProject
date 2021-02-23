@@ -15,7 +15,7 @@ import java.util.*;
  *
  * @author James Holmquest
  */
-public class UserDao {
+public class UserDao implements BaseDao {
 
     private final Logger logger = LogManager.getLogger(this.getClass());
     SessionFactory sessionFactory = SessionFactoryProvider.getSessionFactory();
@@ -58,27 +58,6 @@ public class UserDao {
 
         logger.debug("Result of search " + user);
         return user;
-    }
-
-    /**
-     * inserts a user
-     *
-     * @param user user to be inserted
-     * @return id of new user
-     */
-    public int createUser(User user) {
-        logger.debug("inserting user " + user);
-
-        int id = 0;
-        Session session = sessionFactory.openSession();
-        CriteriaBuilder builder = session.getCriteriaBuilder();
-        Transaction transaction = session.beginTransaction();
-        id = (int) session.save(user);
-        transaction.commit();
-        session.close();
-
-        logger.debug("inserted user with id " + id);
-        return id;
     }
 
     /**

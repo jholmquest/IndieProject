@@ -59,7 +59,7 @@ public class SpecimenDaoTest {
         LocalDate date = LocalDate.now();
         Specimen newSpecimen = new Specimen("testbug", "here", date, "hello world", user);
         user.addSpecimen(newSpecimen);
-        int id = dao.createSpecimen(newSpecimen);
+        int id = dao.create(newSpecimen);
         Specimen createdSpecimen = dao.getSpecimenById(id);
         assertTrue(createdSpecimen.equals(newSpecimen));
     }
