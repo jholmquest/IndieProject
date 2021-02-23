@@ -50,21 +50,6 @@ public class SpecimenDao implements BaseDao {
     }
 
     /**
-     * updates a specimen in the db with new values
-     *
-     * @param specimen new specimen info
-     */
-    public void updateSpecimen(Specimen specimen) {
-        logger.debug("updating specimen " + specimen);
-
-        Session session = sessionFactory.openSession();
-        Transaction transaction = session.beginTransaction();
-        session.saveOrUpdate(specimen);
-        transaction.commit();
-        session.close();
-    }
-
-    /**
      * deletes a specimen
      *
      * @param specimen specimen to be deleted

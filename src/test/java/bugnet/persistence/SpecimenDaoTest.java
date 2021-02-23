@@ -91,7 +91,7 @@ public class SpecimenDaoTest {
     void updateTest() {
         Specimen specimenToUpdate = dao.getSpecimenById(1);
         specimenToUpdate.setBugName("updated beetle");
-        dao.updateSpecimen(specimenToUpdate);
+        dao.saveOrUpdate(specimenToUpdate);
         Specimen updatedSpecimen = dao.getSpecimenById(1);
         assertTrue(updatedSpecimen.equals(specimenToUpdate));
     }

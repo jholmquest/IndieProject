@@ -61,21 +61,6 @@ public class UserDao implements BaseDao {
     }
 
     /**
-     * updates a user in the db with new values
-     *
-     * @param user new user info
-     */
-    public void updateUser(User user) {
-        logger.debug("updating user " + user);
-
-        Session session = sessionFactory.openSession();
-        Transaction transaction = session.beginTransaction();
-        session.saveOrUpdate(user);
-        transaction.commit();
-        session.close();
-    }
-
-    /**
      * deletes a user
      *
      * @param user user to be deleted

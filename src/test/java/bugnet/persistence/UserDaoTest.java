@@ -77,7 +77,7 @@ public class UserDaoTest {
     void updateUserTest() {
         User userToUpdate = dao.getUserByUsername("holmquest");
         userToUpdate.setPassword("updated");
-        dao.updateUser(userToUpdate);
+        dao.saveOrUpdate(userToUpdate);
         User updatedUser = dao.getUserByUsername("holmquest");
         assertTrue(updatedUser.equals(userToUpdate));
     }

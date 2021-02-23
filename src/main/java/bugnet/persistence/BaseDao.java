@@ -16,17 +16,30 @@ public interface BaseDao {
 
     /**
      * Inserts a record
-     * @param object record being inserted
+     * @param record record being inserted
      * @return id of record
      */
-    default int create(Object object) {
+    default int create(Object record) {
         int id;
         Session session = sessionFactory.openSession();
         CriteriaBuilder builder = session.getCriteriaBuilder();
         Transaction transaction = session.beginTransaction();
-        id = (int) session.save(object);
+        id = (int) session.save(record);
         transaction.commit();
         session.close();
         return id;
+    }
+
+    /**
+     * Saves or updates a record
+     * @param record record being updated/saved
+     */
+    default void saveOrUpdate(Object record) {
+
+        Session session = sessionFactory.openSession();
+        Transaction transaction = session.beginTransaction();
+        session.saveOrUpdate(record);
+        transaction.commit();
+        session.close();
     }
 }
