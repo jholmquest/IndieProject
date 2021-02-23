@@ -1,8 +1,5 @@
 package bugnet.persistence;
 
-import bugnet.entity.Specimen;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -39,6 +36,19 @@ public interface BaseDao {
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
         session.saveOrUpdate(record);
+        transaction.commit();
+        session.close();
+    }
+
+    /**
+     * Deletes a record
+     * @param record record to be deleted
+     */
+    default void delete(Object record) {
+
+        Session session = sessionFactory.openSession();
+        Transaction transaction = session.beginTransaction();
+        session.delete(record);
         transaction.commit();
         session.close();
     }

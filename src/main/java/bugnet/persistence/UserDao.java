@@ -59,19 +59,4 @@ public class UserDao implements BaseDao {
         logger.debug("Result of search " + user);
         return user;
     }
-
-    /**
-     * deletes a user
-     *
-     * @param user user to be deleted
-     */
-    public void delete(User user) {
-        logger.debug("deleting user " + user);
-
-        Session session = sessionFactory.openSession();
-        Transaction transaction = session.beginTransaction();
-        session.delete(user);
-        transaction.commit();
-        session.close();
-    }
 }

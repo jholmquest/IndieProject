@@ -48,19 +48,4 @@ public class SpecimenDao implements BaseDao {
         session.close();
         return specimen;
     }
-
-    /**
-     * deletes a specimen
-     *
-     * @param specimen specimen to be deleted
-     */
-    public void delete(Specimen specimen) {
-        logger.debug("deleting specimen " + specimen);
-
-        Session session = sessionFactory.openSession();
-        Transaction transaction = session.beginTransaction();
-        session.delete(specimen);
-        transaction.commit();
-        session.close();
-    }
 }
