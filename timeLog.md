@@ -52,3 +52,14 @@ Tracking Time Spent Working
 2021-02-20 11:00am - 12:00pm went through readings for week5
 
 2021-02-21 12:00pm - 3:00pm did week 5 exercise
+
+#Week 6
+2021-02-23 3:30pm - 4:00pm began interface implementation
+
+2021-02-27 7:30pm - 8:30pm worked on code reviews
+
+2021-02-28 11:30am - 11:45am added feedback for professional development
+
+2021-02-28 2:30pm - 3:30pm worked on weekly exercise
+
+2021-02-28 4:30pm - 6:00pm finished getting initial deploy for exercise done

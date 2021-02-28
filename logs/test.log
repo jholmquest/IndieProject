@@ -614,3 +614,34 @@
 [DEBUG] 2021-02-28 15:06:06.500 [main] UserDao - list of users [bugnet.entity.User@36886fe, bugnet.entity.User@5354a596]
 [DEBUG] 2021-02-28 15:06:57.345 [http-nio-8080-exec-3] UserDao - getting all users
 [DEBUG] 2021-02-28 15:06:58.073 [http-nio-8080-exec-3] UserDao - list of users [bugnet.entity.User@36886fe, bugnet.entity.User@ed86ecd3]
+[DEBUG] 2021-02-28 17:29:14.420 [main] UserDao - Searching for user with username holmquest
+[DEBUG] 2021-02-28 17:29:14.986 [main] UserDao - Result of search bugnet.entity.User@ba95c248
+[DEBUG] 2021-02-28 17:29:15.091 [main] SpecimenDao - getting specimen of id 1
+[DEBUG] 2021-02-28 17:29:15.293 [main] SpecimenDao - getting specimen of id 1
+[DEBUG] 2021-02-28 17:29:15.478 [main] SpecimenDao - getting all specimens
+[DEBUG] 2021-02-28 17:29:15.544 [main] SpecimenDao - list of specimens [bugnet.entity.Specimen@3a829d7b, bugnet.entity.Specimen@efdf4043, bugnet.entity.Specimen@f7945e06]
+[DEBUG] 2021-02-28 17:29:15.669 [main] SpecimenDao - getting specimen of id 1
+[DEBUG] 2021-02-28 17:29:15.741 [main] SpecimenDao - getting specimen of id 1
+[DEBUG] 2021-02-28 17:29:15.881 [main] UserDao - Searching for user with username testuser
+[DEBUG] 2021-02-28 17:29:15.905 [main] UserDao - Result of search bugnet.entity.User@36886fe
+[DEBUG] 2021-02-28 17:29:15.960 [main] SpecimenDao - getting specimen of id 47
+[DEBUG] 2021-02-28 17:29:16.088 [main] SpecimenDao - getting specimen of id 1
+[DEBUG] 2021-02-28 17:29:16.130 [main] SpecimenDao - getting specimen of id 1
+[DEBUG] 2021-02-28 17:29:16.462 [main] UserDao - Searching for user with username createdUser
+[DEBUG] 2021-02-28 17:29:16.553 [main] UserDao - Result of search bugnet.entity.User@f951c3b8
+[DEBUG] 2021-02-28 17:29:16.697 [main] UserDao - getting all users
+[DEBUG] 2021-02-28 17:29:16.778 [main] UserDao - list of users [bugnet.entity.User@36886fe, bugnet.entity.User@5354a596, bugnet.entity.User@ba95c248]
+[DEBUG] 2021-02-28 17:29:16.906 [main] UserDao - Searching for user with username holmquest
+[DEBUG] 2021-02-28 17:29:16.931 [main] UserDao - Result of search bugnet.entity.User@ba95c248
+[DEBUG] 2021-02-28 17:29:16.963 [main] UserDao - Searching for user with username holmquest
+[DEBUG] 2021-02-28 17:29:16.992 [main] UserDao - Result of search bugnet.entity.User@9a03a283
+[DEBUG] 2021-02-28 17:29:17.130 [main] UserDao - getting all users
+[DEBUG] 2021-02-28 17:29:17.179 [main] UserDao - list of users [bugnet.entity.User@36886fe, bugnet.entity.User@5354a596, bugnet.entity.User@ba95c248, bugnet.entity.User@f951c779]
+[DEBUG] 2021-02-28 17:29:17.297 [main] UserDao - Searching for user with username holmquest
+[DEBUG] 2021-02-28 17:29:17.320 [main] UserDao - Result of search bugnet.entity.User@ba95c248
+[DEBUG] 2021-02-28 17:29:17.619 [main] UserDao - Searching for user with username holmquest
+[DEBUG] 2021-02-28 17:29:17.696 [main] UserDao - Result of search bugnet.entity.User@ba95c248
+[DEBUG] 2021-02-28 17:29:17.722 [main] UserDao - Searching for user with username holmquest
+[DEBUG] 2021-02-28 17:29:17.728 [main] UserDao - Result of search null
+[DEBUG] 2021-02-28 17:29:17.728 [main] UserDao - getting all users
+[DEBUG] 2021-02-28 17:29:17.750 [main] UserDao - list of users [bugnet.entity.User@36886fe, bugnet.entity.User@5354a596]
