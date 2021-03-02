@@ -10,7 +10,7 @@ public class Role {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
-    @GenericGenerator(name = "native", strategy = "native")
+    @GenericGenerator(name = "role_id", strategy = "native")
     private int id;
 
     @Column(name = "role_name")
@@ -19,8 +19,8 @@ public class Role {
     @Column(name = "role_level")
     private int roleLevel;
 
-    @ManyToMany(targetEntity = User.class)
-    private List<User> users = new ArrayList<User>();
+    @ManyToMany(targetEntity = User.class, fetch = FetchType.EAGER, mappedBy = "roles")
+    private Set<User> users = new HashSet<User>();
 
     public Role() {
     }
@@ -54,11 +54,11 @@ public class Role {
         this.roleLevel = roleLevel;
     }
 
-    public List<User> getUsers() {
+    public Set<User> getUsers() {
         return users;
     }
 
-    public void setUsers(List<User> users) {
+    public void setUsers(Set<User> users) {
         this.users = users;
     }
 

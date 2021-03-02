@@ -27,8 +27,13 @@ public class User {
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     private Set<Specimen> specimens = new HashSet<>();
 
-    @ManyToMany(targetEntity = Role.class)
-    private List<Role> roles = new ArrayList<Role>();
+    @ManyToMany(cascade = { CascadeType.ALL }, fetch = FetchType.EAGER)
+    @JoinTable(
+        name = "user_role",
+        joinColumns = { @JoinColumn(name = "user_id") },
+        inverseJoinColumns = { @JoinColumn( name = "role_id") }
+    )
+    private Set<Role> roles = new HashSet<Role>();
 
     /**
      * Instantiate a new user
@@ -110,11 +115,11 @@ public class User {
         this.specimens = specimens;
     }
 
-    public List<Role> getRoles() {
+    public Set<Role> getRoles() {
         return roles;
     }
 
-    public void setRoles(List<Role> roles) {
+    public void setRoles(Set<Role> roles) {
         this.roles = roles;
     }
 

@@ -94,4 +94,10 @@ public class UserDaoTest {
         assertNotNull(insertedUser);
         assertTrue(insertedUser.equals(newUser));
     }
+
+    @Test
+    void getByRoleTest() {
+        User user = dao.getById(3);
+        assertEquals(2, user.getRoles().size());
+    }
 }
