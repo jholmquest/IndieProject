@@ -132,6 +132,7 @@ public class GenericDao<T> {
      *
      *
      */
+    /*
     public List<T> findByPropertyEqual(Map<String, Object> propertyMap) {
         Session session = getSession();
         CriteriaBuilder builder = session.getCriteriaBuilder();
@@ -145,7 +146,7 @@ public class GenericDao<T> {
 
         return session.createQuery(query).getResultList();
     }
-
+    */
 
     /**
      * Returns an open session from the SessionFactory
