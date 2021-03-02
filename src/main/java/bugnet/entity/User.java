@@ -110,6 +110,14 @@ public class User {
         this.specimens = specimens;
     }
 
+    public List<Role> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(List<Role> roles) {
+        this.roles = roles;
+    }
+
     /**
      * adds specimen to list of specimens
      * @param specimen new specimen
@@ -126,6 +134,16 @@ public class User {
     public void removeSpecimen(Specimen specimen) {
         specimens.remove(specimen);
         specimen.setUser(null);
+    }
+
+    public void addRole(Role role) {
+        roles.add(role);
+        role.getUsers().add(this);
+    }
+
+    public void removeRole(Role role) {
+        roles.remove(role);
+        role.getUsers().remove(this);
     }
 
     /**
