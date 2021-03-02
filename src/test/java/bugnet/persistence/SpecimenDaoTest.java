@@ -15,14 +15,14 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class SpecimenDaoTest {
 
-    SpecimenDao dao;
+    GenericDao<Specimen> dao;
 
     /**
      * cleans db, makes a new dao
      */
     @BeforeEach
     void setUp() {
-        dao = new SpecimenDao();
+        dao = new GenericDao<>(Specimen.class);
 
         Database database = Database.getInstance();
         database.runSQL("cleanUser.sql");
@@ -34,7 +34,7 @@ public class SpecimenDaoTest {
      */
     @Test
     void getAllSuccess() {
-        List<Specimen> specimens = dao.getAllSpecimens();
+        List<Specimen> specimens = dao.getAll();
         assertEquals(3, specimens.size());
     }
 
@@ -43,10 +43,10 @@ public class SpecimenDaoTest {
      */
     @Test
     void cascadeTest() {
-        UserDao userDao = new UserDao();
-        User user = userDao.getUserByUsername("holmquest");
+        GenericDao<User> userDao = new GenericDao<>(User.class);
+        User user = userDao.getById(3);
         userDao.delete(user);
-        assertNull(dao.getSpecimenById(1));
+        assertNull(dao.getById(1));
     }
 
     /**
@@ -59,8 +59,8 @@ public class SpecimenDaoTest {
         LocalDate date = LocalDate.now();
         Specimen newSpecimen = new Specimen("testbug", "here", date, "hello world", user);
         user.addSpecimen(newSpecimen);
-        int id = dao.create(newSpecimen);
-        Specimen createdSpecimen = dao.getSpecimenById(id);
+        int id = dao.insert(newSpecimen);
+        Specimen createdSpecimen = dao.getById(id);
         assertTrue(createdSpecimen.equals(newSpecimen));
     }
 
@@ -69,7 +69,7 @@ public class SpecimenDaoTest {
      */
     @Test
     void getByIdTest() {
-        Specimen specimen = dao.getSpecimenById(1);
+        Specimen specimen = dao.getById(1);
         assertEquals("beetle", specimen.getBugName());
     }
 
@@ -78,9 +78,9 @@ public class SpecimenDaoTest {
      */
     @Test
     void deleteTest() {
-        Specimen specimen = dao.getSpecimenById(1);
+        Specimen specimen = dao.getById(1);
         dao.delete(specimen);
-        Specimen deletedSpecimen = dao.getSpecimenById(1);
+        Specimen deletedSpecimen = dao.getById(1);
         assertNull(deletedSpecimen);
     }
 
@@ -89,10 +89,10 @@ public class SpecimenDaoTest {
      */
     @Test
     void updateTest() {
-        Specimen specimenToUpdate = dao.getSpecimenById(1);
+        Specimen specimenToUpdate = dao.getById(1);
         specimenToUpdate.setBugName("updated beetle");
         dao.saveOrUpdate(specimenToUpdate);
-        Specimen updatedSpecimen = dao.getSpecimenById(1);
+        Specimen updatedSpecimen = dao.getById(1);
         assertTrue(updatedSpecimen.equals(specimenToUpdate));
     }
 }

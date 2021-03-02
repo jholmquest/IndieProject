@@ -1,6 +1,10 @@
 package bugnet.persistence;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -16,10 +20,11 @@ import java.util.Properties;
  * @author Alex M - Fall 2019 - added multi-line sql capability
  */
 
-public class Database implements PropertiesLoader {
+public class Database {
 
     // create an object of the class Database
     private static Database instance = new Database();
+    private final Logger logger = LogManager.getLogger(this.getClass());
 
     private Properties properties;
     private Connection connection;
@@ -68,13 +73,26 @@ public class Database implements PropertiesLoader {
             try {
                 connection.close();
             } catch (SQLException e) {
-                System.out.println("Cannot close connection" + e);
+                logger.error("Cannot close connection" + e);
             }
         }
 
         connection = null;
     }
 
+    public Properties loadProperties(String filePath) {
+        Properties properties = new Properties();
+        try {
+            properties.load (this.getClass().getResourceAsStream(filePath));
+        } catch (IOException ioe) {
+            logger.error("Database.loadProperties()...Cannot load the properties file");
+            ioe.printStackTrace();
+        } catch (Exception e) {
+            logger.error("Database.loadProperties()..." + e);
+            e.printStackTrace();
+        }
+        return properties;
+    }
     /**
      * Run the sql.
      *
@@ -104,9 +122,9 @@ public class Database implements PropertiesLoader {
             }
 
         } catch (SQLException se) {
-            System.out.println("SQL Exception" + se);
+            logger.error("SQL Exception" + se);
         } catch (Exception e) {
-            System.out.println("Exception" + e);
+            logger.error("Exception" + e);
         } finally {
             disconnect();
         }

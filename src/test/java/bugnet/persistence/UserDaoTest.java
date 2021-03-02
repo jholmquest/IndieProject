@@ -1,5 +1,6 @@
 package bugnet.persistence;
 
+import bugnet.entity.Role;
 import bugnet.entity.Specimen;
 import bugnet.entity.User;
 import org.junit.jupiter.api.BeforeEach;
@@ -78,7 +79,7 @@ public class UserDaoTest {
         userToUpdate.setPassword("updated");
         dao.saveOrUpdate(userToUpdate);
         User updatedUser = dao.getById(3);
-        assertTrue(updatedUser.equals(userToUpdate));
+        assertEquals(updatedUser, userToUpdate);
     }
 
     /**
@@ -92,12 +93,23 @@ public class UserDaoTest {
         int id = dao.insert(newUser);
         User insertedUser = dao.getById(id);
         assertNotNull(insertedUser);
-        assertTrue(insertedUser.equals(newUser));
+        assertEquals(insertedUser, newUser);
     }
 
+    // Tests getting roles for a user
     @Test
-    void getByRoleTest() {
+    void getRoleTest() {
         User user = dao.getById(3);
         assertEquals(2, user.getRoles().size());
+    }
+
+    // Tests if deleting a role successfully removes it from user's list of roles without deleting them
+    @Test
+    void deleteRoleCascadeTest() {
+        GenericDao<Role> roleDao = new GenericDao<>(Role.class);
+        Role role = roleDao.getById(1);
+        roleDao.delete(role);
+        User user = dao.getById(3);
+        assertEquals(1, user.getRoles().size());
     }
 }
