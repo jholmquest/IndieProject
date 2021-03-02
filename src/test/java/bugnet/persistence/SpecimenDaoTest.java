@@ -54,8 +54,8 @@ public class SpecimenDaoTest {
      */
     @Test
     void insertTest() {
-        UserDao userDao = new UserDao();
-        User user = userDao.getUserByUsername("testuser");
+        GenericDao<User> userDao = new GenericDao<>(User.class);
+        User user = userDao.getById(1);
         LocalDate date = LocalDate.now();
         Specimen newSpecimen = new Specimen("testbug", "here", date, "hello world", user);
         user.addSpecimen(newSpecimen);
