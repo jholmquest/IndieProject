@@ -63,3 +63,6 @@ Tracking Time Spent Working
 2021-02-28 2:30pm - 3:30pm worked on weekly exercise
 
 2021-02-28 4:30pm - 6:00pm finished getting initial deploy for exercise done
+
+#Week 7
+2021-03-02 1:30pm - 4:00pm fun time with generic dao, getting many to many working
