@@ -9,7 +9,8 @@
 
 ~~Week5: Basic collecting tables working, start working on CRUD~~
 
-Week6: Finish DAO/CRUD stuff
+~~Week6: Finish DAO/CRUD stuff~~
+- testing not fully done
 
 Week7: SECOND CHECKPOINT - DAO, CRUD, Hibernate, Log4j
 Build UI to allow adding specimens
