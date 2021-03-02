@@ -31,4 +31,12 @@ public class RoleTest {
         roles = dao.getAll();
         assertEquals(3, roles.size());
     }
+
+    @Test
+    void insertTest() {
+        Role newRole = new Role("Test Role", 7);
+        int id = dao.insert(newRole);
+        Role createdRole = dao.getById(id);
+        assertEquals(newRole, createdRole);
+    }
 }
