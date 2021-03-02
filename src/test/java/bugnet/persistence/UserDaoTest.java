@@ -13,18 +13,17 @@ import java.util.*;
 
 public class UserDaoTest {
 
-    UserDao dao;
-
+    GenericDao<User> dao;
+    List<User> users;
     /**
      * cleans db, makes a new dao
      */
     @BeforeEach
     void setUp() {
-        dao = new UserDao();
+        dao = new GenericDao<>(User.class);
 
         Database database = Database.getInstance();
-        database.runSQL("cleanUser.sql");
-        database.runSQL("cleanSpecimen.sql");
+        database.runSQL("clean.sql");
     }
 
     /**
@@ -32,7 +31,7 @@ public class UserDaoTest {
      */
     @Test
     void getAllSuccess() {
-        List<User> users = dao.getAllUsers();
+        List<User> users = dao.getAll();
         assertEquals(3, users.size());
     }
 
@@ -42,8 +41,8 @@ public class UserDaoTest {
      */
     @Test
     void getByUsernameTest() {
-        User testUser = dao.getUserByUsername("holmquest");
-        assertEquals(3, testUser.getId());
+        users = dao.findByPropertyEqual("username", "holmquest");
+        assertEquals(3, users.get(0).getId());
     }
 
     /**
@@ -52,9 +51,9 @@ public class UserDaoTest {
     @Test
     void createUserTest() {
         User newUser = new User("createdUser", "eaohgeago");
-        int newId = dao.create(newUser);
+        int newId = dao.insert(newUser);
         assertEquals(newUser.getId(), newId);
-        List<User> users = dao.getAllUsers();
+        List<User> users = dao.getAll();
         assertEquals(4, users.size());
     }
 
@@ -63,10 +62,10 @@ public class UserDaoTest {
      */
     @Test
     void deleteUserTest() {
-        User deletedUser = dao.getUserByUsername("holmquest");
+        User deletedUser = dao.getById(3);
         dao.delete(deletedUser);
-        assertNull(dao.getUserByUsername("holmquest"));
-        List<User> users = dao.getAllUsers();
+        assertNull(dao.getById(3));
+        List<User> users = dao.getAll();
         assertEquals(2, users.size());
     }
 
@@ -75,10 +74,10 @@ public class UserDaoTest {
      */
     @Test
     void updateUserTest() {
-        User userToUpdate = dao.getUserByUsername("holmquest");
+        User userToUpdate = dao.getById(3);
         userToUpdate.setPassword("updated");
         dao.saveOrUpdate(userToUpdate);
-        User updatedUser = dao.getUserByUsername("holmquest");
+        User updatedUser = dao.getById(3);
         assertTrue(updatedUser.equals(userToUpdate));
     }
 
@@ -90,8 +89,8 @@ public class UserDaoTest {
         User newUser = new User("createdUser", "eaohgeago");
         Specimen newSpecimen = new Specimen("testbug", "here", LocalDate.now(), "hello world", newUser);
         newUser.addSpecimen(newSpecimen);
-        dao.create(newUser);
-        User insertedUser = dao.getUserByUsername("createdUser");
+        int id = dao.insert(newUser);
+        User insertedUser = dao.getById(id);
         assertNotNull(insertedUser);
         assertTrue(insertedUser.equals(newUser));
     }

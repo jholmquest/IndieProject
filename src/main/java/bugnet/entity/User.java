@@ -27,7 +27,7 @@ public class User {
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     private Set<Specimen> specimens = new HashSet<>();
 
-    @ManyToMany(targetEntity = Role.class, mappedBy = "users")
+    @ManyToMany(targetEntity = Role.class)
     private List<Role> roles = new ArrayList<Role>();
 
     /**

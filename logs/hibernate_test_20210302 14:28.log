@@ -1,0 +1,783 @@
+[DEBUG] 2021-03-02 14:28:23.629 [main] IntegratorServiceImpl - Adding Integrator [org.hibernate.cfg.beanvalidation.BeanValidationIntegrator].
+[DEBUG] 2021-03-02 14:28:23.662 [main] IntegratorServiceImpl - Adding Integrator [org.hibernate.secure.spi.JaccIntegrator].
+[DEBUG] 2021-03-02 14:28:23.671 [main] IntegratorServiceImpl - Adding Integrator [org.hibernate.cache.internal.CollectionCacheInvalidator].
+[INFO ] 2021-03-02 14:28:23.871 [main] Version - HHH000412: Hibernate Core {5.4.4.Final}
+[DEBUG] 2021-03-02 14:28:23.879 [main] Environment - HHH000206: hibernate.properties not found
+[DEBUG] 2021-03-02 14:28:24.170 [main] LocalXmlResourceResolver - Interpreting public/system identifier : [-//Hibernate/Hibernate Configuration DTD//EN] - [http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd]
+[DEBUG] 2021-03-02 14:28:24.189 [main] LocalXmlResourceResolver - Recognized hibernate-configuration identifier; attempting to resolve on classpath under org/hibernate/
+[DEBUG] 2021-03-02 14:28:24.200 [main] JaxbCfgProcessor - cfg.xml document did not define namespaces; wrapping in custom event reader to introduce namespace information
+[DEBUG] 2021-03-02 14:28:24.635 [main] ServiceBinding - Overriding existing service binding [org.hibernate.secure.spi.JaccService]
+[DEBUG] 2021-03-02 14:28:24.693 [main] RegionFactoryInitiator - Cannot default RegionFactory based on registered strategies as `[]` RegionFactory strategies were registered
+[DEBUG] 2021-03-02 14:28:24.696 [main] RegionFactoryInitiator - Cache region factory : org.hibernate.cache.internal.NoCachingRegionFactory
+[INFO ] 2021-03-02 14:28:24.728 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[DEBUG] 2021-03-02 14:28:24.777 [main] BasicTypeRegistry - Adding type registration boolean -> org.hibernate.type.BooleanType@6dfcffb5
+[DEBUG] 2021-03-02 14:28:24.777 [main] BasicTypeRegistry - Adding type registration boolean -> org.hibernate.type.BooleanType@6dfcffb5
+[DEBUG] 2021-03-02 14:28:24.777 [main] BasicTypeRegistry - Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@6dfcffb5
+[DEBUG] 2021-03-02 14:28:24.778 [main] BasicTypeRegistry - Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@14d8444b
+[DEBUG] 2021-03-02 14:28:24.778 [main] BasicTypeRegistry - Adding type registration true_false -> org.hibernate.type.TrueFalseType@16a49a5d
+[DEBUG] 2021-03-02 14:28:24.779 [main] BasicTypeRegistry - Adding type registration yes_no -> org.hibernate.type.YesNoType@129fed45
+[DEBUG] 2021-03-02 14:28:24.779 [main] BasicTypeRegistry - Adding type registration byte -> org.hibernate.type.ByteType@702c436b
+[DEBUG] 2021-03-02 14:28:24.779 [main] BasicTypeRegistry - Adding type registration byte -> org.hibernate.type.ByteType@702c436b
+[DEBUG] 2021-03-02 14:28:24.784 [main] BasicTypeRegistry - Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@702c436b
+[DEBUG] 2021-03-02 14:28:24.785 [main] BasicTypeRegistry - Adding type registration character -> org.hibernate.type.CharacterType@37303f12
+[DEBUG] 2021-03-02 14:28:24.786 [main] BasicTypeRegistry - Adding type registration char -> org.hibernate.type.CharacterType@37303f12
+[DEBUG] 2021-03-02 14:28:24.786 [main] BasicTypeRegistry - Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@37303f12
+[DEBUG] 2021-03-02 14:28:24.787 [main] BasicTypeRegistry - Adding type registration short -> org.hibernate.type.ShortType@2ab5afc7
+[DEBUG] 2021-03-02 14:28:24.787 [main] BasicTypeRegistry - Adding type registration short -> org.hibernate.type.ShortType@2ab5afc7
+[DEBUG] 2021-03-02 14:28:24.787 [main] BasicTypeRegistry - Adding type registration java.lang.Short -> org.hibernate.type.ShortType@2ab5afc7
+[DEBUG] 2021-03-02 14:28:24.789 [main] BasicTypeRegistry - Adding type registration integer -> org.hibernate.type.IntegerType@3ed03652
+[DEBUG] 2021-03-02 14:28:24.789 [main] BasicTypeRegistry - Adding type registration int -> org.hibernate.type.IntegerType@3ed03652
+[DEBUG] 2021-03-02 14:28:24.792 [main] BasicTypeRegistry - Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@3ed03652
+[DEBUG] 2021-03-02 14:28:24.793 [main] BasicTypeRegistry - Adding type registration long -> org.hibernate.type.LongType@1dc76fa1
+[DEBUG] 2021-03-02 14:28:24.793 [main] BasicTypeRegistry - Adding type registration long -> org.hibernate.type.LongType@1dc76fa1
+[DEBUG] 2021-03-02 14:28:24.796 [main] BasicTypeRegistry - Adding type registration java.lang.Long -> org.hibernate.type.LongType@1dc76fa1
+[DEBUG] 2021-03-02 14:28:24.797 [main] BasicTypeRegistry - Adding type registration float -> org.hibernate.type.FloatType@1e141e42
+[DEBUG] 2021-03-02 14:28:24.797 [main] BasicTypeRegistry - Adding type registration float -> org.hibernate.type.FloatType@1e141e42
+[DEBUG] 2021-03-02 14:28:24.797 [main] BasicTypeRegistry - Adding type registration java.lang.Float -> org.hibernate.type.FloatType@1e141e42
+[DEBUG] 2021-03-02 14:28:24.801 [main] BasicTypeRegistry - Adding type registration double -> org.hibernate.type.DoubleType@2de50ee4
+[DEBUG] 2021-03-02 14:28:24.801 [main] BasicTypeRegistry - Adding type registration double -> org.hibernate.type.DoubleType@2de50ee4
+[DEBUG] 2021-03-02 14:28:24.802 [main] BasicTypeRegistry - Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@2de50ee4
+[DEBUG] 2021-03-02 14:28:24.803 [main] BasicTypeRegistry - Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@4e17913b
+[DEBUG] 2021-03-02 14:28:24.808 [main] BasicTypeRegistry - Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@4e17913b
+[DEBUG] 2021-03-02 14:28:24.809 [main] BasicTypeRegistry - Adding type registration big_integer -> org.hibernate.type.BigIntegerType@3f628ce9
+[DEBUG] 2021-03-02 14:28:24.809 [main] BasicTypeRegistry - Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@3f628ce9
+[DEBUG] 2021-03-02 14:28:24.810 [main] BasicTypeRegistry - Adding type registration string -> org.hibernate.type.StringType@75fc1992
+[DEBUG] 2021-03-02 14:28:24.810 [main] BasicTypeRegistry - Adding type registration java.lang.String -> org.hibernate.type.StringType@75fc1992
+[DEBUG] 2021-03-02 14:28:24.811 [main] BasicTypeRegistry - Adding type registration nstring -> org.hibernate.type.StringNVarcharType@7be7e15
+[DEBUG] 2021-03-02 14:28:24.811 [main] BasicTypeRegistry - Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@4248b963
+[DEBUG] 2021-03-02 14:28:24.812 [main] BasicTypeRegistry - Adding type registration url -> org.hibernate.type.UrlType@706eab5d
+[DEBUG] 2021-03-02 14:28:24.812 [main] BasicTypeRegistry - Adding type registration java.net.URL -> org.hibernate.type.UrlType@706eab5d
+[DEBUG] 2021-03-02 14:28:24.812 [main] BasicTypeRegistry - Adding type registration Duration -> org.hibernate.type.DurationType@61f39bb
+[DEBUG] 2021-03-02 14:28:24.813 [main] BasicTypeRegistry - Adding type registration java.time.Duration -> org.hibernate.type.DurationType@61f39bb
+[DEBUG] 2021-03-02 14:28:24.821 [main] BasicTypeRegistry - Adding type registration Instant -> org.hibernate.type.InstantType@1b4ae4e0
+[DEBUG] 2021-03-02 14:28:24.822 [main] BasicTypeRegistry - Adding type registration java.time.Instant -> org.hibernate.type.InstantType@1b4ae4e0
+[DEBUG] 2021-03-02 14:28:24.823 [main] BasicTypeRegistry - Adding type registration LocalDateTime -> org.hibernate.type.LocalDateTimeType@37d871c2
+[DEBUG] 2021-03-02 14:28:24.823 [main] BasicTypeRegistry - Adding type registration java.time.LocalDateTime -> org.hibernate.type.LocalDateTimeType@37d871c2
+[DEBUG] 2021-03-02 14:28:24.824 [main] BasicTypeRegistry - Adding type registration LocalDate -> org.hibernate.type.LocalDateType@476e8796
+[DEBUG] 2021-03-02 14:28:24.824 [main] BasicTypeRegistry - Adding type registration java.time.LocalDate -> org.hibernate.type.LocalDateType@476e8796
+[DEBUG] 2021-03-02 14:28:24.827 [main] BasicTypeRegistry - Adding type registration LocalTime -> org.hibernate.type.LocalTimeType@61d84e08
+[DEBUG] 2021-03-02 14:28:24.828 [main] BasicTypeRegistry - Adding type registration java.time.LocalTime -> org.hibernate.type.LocalTimeType@61d84e08
+[DEBUG] 2021-03-02 14:28:24.833 [main] BasicTypeRegistry - Adding type registration OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@7397c6
+[DEBUG] 2021-03-02 14:28:24.833 [main] BasicTypeRegistry - Adding type registration java.time.OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@7397c6
+[DEBUG] 2021-03-02 14:28:24.834 [main] BasicTypeRegistry - Adding type registration OffsetTime -> org.hibernate.type.OffsetTimeType@6014a9ba
+[DEBUG] 2021-03-02 14:28:24.835 [main] BasicTypeRegistry - Adding type registration java.time.OffsetTime -> org.hibernate.type.OffsetTimeType@6014a9ba
+[DEBUG] 2021-03-02 14:28:24.836 [main] BasicTypeRegistry - Adding type registration ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@4492eede
+[DEBUG] 2021-03-02 14:28:24.839 [main] BasicTypeRegistry - Adding type registration java.time.ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@4492eede
+[DEBUG] 2021-03-02 14:28:24.840 [main] BasicTypeRegistry - Adding type registration date -> org.hibernate.type.DateType@671facee
+[DEBUG] 2021-03-02 14:28:24.840 [main] BasicTypeRegistry - Adding type registration java.sql.Date -> org.hibernate.type.DateType@671facee
+[DEBUG] 2021-03-02 14:28:24.841 [main] BasicTypeRegistry - Adding type registration time -> org.hibernate.type.TimeType@680a66dd
+[DEBUG] 2021-03-02 14:28:24.841 [main] BasicTypeRegistry - Adding type registration java.sql.Time -> org.hibernate.type.TimeType@680a66dd
+[DEBUG] 2021-03-02 14:28:24.842 [main] BasicTypeRegistry - Adding type registration timestamp -> org.hibernate.type.TimestampType@3f92a84e
+[DEBUG] 2021-03-02 14:28:24.842 [main] BasicTypeRegistry - Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@3f92a84e
+[DEBUG] 2021-03-02 14:28:24.842 [main] BasicTypeRegistry - Adding type registration java.util.Date -> org.hibernate.type.TimestampType@3f92a84e
+[DEBUG] 2021-03-02 14:28:24.844 [main] BasicTypeRegistry - Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@53b8afea
+[DEBUG] 2021-03-02 14:28:24.849 [main] BasicTypeRegistry - Adding type registration calendar -> org.hibernate.type.CalendarType@16eedaa6
+[DEBUG] 2021-03-02 14:28:24.849 [main] BasicTypeRegistry - Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@16eedaa6
+[DEBUG] 2021-03-02 14:28:24.849 [main] BasicTypeRegistry - Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@16eedaa6
+[DEBUG] 2021-03-02 14:28:24.850 [main] BasicTypeRegistry - Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@2bebb74f
+[DEBUG] 2021-03-02 14:28:24.851 [main] BasicTypeRegistry - Adding type registration locale -> org.hibernate.type.LocaleType@3f9f71ff
+[DEBUG] 2021-03-02 14:28:24.852 [main] BasicTypeRegistry - Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@3f9f71ff
+[DEBUG] 2021-03-02 14:28:24.853 [main] BasicTypeRegistry - Adding type registration currency -> org.hibernate.type.CurrencyType@ad3324b
+[DEBUG] 2021-03-02 14:28:24.853 [main] BasicTypeRegistry - Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@ad3324b
+[DEBUG] 2021-03-02 14:28:24.854 [main] BasicTypeRegistry - Adding type registration timezone -> org.hibernate.type.TimeZoneType@48eb9836
+[DEBUG] 2021-03-02 14:28:24.854 [main] BasicTypeRegistry - Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@48eb9836
+[DEBUG] 2021-03-02 14:28:24.855 [main] BasicTypeRegistry - Adding type registration class -> org.hibernate.type.ClassType@74294c1a
+[DEBUG] 2021-03-02 14:28:24.855 [main] BasicTypeRegistry - Adding type registration java.lang.Class -> org.hibernate.type.ClassType@74294c1a
+[DEBUG] 2021-03-02 14:28:24.859 [main] BasicTypeRegistry - Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@e8ea697
+[DEBUG] 2021-03-02 14:28:24.859 [main] BasicTypeRegistry - Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@e8ea697
+[DEBUG] 2021-03-02 14:28:24.859 [main] BasicTypeRegistry - Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@45bf6f39
+[DEBUG] 2021-03-02 14:28:24.860 [main] BasicTypeRegistry - Adding type registration binary -> org.hibernate.type.BinaryType@4867ab9f
+[DEBUG] 2021-03-02 14:28:24.860 [main] BasicTypeRegistry - Adding type registration byte[] -> org.hibernate.type.BinaryType@4867ab9f
+[DEBUG] 2021-03-02 14:28:24.860 [main] BasicTypeRegistry - Adding type registration [B -> org.hibernate.type.BinaryType@4867ab9f
+[DEBUG] 2021-03-02 14:28:24.861 [main] BasicTypeRegistry - Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@46c3a14d
+[DEBUG] 2021-03-02 14:28:24.861 [main] BasicTypeRegistry - Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@46c3a14d
+[DEBUG] 2021-03-02 14:28:24.862 [main] BasicTypeRegistry - Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@46c3a14d
+[DEBUG] 2021-03-02 14:28:24.862 [main] BasicTypeRegistry - Adding type registration row_version -> org.hibernate.type.RowVersionType@1de0a46c
+[DEBUG] 2021-03-02 14:28:24.862 [main] BasicTypeRegistry - Adding type registration image -> org.hibernate.type.ImageType@54f4a7f0
+[DEBUG] 2021-03-02 14:28:24.868 [main] BasicTypeRegistry - Adding type registration characters -> org.hibernate.type.CharArrayType@e9dc4d0
+[DEBUG] 2021-03-02 14:28:24.868 [main] BasicTypeRegistry - Adding type registration char[] -> org.hibernate.type.CharArrayType@e9dc4d0
+[DEBUG] 2021-03-02 14:28:24.868 [main] BasicTypeRegistry - Adding type registration [C -> org.hibernate.type.CharArrayType@e9dc4d0
+[DEBUG] 2021-03-02 14:28:24.869 [main] BasicTypeRegistry - Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@2184b4f4
+[DEBUG] 2021-03-02 14:28:24.869 [main] BasicTypeRegistry - Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@2184b4f4
+[DEBUG] 2021-03-02 14:28:24.870 [main] BasicTypeRegistry - Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@2184b4f4
+[DEBUG] 2021-03-02 14:28:24.870 [main] BasicTypeRegistry - Adding type registration text -> org.hibernate.type.TextType@316a598d
+[DEBUG] 2021-03-02 14:28:24.870 [main] BasicTypeRegistry - Adding type registration ntext -> org.hibernate.type.NTextType@5633dafd
+[DEBUG] 2021-03-02 14:28:24.871 [main] BasicTypeRegistry - Adding type registration blob -> org.hibernate.type.BlobType@d8d9199
+[DEBUG] 2021-03-02 14:28:24.871 [main] BasicTypeRegistry - Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@d8d9199
+[DEBUG] 2021-03-02 14:28:24.871 [main] BasicTypeRegistry - Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@71ad3d8a
+[DEBUG] 2021-03-02 14:28:24.872 [main] BasicTypeRegistry - Adding type registration clob -> org.hibernate.type.ClobType@319c3a25
+[DEBUG] 2021-03-02 14:28:24.875 [main] BasicTypeRegistry - Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@319c3a25
+[DEBUG] 2021-03-02 14:28:24.876 [main] BasicTypeRegistry - Adding type registration nclob -> org.hibernate.type.NClobType@3e17a0a1
+[DEBUG] 2021-03-02 14:28:24.880 [main] BasicTypeRegistry - Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@3e17a0a1
+[DEBUG] 2021-03-02 14:28:24.880 [main] BasicTypeRegistry - Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@161f6623
+[DEBUG] 2021-03-02 14:28:24.881 [main] BasicTypeRegistry - Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@69228e85
+[DEBUG] 2021-03-02 14:28:24.882 [main] BasicTypeRegistry - Adding type registration serializable -> org.hibernate.type.SerializableType@4d192aef
+[DEBUG] 2021-03-02 14:28:24.886 [main] BasicTypeRegistry - Adding type registration object -> org.hibernate.type.ObjectType@1b9776f5
+[DEBUG] 2021-03-02 14:28:24.887 [main] BasicTypeRegistry - Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@1b9776f5
+[DEBUG] 2021-03-02 14:28:24.887 [main] BasicTypeRegistry - Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@1dd7796b
+[DEBUG] 2021-03-02 14:28:24.891 [main] BasicTypeRegistry - Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@67a3bd51
+[DEBUG] 2021-03-02 14:28:24.891 [main] BasicTypeRegistry - Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@57402ba1
+[DEBUG] 2021-03-02 14:28:24.891 [main] BasicTypeRegistry - Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@56913163
+[DEBUG] 2021-03-02 14:28:24.891 [main] BasicTypeRegistry - Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@702b06fb
+[DEBUG] 2021-03-02 14:28:24.891 [main] BasicTypeRegistry - Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@a18649a
+[DEBUG] 2021-03-02 14:28:24.891 [main] BasicTypeRegistry - Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@5c534b5b
+[DEBUG] 2021-03-02 14:28:24.891 [main] BasicTypeRegistry - Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@396639b
+[DEBUG] 2021-03-02 14:28:24.942 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [uuid2] -> [org.hibernate.id.UUIDGenerator]
+[DEBUG] 2021-03-02 14:28:24.943 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [guid] -> [org.hibernate.id.GUIDGenerator]
+[DEBUG] 2021-03-02 14:28:24.945 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [uuid] -> [org.hibernate.id.UUIDHexGenerator]
+[DEBUG] 2021-03-02 14:28:24.945 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [uuid.hex] -> [org.hibernate.id.UUIDHexGenerator]
+[DEBUG] 2021-03-02 14:28:24.947 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [assigned] -> [org.hibernate.id.Assigned]
+[DEBUG] 2021-03-02 14:28:24.948 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [identity] -> [org.hibernate.id.IdentityGenerator]
+[DEBUG] 2021-03-02 14:28:24.948 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [select] -> [org.hibernate.id.SelectGenerator]
+[DEBUG] 2021-03-02 14:28:24.952 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+[DEBUG] 2021-03-02 14:28:24.953 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [seqhilo] -> [org.hibernate.id.SequenceHiLoGenerator]
+[DEBUG] 2021-03-02 14:28:24.953 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [increment] -> [org.hibernate.id.IncrementGenerator]
+[DEBUG] 2021-03-02 14:28:24.954 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [foreign] -> [org.hibernate.id.ForeignGenerator]
+[DEBUG] 2021-03-02 14:28:24.954 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [sequence-identity] -> [org.hibernate.id.SequenceIdentityGenerator]
+[DEBUG] 2021-03-02 14:28:24.954 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [enhanced-sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+[DEBUG] 2021-03-02 14:28:24.955 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [enhanced-table] -> [org.hibernate.id.enhanced.TableGenerator]
+[INFO ] 2021-03-02 14:28:24.961 [main] C3P0ConnectionProvider - HHH010002: C3P0 using driver: com.mysql.cj.jdbc.Driver at URL: jdbc:mysql://localhost:3306/BugNet_Test
+[INFO ] 2021-03-02 14:28:24.961 [main] C3P0ConnectionProvider - HHH10001001: Connection properties: {password=****, user=root}
+[INFO ] 2021-03-02 14:28:24.961 [main] C3P0ConnectionProvider - HHH10001003: Autocommit mode: false
+[INFO ] 2021-03-02 14:28:25.182 [main] C3P0ConnectionProvider - HHH10001007: JDBC isolation level: <unknown>
+[DEBUG] 2021-03-02 14:28:25.406 [main] JdbcEnvironmentInitiator - Database ->
+       name : MySQL
+    version : 8.0.22
+      major : 8
+      minor : 0
+[DEBUG] 2021-03-02 14:28:25.417 [main] JdbcEnvironmentInitiator - Driver ->
+       name : MySQL Connector/J
+    version : mysql-connector-java-8.0.16 (Revision: 34cbc6bc61f72836e26327537a432d6db7c77de6)
+      major : 8
+      minor : 0
+[DEBUG] 2021-03-02 14:28:25.418 [main] JdbcEnvironmentInitiator - JDBC version : 4.2
+[INFO ] 2021-03-02 14:28:25.492 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[DEBUG] 2021-03-02 14:28:25.517 [main] IdentifierHelperBuilder - JDBC driver metadata reported database stores quoted identifiers in more than one case
+[DEBUG] 2021-03-02 14:28:25.560 [main] IdentifierHelperBuilder - IdentifierCaseStrategy for both quoted and unquoted identifiers was set to the same strategy [MIXED]; that will likely lead to problems in schema update and validation if using quoted identifiers
+[DEBUG] 2021-03-02 14:28:25.627 [main] Namespace - Created database namespace [logicalName=Name{catalog=null, schema=null}, physicalName=Name{catalog=null, schema=null}]
+[DEBUG] 2021-03-02 14:28:25.636 [main] TypeConfiguration$Scope - Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@5922d3e9] to MetadataBuildingContext [org.hibernate.boot.internal.MetadataBuildingContextRootImpl@7d57dbb5]
+[DEBUG] 2021-03-02 14:28:25.725 [main] AnnotationBinder - Binding entity from annotated class: bugnet.entity.User
+[DEBUG] 2021-03-02 14:28:25.763 [main] Ejb3Column - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+[DEBUG] 2021-03-02 14:28:25.770 [main] EntityBinder - Import with entity name User
+[DEBUG] 2021-03-02 14:28:25.775 [main] EntityBinder - Bind entity bugnet.entity.User on table user
+[DEBUG] 2021-03-02 14:28:25.817 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user), mappingColumn=id, insertable=true, updatable=true, unique=false}
+[DEBUG] 2021-03-02 14:28:25.823 [main] PropertyBinder - MetadataSourceProcessor property id with lazy=false
+[DEBUG] 2021-03-02 14:28:25.829 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [bugnet.entity.User:id]
+[DEBUG] 2021-03-02 14:28:25.830 [main] SimpleValueBinder - building SimpleValue for id
+[DEBUG] 2021-03-02 14:28:25.832 [main] PropertyBinder - Building property id
+[DEBUG] 2021-03-02 14:28:25.835 [main] BinderHelper - #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(id)]), id, org.hibernate.id.enhanced.SequenceStyleGenerator, native, ...)
+[DEBUG] 2021-03-02 14:28:25.842 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user), mappingColumn=password, insertable=true, updatable=true, unique=false}
+[DEBUG] 2021-03-02 14:28:25.845 [main] PropertyBinder - MetadataSourceProcessor property password with lazy=false
+[DEBUG] 2021-03-02 14:28:25.845 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [bugnet.entity.User:password]
+[DEBUG] 2021-03-02 14:28:25.846 [main] SimpleValueBinder - building SimpleValue for password
+[DEBUG] 2021-03-02 14:28:25.846 [main] PropertyBinder - Building property password
+[DEBUG] 2021-03-02 14:28:25.849 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user), mappingColumn=null, insertable=true, updatable=true, unique=false}
+[DEBUG] 2021-03-02 14:28:25.863 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user), mappingColumn=element, insertable=true, updatable=true, unique=false}
+[DEBUG] 2021-03-02 14:28:25.867 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user), mappingColumn=roles_KEY, insertable=true, updatable=true, unique=false}
+[DEBUG] 2021-03-02 14:28:25.869 [main] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='roles_KEY', referencedColumn='null', mappedBy='null'}
+[DEBUG] 2021-03-02 14:28:25.870 [main] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy=''}
+[DEBUG] 2021-03-02 14:28:25.870 [main] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy=''}
+[DEBUG] 2021-03-02 14:28:25.872 [main] CollectionBinder - Collection role: bugnet.entity.User.roles
+[DEBUG] 2021-03-02 14:28:25.883 [main] PropertyBinder - Building property roles
+[DEBUG] 2021-03-02 14:28:25.884 [main] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='user'}
+[DEBUG] 2021-03-02 14:28:25.884 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user), mappingColumn=specimens, insertable=true, updatable=true, unique=false}
+[DEBUG] 2021-03-02 14:28:25.884 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user), mappingColumn=null, insertable=true, updatable=true, unique=false}
+[DEBUG] 2021-03-02 14:28:25.884 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user), mappingColumn=element, insertable=true, updatable=true, unique=false}
+[DEBUG] 2021-03-02 14:28:25.884 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user), mappingColumn=specimens_KEY, insertable=true, updatable=true, unique=false}
+[DEBUG] 2021-03-02 14:28:25.884 [main] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='specimens_KEY', referencedColumn='null', mappedBy='null'}
+[DEBUG] 2021-03-02 14:28:25.885 [main] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='user'}
+[DEBUG] 2021-03-02 14:28:25.885 [main] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='user'}
+[DEBUG] 2021-03-02 14:28:25.885 [main] CollectionBinder - Collection role: bugnet.entity.User.specimens
+[DEBUG] 2021-03-02 14:28:25.885 [main] PropertyBinder - Building property specimens
+[DEBUG] 2021-03-02 14:28:25.885 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user), mappingColumn=username, insertable=true, updatable=true, unique=false}
+[DEBUG] 2021-03-02 14:28:25.886 [main] PropertyBinder - MetadataSourceProcessor property username with lazy=false
+[DEBUG] 2021-03-02 14:28:25.886 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [bugnet.entity.User:username]
+[DEBUG] 2021-03-02 14:28:25.886 [main] SimpleValueBinder - building SimpleValue for username
+[DEBUG] 2021-03-02 14:28:25.886 [main] PropertyBinder - Building property username
+[DEBUG] 2021-03-02 14:28:25.887 [main] AnnotationBinder - Binding entity from annotated class: bugnet.entity.Specimen
+[DEBUG] 2021-03-02 14:28:25.887 [main] Ejb3Column - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+[DEBUG] 2021-03-02 14:28:25.887 [main] EntityBinder - Import with entity name Specimen
+[DEBUG] 2021-03-02 14:28:25.887 [main] EntityBinder - Bind entity bugnet.entity.Specimen on table specimen
+[DEBUG] 2021-03-02 14:28:25.901 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(specimen), mappingColumn=id, insertable=true, updatable=true, unique=false}
+[DEBUG] 2021-03-02 14:28:25.902 [main] PropertyBinder - MetadataSourceProcessor property id with lazy=false
+[DEBUG] 2021-03-02 14:28:25.902 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [bugnet.entity.Specimen:id]
+[DEBUG] 2021-03-02 14:28:25.902 [main] SimpleValueBinder - building SimpleValue for id
+[DEBUG] 2021-03-02 14:28:25.902 [main] PropertyBinder - Building property id
+[DEBUG] 2021-03-02 14:28:25.902 [main] BinderHelper - #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(id)]), id, org.hibernate.id.enhanced.SequenceStyleGenerator, native, ...)
+[DEBUG] 2021-03-02 14:28:25.906 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(specimen), mappingColumn=determination, insertable=true, updatable=true, unique=false}
+[DEBUG] 2021-03-02 14:28:25.907 [main] PropertyBinder - MetadataSourceProcessor property bugName with lazy=false
+[DEBUG] 2021-03-02 14:28:25.907 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [bugnet.entity.Specimen:bugName]
+[DEBUG] 2021-03-02 14:28:25.907 [main] SimpleValueBinder - building SimpleValue for bugName
+[DEBUG] 2021-03-02 14:28:25.907 [main] PropertyBinder - Building property bugName
+[DEBUG] 2021-03-02 14:28:25.910 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(specimen), mappingColumn=notes, insertable=true, updatable=true, unique=false}
+[DEBUG] 2021-03-02 14:28:25.910 [main] PropertyBinder - MetadataSourceProcessor property bugNotes with lazy=false
+[DEBUG] 2021-03-02 14:28:25.910 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [bugnet.entity.Specimen:bugNotes]
+[DEBUG] 2021-03-02 14:28:25.910 [main] SimpleValueBinder - building SimpleValue for bugNotes
+[DEBUG] 2021-03-02 14:28:25.911 [main] PropertyBinder - Building property bugNotes
+[DEBUG] 2021-03-02 14:28:25.911 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(specimen), mappingColumn=date, insertable=true, updatable=true, unique=false}
+[DEBUG] 2021-03-02 14:28:25.911 [main] PropertyBinder - MetadataSourceProcessor property collectedDate with lazy=false
+[DEBUG] 2021-03-02 14:28:25.911 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [bugnet.entity.Specimen:collectedDate]
+[DEBUG] 2021-03-02 14:28:25.911 [main] SimpleValueBinder - building SimpleValue for collectedDate
+[DEBUG] 2021-03-02 14:28:25.911 [main] PropertyBinder - Building property collectedDate
+[DEBUG] 2021-03-02 14:28:25.911 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(specimen), mappingColumn=location, insertable=true, updatable=true, unique=false}
+[DEBUG] 2021-03-02 14:28:25.911 [main] PropertyBinder - MetadataSourceProcessor property collectedLocation with lazy=false
+[DEBUG] 2021-03-02 14:28:25.911 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [bugnet.entity.Specimen:collectedLocation]
+[DEBUG] 2021-03-02 14:28:25.911 [main] SimpleValueBinder - building SimpleValue for collectedLocation
+[DEBUG] 2021-03-02 14:28:25.911 [main] PropertyBinder - Building property collectedLocation
+[DEBUG] 2021-03-02 14:28:25.912 [main] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='user_id', referencedColumn='', mappedBy=''}
+[DEBUG] 2021-03-02 14:28:25.912 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(specimen), mappingColumn=user, insertable=true, updatable=true, unique=false}
+[DEBUG] 2021-03-02 14:28:25.918 [main] PropertyBinder - Building property user
+[DEBUG] 2021-03-02 14:28:25.919 [main] AnnotationBinder - Binding entity from annotated class: bugnet.entity.Role
+[DEBUG] 2021-03-02 14:28:25.919 [main] Ejb3Column - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+[DEBUG] 2021-03-02 14:28:25.919 [main] EntityBinder - Import with entity name Role
+[DEBUG] 2021-03-02 14:28:25.919 [main] EntityBinder - Bind entity bugnet.entity.Role on table role
+[DEBUG] 2021-03-02 14:28:25.921 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(role), mappingColumn=id, insertable=true, updatable=true, unique=false}
+[DEBUG] 2021-03-02 14:28:25.926 [main] PropertyBinder - MetadataSourceProcessor property id with lazy=false
+[DEBUG] 2021-03-02 14:28:25.926 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [bugnet.entity.Role:id]
+[DEBUG] 2021-03-02 14:28:25.926 [main] SimpleValueBinder - building SimpleValue for id
+[DEBUG] 2021-03-02 14:28:25.926 [main] PropertyBinder - Building property id
+[DEBUG] 2021-03-02 14:28:25.928 [main] BinderHelper - #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(id)]), id, org.hibernate.id.enhanced.SequenceStyleGenerator, native, ...)
+[DEBUG] 2021-03-02 14:28:25.929 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(role), mappingColumn=role_level, insertable=true, updatable=true, unique=false}
+[DEBUG] 2021-03-02 14:28:25.929 [main] PropertyBinder - MetadataSourceProcessor property roleLevel with lazy=false
+[DEBUG] 2021-03-02 14:28:25.929 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [bugnet.entity.Role:roleLevel]
+[DEBUG] 2021-03-02 14:28:25.929 [main] SimpleValueBinder - building SimpleValue for roleLevel
+[DEBUG] 2021-03-02 14:28:25.929 [main] PropertyBinder - Building property roleLevel
+[DEBUG] 2021-03-02 14:28:25.929 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(role), mappingColumn=role_name, insertable=true, updatable=true, unique=false}
+[DEBUG] 2021-03-02 14:28:25.929 [main] PropertyBinder - MetadataSourceProcessor property roleName with lazy=false
+[DEBUG] 2021-03-02 14:28:25.929 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [bugnet.entity.Role:roleName]
+[DEBUG] 2021-03-02 14:28:25.929 [main] SimpleValueBinder - building SimpleValue for roleName
+[DEBUG] 2021-03-02 14:28:25.929 [main] PropertyBinder - Building property roleName
+[DEBUG] 2021-03-02 14:28:25.930 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(role), mappingColumn=null, insertable=true, updatable=true, unique=false}
+[DEBUG] 2021-03-02 14:28:25.930 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(role), mappingColumn=element, insertable=true, updatable=true, unique=false}
+[DEBUG] 2021-03-02 14:28:25.930 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(role), mappingColumn=users_KEY, insertable=true, updatable=true, unique=false}
+[DEBUG] 2021-03-02 14:28:25.930 [main] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='users_KEY', referencedColumn='null', mappedBy='null'}
+[DEBUG] 2021-03-02 14:28:25.931 [main] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='roles'}
+[DEBUG] 2021-03-02 14:28:25.931 [main] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='roles'}
+[DEBUG] 2021-03-02 14:28:25.932 [main] CollectionBinder - Collection role: bugnet.entity.Role.users
+[DEBUG] 2021-03-02 14:28:25.932 [main] PropertyBinder - Building property users
+[DEBUG] 2021-03-02 14:28:25.933 [main] SimpleValueBinder - Starting fillSimpleValue for id
+[DEBUG] 2021-03-02 14:28:25.934 [main] SimpleValueBinder - Starting fillSimpleValue for password
+[DEBUG] 2021-03-02 14:28:25.934 [main] SimpleValueBinder - Starting fillSimpleValue for username
+[DEBUG] 2021-03-02 14:28:25.934 [main] SimpleValueBinder - Starting fillSimpleValue for id
+[DEBUG] 2021-03-02 14:28:25.935 [main] SimpleValueBinder - Starting fillSimpleValue for bugName
+[DEBUG] 2021-03-02 14:28:25.937 [main] SimpleValueBinder - Starting fillSimpleValue for bugNotes
+[DEBUG] 2021-03-02 14:28:25.939 [main] SimpleValueBinder - Starting fillSimpleValue for collectedDate
+[DEBUG] 2021-03-02 14:28:25.940 [main] SimpleValueBinder - Starting fillSimpleValue for collectedLocation
+[DEBUG] 2021-03-02 14:28:25.940 [main] SimpleValueBinder - Starting fillSimpleValue for id
+[DEBUG] 2021-03-02 14:28:25.940 [main] SimpleValueBinder - Starting fillSimpleValue for roleLevel
+[DEBUG] 2021-03-02 14:28:25.940 [main] SimpleValueBinder - Starting fillSimpleValue for roleName
+[DEBUG] 2021-03-02 14:28:25.945 [main] PrimaryKey - Forcing column [id] to be non-null as it is part of the primary key for table [user]
+[DEBUG] 2021-03-02 14:28:25.945 [main] PrimaryKey - Forcing column [id] to be non-null as it is part of the primary key for table [specimen]
+[DEBUG] 2021-03-02 14:28:25.945 [main] PrimaryKey - Forcing column [id] to be non-null as it is part of the primary key for table [role]
+[DEBUG] 2021-03-02 14:28:25.945 [main] CollectionSecondPass - Second pass for collection: bugnet.entity.User.roles
+[DEBUG] 2021-03-02 14:28:25.945 [main] CollectionBinder - Binding as ManyToMany: bugnet.entity.User.roles
+[DEBUG] 2021-03-02 14:28:25.953 [main] CollectionSecondPass - Mapped collection key: users_id, element: roles_id
+[DEBUG] 2021-03-02 14:28:25.954 [main] CollectionSecondPass - Second pass for collection: bugnet.entity.User.specimens
+[DEBUG] 2021-03-02 14:28:25.954 [main] CollectionBinder - Binding a OneToMany: bugnet.entity.User.specimens through a foreign key
+[DEBUG] 2021-03-02 14:28:25.954 [main] CollectionBinder - Mapping collection: bugnet.entity.User.specimens -> specimen
+[DEBUG] 2021-03-02 14:28:25.954 [main] TableBinder - Retrieving property bugnet.entity.Specimen.user
+[DEBUG] 2021-03-02 14:28:25.955 [main] CollectionSecondPass - Mapped collection key: user_id, one-to-many: bugnet.entity.Specimen
+[DEBUG] 2021-03-02 14:28:25.955 [main] CollectionSecondPass - Second pass for collection: bugnet.entity.Role.users
+[DEBUG] 2021-03-02 14:28:25.955 [main] CollectionBinder - Binding as ManyToMany: bugnet.entity.Role.users
+[DEBUG] 2021-03-02 14:28:25.955 [main] TableBinder - Retrieving property bugnet.entity.User.roles
+[DEBUG] 2021-03-02 14:28:25.955 [main] CollectionSecondPass - Mapped collection key: roles_id, element: users_id
+[DEBUG] 2021-03-02 14:28:25.955 [main] InFlightMetadataCollectorImpl - Resolving reference to class: bugnet.entity.User
+[DEBUG] 2021-03-02 14:28:25.955 [main] InFlightMetadataCollectorImpl - Resolving reference to class: bugnet.entity.Role
+[DEBUG] 2021-03-02 14:28:25.963 [main] InFlightMetadataCollectorImpl - Resolving reference to class: bugnet.entity.User
+[DEBUG] 2021-03-02 14:28:25.965 [main] InFlightMetadataCollectorImpl - Resolving reference to class: bugnet.entity.User
+[DEBUG] 2021-03-02 14:28:25.965 [main] InFlightMetadataCollectorImpl - Resolving reference to class: bugnet.entity.Role
+[DEBUG] 2021-03-02 14:28:25.966 [main] InFlightMetadataCollectorImpl - Resolving reference to class: bugnet.entity.User
+[DEBUG] 2021-03-02 14:28:26.008 [main] SessionFactoryImpl - Building session factory
+[DEBUG] 2021-03-02 14:28:26.010 [main] Settings - SessionFactory name : null
+[DEBUG] 2021-03-02 14:28:26.011 [main] Settings - Automatic flush during beforeCompletion(): enabled
+[DEBUG] 2021-03-02 14:28:26.011 [main] Settings - Automatic session close at end of transaction: disabled
+[DEBUG] 2021-03-02 14:28:26.011 [main] Settings - Statistics: disabled
+[DEBUG] 2021-03-02 14:28:26.011 [main] Settings - Deleted entity synthetic identifier rollback: disabled
+[DEBUG] 2021-03-02 14:28:26.011 [main] Settings - Default entity-mode: pojo
+[DEBUG] 2021-03-02 14:28:26.011 [main] Settings - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+[DEBUG] 2021-03-02 14:28:26.011 [main] Settings - Allow initialization of lazy state outside session : disabled
+[DEBUG] 2021-03-02 14:28:26.011 [main] Settings - Using BatchFetchStyle : LEGACY
+[DEBUG] 2021-03-02 14:28:26.011 [main] Settings - Default batch fetch size: -1
+[DEBUG] 2021-03-02 14:28:26.011 [main] Settings - Maximum outer join fetch depth: 2
+[DEBUG] 2021-03-02 14:28:26.011 [main] Settings - Default null ordering: NONE
+[DEBUG] 2021-03-02 14:28:26.011 [main] Settings - Order SQL updates by primary key: disabled
+[DEBUG] 2021-03-02 14:28:26.011 [main] Settings - Order SQL inserts for batching: disabled
+[DEBUG] 2021-03-02 14:28:26.011 [main] Settings - multi-tenancy strategy : NONE
+[DEBUG] 2021-03-02 14:28:26.011 [main] Settings - JTA Track by Thread: enabled
+[DEBUG] 2021-03-02 14:28:26.011 [main] Settings - Query language substitutions: {}
+[DEBUG] 2021-03-02 14:28:26.011 [main] Settings - Named query checking : enabled
+[DEBUG] 2021-03-02 14:28:26.011 [main] Settings - Second-level cache: disabled
+[DEBUG] 2021-03-02 14:28:26.011 [main] Settings - Second-level query cache: disabled
+[DEBUG] 2021-03-02 14:28:26.015 [main] Settings - Second-level query cache factory: null
+[DEBUG] 2021-03-02 14:28:26.015 [main] Settings - Second-level cache region prefix: null
+[DEBUG] 2021-03-02 14:28:26.015 [main] Settings - Optimize second-level cache for minimal puts: disabled
+[DEBUG] 2021-03-02 14:28:26.016 [main] Settings - Structured second-level cache entries: disabled
+[DEBUG] 2021-03-02 14:28:26.016 [main] Settings - Second-level cache direct-reference entries: disabled
+[DEBUG] 2021-03-02 14:28:26.016 [main] Settings - Automatic eviction of collection cache: disabled
+[DEBUG] 2021-03-02 14:28:26.016 [main] Settings - JDBC batch size: 15
+[DEBUG] 2021-03-02 14:28:26.016 [main] Settings - JDBC batch updates for versioned data: enabled
+[DEBUG] 2021-03-02 14:28:26.016 [main] Settings - Scrollable result sets: enabled
+[DEBUG] 2021-03-02 14:28:26.016 [main] Settings - Wrap result sets: disabled
+[DEBUG] 2021-03-02 14:28:26.016 [main] Settings - JDBC3 getGeneratedKeys(): enabled
+[DEBUG] 2021-03-02 14:28:26.016 [main] Settings - JDBC result set fetch size: null
+[DEBUG] 2021-03-02 14:28:26.016 [main] Settings - Connection release mode: AFTER_TRANSACTION
+[DEBUG] 2021-03-02 14:28:26.016 [main] Settings - Generate SQL with comments: disabled
+[DEBUG] 2021-03-02 14:28:26.016 [main] Settings - JPA compliance - query : 
+[DEBUG] 2021-03-02 14:28:26.016 [main] Settings - JPA compliance - closed-handling : 
+[DEBUG] 2021-03-02 14:28:26.024 [main] Settings - JPA compliance - lists : 
+[DEBUG] 2021-03-02 14:28:26.024 [main] Settings - JPA compliance - transactions : 
+[INFO ] 2021-03-02 14:28:26.074 [main] beans - HHH10005002: No explicit CDI BeanManager reference was passed to Hibernate, but CDI is available on the Hibernate ClassLoader.
+[DEBUG] 2021-03-02 14:28:26.112 [main] SessionFactoryImpl - Session factory constructed with filter configurations : {}
+[DEBUG] 2021-03-02 14:28:26.112 [main] SessionFactoryImpl - Instantiating session factory with properties: {sun.desktop=gnome, awt.toolkit=sun.awt.X11.XToolkit, java.specification.version=11, sun.cpu.isalist=, hibernate.c3p0.idle_test_period=3000, sun.jnu.encoding=UTF-8, hibernate.c3p0.min_size=5, java.class.path=/home/student/intellij/lib/idea_rt.jar:/home/student/intellij/plugins/junit/lib/junit5-rt.jar:/home/student/intellij/plugins/junit/lib/junit-rt.jar:/home/student/IdeaProjects/IndieProject/target/test-classes:/home/student/IdeaProjects/IndieProject/target/classes:/home/student/.m2/repository/org/junit/platform/junit-platform-runner/1.0.0/junit-platform-runner-1.0.0.jar:/home/student/.m2/repository/org/apiguardian/apiguardian-api/1.0.0/apiguardian-api-1.0.0.jar:/home/student/.m2/repository/org/junit/platform/junit-platform-launcher/1.0.0/junit-platform-launcher-1.0.0.jar:/home/student/.m2/repository/org/junit/platform/junit-platform-suite-api/1.0.0/junit-platform-suite-api-1.0.0.jar:/home/student/.m2/repository/org/junit/platform/junit-platform-commons/1.0.0/junit-platform-commons-1.0.0.jar:/home/student/.m2/repository/org/junit/vintage/junit-vintage-engine/4.12.0/junit-vintage-engine-4.12.0.jar:/home/student/.m2/repository/org/junit/platform/junit-platform-engine/1.0.0/junit-platform-engine-1.0.0.jar:/home/student/.m2/repository/org/opentest4j/opentest4j/1.0.0/opentest4j-1.0.0.jar:/home/student/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.0.0/junit-jupiter-engine-5.0.0.jar:/home/student/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.0.0/junit-jupiter-api-5.0.0.jar:/home/student/.m2/repository/junit/junit/4.12/junit-4.12.jar:/home/student/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/student/.m2/repository/javax/javaee-web-api/7.0/javaee-web-api-7.0.jar:/home/student/.m2/repository/mysql/mysql-connector-java/8.0.16/mysql-connector-java-8.0.16.jar:/home/student/.m2/repository/com/google/protobuf/protobuf-java/3.6.1/protobuf-java-3.6.1.jar:/home/student/.m2/repository/jstl/jstl/1.2/jstl-1.2.jar:/home/student/.m2/repository/org/apache/logging/log4j/log4j-api/2.10.0/log4j-api-2.10.0.jar:/home/student/.m2/repository/org/apache/logging/log4j/log4j-core/2.10.0/log4j-core-2.10.0.jar:/home/student/.m2/repository/org/hibernate/hibernate-core/5.4.4.Final/hibernate-core-5.4.4.Final.jar:/home/student/.m2/repository/org/jboss/logging/jboss-logging/3.3.2.Final/jboss-logging-3.3.2.Final.jar:/home/student/.m2/repository/javax/persistence/javax.persistence-api/2.2/javax.persistence-api-2.2.jar:/home/student/.m2/repository/org/javassist/javassist/3.24.0-GA/javassist-3.24.0-GA.jar:/home/student/.m2/repository/net/bytebuddy/byte-buddy/1.9.11/byte-buddy-1.9.11.jar:/home/student/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar:/home/student/.m2/repository/org/jboss/spec/javax/transaction/jboss-transaction-api_1.2_spec/1.1.1.Final/jboss-transaction-api_1.2_spec-1.1.1.Final.jar:/home/student/.m2/repository/org/jboss/jandex/2.0.5.Final/jandex-2.0.5.Final.jar:/home/student/.m2/repository/com/fasterxml/classmate/1.3.4/classmate-1.3.4.jar:/home/student/.m2/repository/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.jar:/home/student/.m2/repository/org/dom4j/dom4j/2.1.1/dom4j-2.1.1.jar:/home/student/.m2/repository/org/hibernate/common/hibernate-commons-annotations/5.1.0.Final/hibernate-commons-annotations-5.1.0.Final.jar:/home/student/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar:/home/student/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.1/jaxb-runtime-2.3.1.jar:/home/student/.m2/repository/org/glassfish/jaxb/txw2/2.3.1/txw2-2.3.1.jar:/home/student/.m2/repository/com/sun/istack/istack-commons-runtime/3.0.7/istack-commons-runtime-3.0.7.jar:/home/student/.m2/repository/org/jvnet/staxex/stax-ex/1.8/stax-ex-1.8.jar:/home/student/.m2/repository/com/sun/xml/fastinfoset/FastInfoset/1.2.15/FastInfoset-1.2.15.jar:/home/student/.m2/repository/org/hibernate/hibernate-c3p0/5.4.4.Final/hibernate-c3p0-5.4.4.Final.jar:/home/student/.m2/repository/com/mchange/c3p0/0.9.5.3/c3p0-0.9.5.3.jar:/home/student/.m2/repository/com/mchange/mchange-commons-java/0.2.15/mchange-commons-java-0.2.15.jar, java.vm.vendor=Ubuntu, sun.arch.data.model=64, idea.test.cyclic.buffer.size=1048576, java.vendor.url=https://ubuntu.com/, user.timezone=America/Chicago, os.name=Linux, java.vm.specification.version=11, sun.java.launcher=SUN_STANDARD, user.country=US, sun.boot.library.path=/usr/lib/jvm/java-11-openjdk-amd64/lib, sun.java.command=com.intellij.rt.junit.JUnitStarter -ideVersion5 -junit5 bugnet.persistence.UserDaoTest,getByUsernameTest, jdk.debug=release, sun.cpu.endian=little, user.home=/home/student, hibernate.c3p0.max_statements=50, user.language=en, java.specification.vendor=Oracle Corporation, java.version.date=2021-01-19, java.home=/usr/lib/jvm/java-11-openjdk-amd64, file.separator=/, java.vm.compressedOopsMode=32-bit, line.separator=
+, hibernate.c3p0.timeout=300, java.specification.name=Java Platform API Specification, java.vm.specification.vendor=Oracle Corporation, java.awt.graphicsenv=sun.awt.X11GraphicsEnvironment, connection.password=student, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, hibernate.c3p0.max_size=20, java.runtime.version=11.0.10+9-Ubuntu-0ubuntu1.20.04, user.name=student, path.separator=:, hibernate.connection.username=****, os.version=5.4.0-65-generic, java.runtime.name=OpenJDK Runtime Environment, hibernate.connection.url=jdbc:mysql://localhost:3306/BugNet_Test, file.encoding=UTF-8, java.vm.name=OpenJDK 64-Bit Server VM, hibernate.connection.driver_class=com.mysql.cj.jdbc.Driver, java.vendor.url.bug=https://bugs.launchpad.net/ubuntu/+source/openjdk-lts, java.io.tmpdir=/tmp, java.version=11.0.10, user.dir=/home/student/IdeaProjects/IndieProject, os.arch=amd64, connection.username=root, java.vm.specification.name=Java Virtual Machine Specification, java.awt.printerjob=sun.print.PSPrinterJob, hibernate.connection.password=****, sun.os.patch.level=unknown, connection.driver_class=com.mysql.cj.jdbc.Driver, hibernate.boot.CfgXmlAccessService.key=org.hibernate.boot.cfgxml.spi.LoadedConfig@47272cd3, java.library.path=/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib, java.vendor=Ubuntu, java.vm.info=mixed mode, sharing, java.vm.version=11.0.10+9-Ubuntu-0ubuntu1.20.04, hibernate.bytecode.use_reflection_optimizer=false, sun.io.unicode.encoding=UnicodeLittle, connection.url=jdbc:mysql://localhost:3306/BugNet_Test, java.class.version=55.0}
+[DEBUG] 2021-03-02 14:28:26.147 [main] TypeSafeActivator - Unable to acquire Bean Validation ValidatorFactory, skipping activation
+[DEBUG] 2021-03-02 14:28:26.147 [main] JaccIntegrator - Skipping JACC integration as it was not enabled
+[DEBUG] 2021-03-02 14:28:26.148 [main] SessionFactoryImpl - Instantiated session factory
+[DEBUG] 2021-03-02 14:28:26.148 [main] TypeConfiguration$Scope - Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@5922d3e9] to SessionFactoryImpl [org.hibernate.internal.SessionFactoryImpl@307e4c44]
+[DEBUG] 2021-03-02 14:28:26.255 [main] ClassLoaderAccessImpl - Not known whether passed class name [bugnet.entity.Specimen] is safe
+[DEBUG] 2021-03-02 14:28:26.256 [main] ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : bugnet.entity.Specimen
+[DEBUG] 2021-03-02 14:28:26.282 [main] ClassLoaderAccessImpl - Not known whether passed class name [bugnet.entity.Specimen] is safe
+[DEBUG] 2021-03-02 14:28:26.283 [main] ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : bugnet.entity.Specimen
+[DEBUG] 2021-03-02 14:28:26.680 [main] ClassLoaderAccessImpl - Not known whether passed class name [bugnet.entity.User] is safe
+[DEBUG] 2021-03-02 14:28:26.681 [main] ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : bugnet.entity.User
+[DEBUG] 2021-03-02 14:28:26.682 [main] ClassLoaderAccessImpl - Not known whether passed class name [bugnet.entity.User] is safe
+[DEBUG] 2021-03-02 14:28:26.682 [main] ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : bugnet.entity.User
+[DEBUG] 2021-03-02 14:28:26.753 [main] ClassLoaderAccessImpl - Not known whether passed class name [bugnet.entity.Role] is safe
+[DEBUG] 2021-03-02 14:28:26.753 [main] ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : bugnet.entity.Role
+[DEBUG] 2021-03-02 14:28:26.754 [main] ClassLoaderAccessImpl - Not known whether passed class name [bugnet.entity.Role] is safe
+[DEBUG] 2021-03-02 14:28:26.754 [main] ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : bugnet.entity.Role
+[DEBUG] 2021-03-02 14:28:26.812 [main] AbstractCollectionPersister - Static SQL for collection: bugnet.entity.User.specimens
+[DEBUG] 2021-03-02 14:28:26.813 [main] AbstractCollectionPersister -  Row insert: update specimen set user_id=? where id=?
+[DEBUG] 2021-03-02 14:28:26.813 [main] AbstractCollectionPersister -  Row update: update specimen set  where id=?
+[DEBUG] 2021-03-02 14:28:26.813 [main] AbstractCollectionPersister -  Row delete: update specimen set user_id=null where user_id=? and id=?
+[DEBUG] 2021-03-02 14:28:26.813 [main] AbstractCollectionPersister -  One-shot delete: update specimen set user_id=null where user_id=?
+[DEBUG] 2021-03-02 14:28:26.814 [main] AbstractCollectionPersister - Static SQL for collection: bugnet.entity.Role.users
+[DEBUG] 2021-03-02 14:28:26.814 [main] AbstractCollectionPersister -  Row insert: insert into user_role (roles_id, users_id) values (?, ?)
+[DEBUG] 2021-03-02 14:28:26.814 [main] AbstractCollectionPersister -  Row update: update user_role set users_id=? where roles_id=? and users_id=?
+[DEBUG] 2021-03-02 14:28:26.814 [main] AbstractCollectionPersister -  Row delete: delete from user_role where roles_id=? and users_id=?
+[DEBUG] 2021-03-02 14:28:26.814 [main] AbstractCollectionPersister -  One-shot delete: delete from user_role where roles_id=?
+[DEBUG] 2021-03-02 14:28:26.815 [main] AbstractCollectionPersister - Static SQL for collection: bugnet.entity.User.roles
+[DEBUG] 2021-03-02 14:28:26.815 [main] AbstractCollectionPersister -  Row insert: insert into user_role (users_id, roles_id) values (?, ?)
+[DEBUG] 2021-03-02 14:28:26.815 [main] AbstractCollectionPersister -  Row update: update user_role set roles_id=? where users_id=? and roles_id=?
+[DEBUG] 2021-03-02 14:28:26.815 [main] AbstractCollectionPersister -  Row delete: delete from user_role where users_id=? and roles_id=?
+[DEBUG] 2021-03-02 14:28:26.815 [main] AbstractCollectionPersister -  One-shot delete: delete from user_role where users_id=?
+[DEBUG] 2021-03-02 14:28:26.830 [main] AbstractEntityPersister - Static SQL for entity: bugnet.entity.Specimen
+[DEBUG] 2021-03-02 14:28:26.830 [main] AbstractEntityPersister -  Version select: select id from specimen where id =?
+[DEBUG] 2021-03-02 14:28:26.830 [main] AbstractEntityPersister -  Snapshot select: select specimen_.id, specimen_.determination as determin2_1_, specimen_.notes as notes3_1_, specimen_.date as date4_1_, specimen_.location as location5_1_, specimen_.user_id as user_id6_1_ from specimen specimen_ where specimen_.id=?
+[DEBUG] 2021-03-02 14:28:26.830 [main] AbstractEntityPersister -  Insert 0: insert into specimen (determination, notes, date, location, user_id, id) values (?, ?, ?, ?, ?, ?)
+[DEBUG] 2021-03-02 14:28:26.830 [main] AbstractEntityPersister -  Update 0: update specimen set determination=?, notes=?, date=?, location=?, user_id=? where id=?
+[DEBUG] 2021-03-02 14:28:26.830 [main] AbstractEntityPersister -  Delete 0: delete from specimen where id=?
+[DEBUG] 2021-03-02 14:28:26.830 [main] AbstractEntityPersister -  Identity insert: insert into specimen (determination, notes, date, location, user_id) values (?, ?, ?, ?, ?)
+[DEBUG] 2021-03-02 14:28:26.869 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@39d77de9]
+[DEBUG] 2021-03-02 14:28:26.870 [main] MetamodelGraphWalker - Visiting attribute path : bugName
+[DEBUG] 2021-03-02 14:28:26.870 [main] MetamodelGraphWalker - Visiting attribute path : bugNotes
+[DEBUG] 2021-03-02 14:28:26.870 [main] MetamodelGraphWalker - Visiting attribute path : collectedDate
+[DEBUG] 2021-03-02 14:28:26.870 [main] MetamodelGraphWalker - Visiting attribute path : collectedLocation
+[DEBUG] 2021-03-02 14:28:26.870 [main] MetamodelGraphWalker - Visiting attribute path : user
+[DEBUG] 2021-03-02 14:28:26.876 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@3009eed7]
+[DEBUG] 2021-03-02 14:28:26.883 [main] MetamodelGraphWalker - Visiting attribute path : user.password
+[DEBUG] 2021-03-02 14:28:26.884 [main] MetamodelGraphWalker - Visiting attribute path : user.roles
+[DEBUG] 2021-03-02 14:28:26.884 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@50cdfafa]
+[DEBUG] 2021-03-02 14:28:26.885 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:3> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@cbf1997]
+[DEBUG] 2021-03-02 14:28:26.885 [main] MetamodelGraphWalker - Visiting attribute path : user.specimens
+[DEBUG] 2021-03-02 14:28:26.885 [main] MetamodelGraphWalker - Property path deemed to be circular : user.specimens
+[DEBUG] 2021-03-02 14:28:26.887 [main] MetamodelGraphWalker - Visiting attribute path : user.username
+[DEBUG] 2021-03-02 14:28:26.887 [main] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2021-03-02 14:28:26.911 [main] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2021-03-02 14:28:26.918 [main] LoadPlanTreePrinter - LoadPlan(entity=bugnet.entity.Specimen)
+    - Returns
+       - EntityReturnImpl(entity=bugnet.entity.Specimen, querySpaceUid=<gen:0>, path=bugnet.entity.Specimen)
+          - EntityAttributeFetchImpl(entity=bugnet.entity.User, querySpaceUid=<gen:1>, path=bugnet.entity.Specimen.user)
+             - CollectionAttributeFetchImpl(collection=bugnet.entity.User.roles, querySpaceUid=<gen:2>, path=bugnet.entity.Specimen.user.roles)
+                - (collection element) CollectionFetchableElementEntityGraph(entity=bugnet.entity.Role, querySpaceUid=<gen:3>, path=bugnet.entity.Specimen.user.roles.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=bugnet.entity.Specimen)
+          - SQL table alias mapping - specimen0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_1_0_}
+          - JOIN (JoinDefinedByMetadata(user)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=bugnet.entity.User)
+                - SQL table alias mapping - user1_
+                - alias suffix - 1_
+                - suffixed key columns - {id1_2_1_}
+
+[DEBUG] 2021-03-02 14:28:26.925 [main] EntityLoader - Static select for entity bugnet.entity.Specimen [NONE]: select specimen0_.id as id1_1_0_, specimen0_.determination as determin2_1_0_, specimen0_.notes as notes3_1_0_, specimen0_.date as date4_1_0_, specimen0_.location as location5_1_0_, specimen0_.user_id as user_id6_1_0_, user1_.id as id1_2_1_, user1_.password as password2_2_1_, user1_.username as username3_2_1_ from specimen specimen0_ left outer join user user1_ on specimen0_.user_id=user1_.id where specimen0_.id=?
+[DEBUG] 2021-03-02 14:28:26.925 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@53ea380b]
+[DEBUG] 2021-03-02 14:28:26.928 [main] MetamodelGraphWalker - Visiting attribute path : bugName
+[DEBUG] 2021-03-02 14:28:26.930 [main] MetamodelGraphWalker - Visiting attribute path : bugNotes
+[DEBUG] 2021-03-02 14:28:26.930 [main] MetamodelGraphWalker - Visiting attribute path : collectedDate
+[DEBUG] 2021-03-02 14:28:26.930 [main] MetamodelGraphWalker - Visiting attribute path : collectedLocation
+[DEBUG] 2021-03-02 14:28:26.930 [main] MetamodelGraphWalker - Visiting attribute path : user
+[DEBUG] 2021-03-02 14:28:26.931 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@245cb8df]
+[DEBUG] 2021-03-02 14:28:26.931 [main] MetamodelGraphWalker - Visiting attribute path : user.password
+[DEBUG] 2021-03-02 14:28:26.931 [main] MetamodelGraphWalker - Visiting attribute path : user.roles
+[DEBUG] 2021-03-02 14:28:26.931 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@241b971f]
+[DEBUG] 2021-03-02 14:28:26.931 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:3> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@125f16b2]
+[DEBUG] 2021-03-02 14:28:26.931 [main] MetamodelGraphWalker - Visiting attribute path : user.specimens
+[DEBUG] 2021-03-02 14:28:26.931 [main] MetamodelGraphWalker - Property path deemed to be circular : user.specimens
+[DEBUG] 2021-03-02 14:28:26.931 [main] MetamodelGraphWalker - Visiting attribute path : user.username
+[DEBUG] 2021-03-02 14:28:26.931 [main] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2021-03-02 14:28:26.939 [main] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2021-03-02 14:28:26.940 [main] LoadPlanTreePrinter - LoadPlan(entity=bugnet.entity.Specimen)
+    - Returns
+       - EntityReturnImpl(entity=bugnet.entity.Specimen, querySpaceUid=<gen:0>, path=bugnet.entity.Specimen)
+          - EntityAttributeFetchImpl(entity=bugnet.entity.User, querySpaceUid=<gen:1>, path=bugnet.entity.Specimen.user)
+             - CollectionAttributeFetchImpl(collection=bugnet.entity.User.roles, querySpaceUid=<gen:2>, path=bugnet.entity.Specimen.user.roles)
+                - (collection element) CollectionFetchableElementEntityGraph(entity=bugnet.entity.Role, querySpaceUid=<gen:3>, path=bugnet.entity.Specimen.user.roles.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=bugnet.entity.Specimen)
+          - SQL table alias mapping - specimen0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_1_0_}
+          - JOIN (JoinDefinedByMetadata(user)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=bugnet.entity.User)
+                - SQL table alias mapping - user1_
+                - alias suffix - 1_
+                - suffixed key columns - {id1_2_1_}
+
+[DEBUG] 2021-03-02 14:28:26.940 [main] EntityLoader - Static select for entity bugnet.entity.Specimen [READ]: select specimen0_.id as id1_1_0_, specimen0_.determination as determin2_1_0_, specimen0_.notes as notes3_1_0_, specimen0_.date as date4_1_0_, specimen0_.location as location5_1_0_, specimen0_.user_id as user_id6_1_0_, user1_.id as id1_2_1_, user1_.password as password2_2_1_, user1_.username as username3_2_1_ from specimen specimen0_ left outer join user user1_ on specimen0_.user_id=user1_.id where specimen0_.id=?
+[DEBUG] 2021-03-02 14:28:26.967 [main] Loader - Static select for action ACTION_MERGE on entity bugnet.entity.Specimen: select specimen0_.id as id1_1_0_, specimen0_.determination as determin2_1_0_, specimen0_.notes as notes3_1_0_, specimen0_.date as date4_1_0_, specimen0_.location as location5_1_0_, specimen0_.user_id as user_id6_1_0_ from specimen specimen0_ where specimen0_.id=?
+[DEBUG] 2021-03-02 14:28:26.968 [main] Loader - Static select for action ACTION_REFRESH on entity bugnet.entity.Specimen: select specimen0_.id as id1_1_0_, specimen0_.determination as determin2_1_0_, specimen0_.notes as notes3_1_0_, specimen0_.date as date4_1_0_, specimen0_.location as location5_1_0_, specimen0_.user_id as user_id6_1_0_ from specimen specimen0_ where specimen0_.id=?
+[DEBUG] 2021-03-02 14:28:26.968 [main] AbstractEntityPersister - Static SQL for entity: bugnet.entity.User
+[DEBUG] 2021-03-02 14:28:26.968 [main] AbstractEntityPersister -  Version select: select id from user where id =?
+[DEBUG] 2021-03-02 14:28:26.968 [main] AbstractEntityPersister -  Snapshot select: select user_.id, user_.password as password2_2_, user_.username as username3_2_ from user user_ where user_.id=?
+[DEBUG] 2021-03-02 14:28:26.968 [main] AbstractEntityPersister -  Insert 0: insert into user (password, username, id) values (?, ?, ?)
+[DEBUG] 2021-03-02 14:28:26.968 [main] AbstractEntityPersister -  Update 0: update user set password=?, username=? where id=?
+[DEBUG] 2021-03-02 14:28:26.968 [main] AbstractEntityPersister -  Delete 0: delete from user where id=?
+[DEBUG] 2021-03-02 14:28:26.968 [main] AbstractEntityPersister -  Identity insert: insert into user (password, username) values (?, ?)
+[DEBUG] 2021-03-02 14:28:26.968 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@374ccb9]
+[DEBUG] 2021-03-02 14:28:26.968 [main] MetamodelGraphWalker - Visiting attribute path : password
+[DEBUG] 2021-03-02 14:28:26.972 [main] MetamodelGraphWalker - Visiting attribute path : roles
+[DEBUG] 2021-03-02 14:28:26.972 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@2ab09943]
+[DEBUG] 2021-03-02 14:28:26.972 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@7d50f2a8]
+[DEBUG] 2021-03-02 14:28:26.972 [main] MetamodelGraphWalker - Visiting attribute path : specimens
+[DEBUG] 2021-03-02 14:28:26.972 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:3> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@5864e8bf]
+[DEBUG] 2021-03-02 14:28:26.972 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:4> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@37ca3ca8]
+[DEBUG] 2021-03-02 14:28:26.973 [main] MetamodelGraphWalker - Visiting attribute path : specimens.bugName
+[DEBUG] 2021-03-02 14:28:26.973 [main] MetamodelGraphWalker - Visiting attribute path : specimens.bugNotes
+[DEBUG] 2021-03-02 14:28:26.973 [main] MetamodelGraphWalker - Visiting attribute path : specimens.collectedDate
+[DEBUG] 2021-03-02 14:28:26.973 [main] MetamodelGraphWalker - Visiting attribute path : specimens.collectedLocation
+[DEBUG] 2021-03-02 14:28:26.973 [main] MetamodelGraphWalker - Visiting attribute path : specimens.user
+[DEBUG] 2021-03-02 14:28:26.973 [main] MetamodelGraphWalker - Property path deemed to be circular : specimens.user
+[DEBUG] 2021-03-02 14:28:26.974 [main] MetamodelGraphWalker - Visiting attribute path : username
+[DEBUG] 2021-03-02 14:28:26.977 [main] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2021-03-02 14:28:26.977 [main] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2021-03-02 14:28:26.985 [main] LoadPlanTreePrinter - LoadPlan(entity=bugnet.entity.User)
+    - Returns
+       - EntityReturnImpl(entity=bugnet.entity.User, querySpaceUid=<gen:0>, path=bugnet.entity.User)
+          - CollectionAttributeFetchImpl(collection=bugnet.entity.User.roles, querySpaceUid=<gen:1>, path=bugnet.entity.User.roles)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=bugnet.entity.Role, querySpaceUid=<gen:2>, path=bugnet.entity.User.roles.<elements>)
+          - CollectionAttributeFetchImpl(collection=bugnet.entity.User.specimens, querySpaceUid=<gen:3>, path=bugnet.entity.User.specimens)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=bugnet.entity.Specimen, querySpaceUid=<gen:4>, path=bugnet.entity.User.specimens.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=bugnet.entity.User)
+          - SQL table alias mapping - user0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_2_0_}
+          - JOIN (JoinDefinedByMetadata(specimens)) : <gen:0> -> <gen:3>
+             - CollectionQuerySpaceImpl(uid=<gen:3>, collection=bugnet.entity.User.specimens)
+                - SQL table alias mapping - specimens1_
+                - alias suffix - 1_
+                - suffixed key columns - {user_id6_1_1_}
+                - entity-element alias suffix - 2_
+                - 2_entity-element suffixed key columns - id1_1_2_
+                - JOIN (JoinDefinedByMetadata(elements)) : <gen:3> -> <gen:4>
+                   - EntityQuerySpaceImpl(uid=<gen:4>, entity=bugnet.entity.Specimen)
+                      - SQL table alias mapping - specimens1_
+                      - alias suffix - 2_
+                      - suffixed key columns - {id1_1_2_}
+
+[DEBUG] 2021-03-02 14:28:26.985 [main] EntityLoader - Static select for entity bugnet.entity.User [NONE]: select user0_.id as id1_2_0_, user0_.password as password2_2_0_, user0_.username as username3_2_0_, specimens1_.user_id as user_id6_1_1_, specimens1_.id as id1_1_1_, specimens1_.id as id1_1_2_, specimens1_.determination as determin2_1_2_, specimens1_.notes as notes3_1_2_, specimens1_.date as date4_1_2_, specimens1_.location as location5_1_2_, specimens1_.user_id as user_id6_1_2_ from user user0_ left outer join specimen specimens1_ on user0_.id=specimens1_.user_id where user0_.id=?
+[DEBUG] 2021-03-02 14:28:26.985 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@47058864]
+[DEBUG] 2021-03-02 14:28:26.986 [main] MetamodelGraphWalker - Visiting attribute path : password
+[DEBUG] 2021-03-02 14:28:26.986 [main] MetamodelGraphWalker - Visiting attribute path : roles
+[DEBUG] 2021-03-02 14:28:26.986 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@54ccb3]
+[DEBUG] 2021-03-02 14:28:26.986 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@9b2dc56]
+[DEBUG] 2021-03-02 14:28:26.986 [main] MetamodelGraphWalker - Visiting attribute path : specimens
+[DEBUG] 2021-03-02 14:28:26.986 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:3> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@621f23ac]
+[DEBUG] 2021-03-02 14:28:26.986 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:4> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@7761e342]
+[DEBUG] 2021-03-02 14:28:26.986 [main] MetamodelGraphWalker - Visiting attribute path : specimens.bugName
+[DEBUG] 2021-03-02 14:28:26.986 [main] MetamodelGraphWalker - Visiting attribute path : specimens.bugNotes
+[DEBUG] 2021-03-02 14:28:26.986 [main] MetamodelGraphWalker - Visiting attribute path : specimens.collectedDate
+[DEBUG] 2021-03-02 14:28:26.986 [main] MetamodelGraphWalker - Visiting attribute path : specimens.collectedLocation
+[DEBUG] 2021-03-02 14:28:26.986 [main] MetamodelGraphWalker - Visiting attribute path : specimens.user
+[DEBUG] 2021-03-02 14:28:26.987 [main] MetamodelGraphWalker - Property path deemed to be circular : specimens.user
+[DEBUG] 2021-03-02 14:28:26.987 [main] MetamodelGraphWalker - Visiting attribute path : username
+[DEBUG] 2021-03-02 14:28:26.987 [main] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2021-03-02 14:28:26.987 [main] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2021-03-02 14:28:26.988 [main] LoadPlanTreePrinter - LoadPlan(entity=bugnet.entity.User)
+    - Returns
+       - EntityReturnImpl(entity=bugnet.entity.User, querySpaceUid=<gen:0>, path=bugnet.entity.User)
+          - CollectionAttributeFetchImpl(collection=bugnet.entity.User.roles, querySpaceUid=<gen:1>, path=bugnet.entity.User.roles)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=bugnet.entity.Role, querySpaceUid=<gen:2>, path=bugnet.entity.User.roles.<elements>)
+          - CollectionAttributeFetchImpl(collection=bugnet.entity.User.specimens, querySpaceUid=<gen:3>, path=bugnet.entity.User.specimens)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=bugnet.entity.Specimen, querySpaceUid=<gen:4>, path=bugnet.entity.User.specimens.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=bugnet.entity.User)
+          - SQL table alias mapping - user0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_2_0_}
+          - JOIN (JoinDefinedByMetadata(specimens)) : <gen:0> -> <gen:3>
+             - CollectionQuerySpaceImpl(uid=<gen:3>, collection=bugnet.entity.User.specimens)
+                - SQL table alias mapping - specimens1_
+                - alias suffix - 1_
+                - suffixed key columns - {user_id6_1_1_}
+                - entity-element alias suffix - 2_
+                - 2_entity-element suffixed key columns - id1_1_2_
+                - JOIN (JoinDefinedByMetadata(elements)) : <gen:3> -> <gen:4>
+                   - EntityQuerySpaceImpl(uid=<gen:4>, entity=bugnet.entity.Specimen)
+                      - SQL table alias mapping - specimens1_
+                      - alias suffix - 2_
+                      - suffixed key columns - {id1_1_2_}
+
+[DEBUG] 2021-03-02 14:28:26.988 [main] EntityLoader - Static select for entity bugnet.entity.User [READ]: select user0_.id as id1_2_0_, user0_.password as password2_2_0_, user0_.username as username3_2_0_, specimens1_.user_id as user_id6_1_1_, specimens1_.id as id1_1_1_, specimens1_.id as id1_1_2_, specimens1_.determination as determin2_1_2_, specimens1_.notes as notes3_1_2_, specimens1_.date as date4_1_2_, specimens1_.location as location5_1_2_, specimens1_.user_id as user_id6_1_2_ from user user0_ left outer join specimen specimens1_ on user0_.id=specimens1_.user_id where user0_.id=?
+[DEBUG] 2021-03-02 14:28:26.993 [main] Loader - Static select for action ACTION_MERGE on entity bugnet.entity.User: select user0_.id as id1_2_1_, user0_.password as password2_2_1_, user0_.username as username3_2_1_, specimens1_.user_id as user_id6_1_3_, specimens1_.id as id1_1_3_, specimens1_.id as id1_1_0_, specimens1_.determination as determin2_1_0_, specimens1_.notes as notes3_1_0_, specimens1_.date as date4_1_0_, specimens1_.location as location5_1_0_, specimens1_.user_id as user_id6_1_0_ from user user0_ left outer join specimen specimens1_ on user0_.id=specimens1_.user_id where user0_.id=?
+[DEBUG] 2021-03-02 14:28:26.993 [main] Loader - Static select for action ACTION_REFRESH on entity bugnet.entity.User: select user0_.id as id1_2_1_, user0_.password as password2_2_1_, user0_.username as username3_2_1_, specimens1_.user_id as user_id6_1_3_, specimens1_.id as id1_1_3_, specimens1_.id as id1_1_0_, specimens1_.determination as determin2_1_0_, specimens1_.notes as notes3_1_0_, specimens1_.date as date4_1_0_, specimens1_.location as location5_1_0_, specimens1_.user_id as user_id6_1_0_ from user user0_ left outer join specimen specimens1_ on user0_.id=specimens1_.user_id where user0_.id=?
+[DEBUG] 2021-03-02 14:28:26.994 [main] AbstractEntityPersister - Static SQL for entity: bugnet.entity.Role
+[DEBUG] 2021-03-02 14:28:26.995 [main] AbstractEntityPersister -  Version select: select id from role where id =?
+[DEBUG] 2021-03-02 14:28:26.995 [main] AbstractEntityPersister -  Snapshot select: select role_.id, role_.role_level as role_lev2_0_, role_.role_name as role_nam3_0_ from role role_ where role_.id=?
+[DEBUG] 2021-03-02 14:28:26.995 [main] AbstractEntityPersister -  Insert 0: insert into role (role_level, role_name, id) values (?, ?, ?)
+[DEBUG] 2021-03-02 14:28:26.995 [main] AbstractEntityPersister -  Update 0: update role set role_level=?, role_name=? where id=?
+[DEBUG] 2021-03-02 14:28:26.995 [main] AbstractEntityPersister -  Delete 0: delete from role where id=?
+[DEBUG] 2021-03-02 14:28:26.995 [main] AbstractEntityPersister -  Identity insert: insert into role (role_level, role_name) values (?, ?)
+[DEBUG] 2021-03-02 14:28:26.995 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@4b3a01d8]
+[DEBUG] 2021-03-02 14:28:26.995 [main] MetamodelGraphWalker - Visiting attribute path : roleLevel
+[DEBUG] 2021-03-02 14:28:26.995 [main] MetamodelGraphWalker - Visiting attribute path : roleName
+[DEBUG] 2021-03-02 14:28:26.995 [main] MetamodelGraphWalker - Visiting attribute path : users
+[DEBUG] 2021-03-02 14:28:26.997 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@2f4d32bf]
+[DEBUG] 2021-03-02 14:28:26.997 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@774d8276]
+[DEBUG] 2021-03-02 14:28:26.997 [main] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2021-03-02 14:28:26.997 [main] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2021-03-02 14:28:26.998 [main] LoadPlanTreePrinter - LoadPlan(entity=bugnet.entity.Role)
+    - Returns
+       - EntityReturnImpl(entity=bugnet.entity.Role, querySpaceUid=<gen:0>, path=bugnet.entity.Role)
+          - CollectionAttributeFetchImpl(collection=bugnet.entity.Role.users, querySpaceUid=<gen:1>, path=bugnet.entity.Role.users)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=bugnet.entity.User, querySpaceUid=<gen:2>, path=bugnet.entity.Role.users.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=bugnet.entity.Role)
+          - SQL table alias mapping - role0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+[DEBUG] 2021-03-02 14:28:26.998 [main] EntityLoader - Static select for entity bugnet.entity.Role [NONE]: select role0_.id as id1_0_0_, role0_.role_level as role_lev2_0_0_, role0_.role_name as role_nam3_0_0_ from role role0_ where role0_.id=?
+[DEBUG] 2021-03-02 14:28:26.998 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@6ce26986]
+[DEBUG] 2021-03-02 14:28:26.998 [main] MetamodelGraphWalker - Visiting attribute path : roleLevel
+[DEBUG] 2021-03-02 14:28:26.998 [main] MetamodelGraphWalker - Visiting attribute path : roleName
+[DEBUG] 2021-03-02 14:28:26.998 [main] MetamodelGraphWalker - Visiting attribute path : users
+[DEBUG] 2021-03-02 14:28:26.998 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@6d6cd1e0]
+[DEBUG] 2021-03-02 14:28:26.998 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@76a9a009]
+[DEBUG] 2021-03-02 14:28:26.998 [main] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2021-03-02 14:28:26.999 [main] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2021-03-02 14:28:26.999 [main] LoadPlanTreePrinter - LoadPlan(entity=bugnet.entity.Role)
+    - Returns
+       - EntityReturnImpl(entity=bugnet.entity.Role, querySpaceUid=<gen:0>, path=bugnet.entity.Role)
+          - CollectionAttributeFetchImpl(collection=bugnet.entity.Role.users, querySpaceUid=<gen:1>, path=bugnet.entity.Role.users)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=bugnet.entity.User, querySpaceUid=<gen:2>, path=bugnet.entity.Role.users.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=bugnet.entity.Role)
+          - SQL table alias mapping - role0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+[DEBUG] 2021-03-02 14:28:26.999 [main] EntityLoader - Static select for entity bugnet.entity.Role [READ]: select role0_.id as id1_0_0_, role0_.role_level as role_lev2_0_0_, role0_.role_name as role_nam3_0_0_ from role role0_ where role0_.id=?
+[DEBUG] 2021-03-02 14:28:27.000 [main] Loader - Static select for action ACTION_MERGE on entity bugnet.entity.Role: select role0_.id as id1_0_0_, role0_.role_level as role_lev2_0_0_, role0_.role_name as role_nam3_0_0_ from role role0_ where role0_.id=?
+[DEBUG] 2021-03-02 14:28:27.002 [main] Loader - Static select for action ACTION_REFRESH on entity bugnet.entity.Role: select role0_.id as id1_0_0_, role0_.role_level as role_lev2_0_0_, role0_.role_name as role_nam3_0_0_ from role role0_ where role0_.id=?
+[DEBUG] 2021-03-02 14:28:27.008 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@2d22d3b1]
+[DEBUG] 2021-03-02 14:28:27.009 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@7ec3a8bd]
+[DEBUG] 2021-03-02 14:28:27.012 [main] MetamodelGraphWalker - Visiting attribute path : bugName
+[DEBUG] 2021-03-02 14:28:27.012 [main] MetamodelGraphWalker - Visiting attribute path : bugNotes
+[DEBUG] 2021-03-02 14:28:27.012 [main] MetamodelGraphWalker - Visiting attribute path : collectedDate
+[DEBUG] 2021-03-02 14:28:27.012 [main] MetamodelGraphWalker - Visiting attribute path : collectedLocation
+[DEBUG] 2021-03-02 14:28:27.012 [main] MetamodelGraphWalker - Visiting attribute path : user
+[DEBUG] 2021-03-02 14:28:27.013 [main] MetamodelGraphWalker - Property path deemed to be circular : user
+[DEBUG] 2021-03-02 14:28:27.013 [main] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2021-03-02 14:28:27.017 [main] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2021-03-02 14:28:27.023 [main] LoadPlanTreePrinter - LoadPlan(collection=bugnet.entity.User.specimens)
+    - Returns
+       - CollectionReturnImpl(collection=bugnet.entity.User.specimens, querySpaceUid=<gen:0>, path=[bugnet.entity.User.specimens])
+          - (collection element) CollectionFetchableElementEntityGraph(entity=bugnet.entity.Specimen, querySpaceUid=<gen:1>, path=[bugnet.entity.User.specimens].<elements>)
+    - QuerySpaces
+       - CollectionQuerySpaceImpl(uid=<gen:0>, collection=bugnet.entity.User.specimens)
+          - SQL table alias mapping - specimens0_
+          - alias suffix - 0_
+          - suffixed key columns - {user_id6_1_0_}
+          - entity-element alias suffix - 1_
+          - 1_entity-element suffixed key columns - id1_1_1_
+          - JOIN (JoinDefinedByMetadata(elements)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=bugnet.entity.Specimen)
+                - SQL table alias mapping - specimens0_
+                - alias suffix - 1_
+                - suffixed key columns - {id1_1_1_}
+
+[DEBUG] 2021-03-02 14:28:27.024 [main] CollectionLoader - Static select for collection bugnet.entity.User.specimens: select specimens0_.user_id as user_id6_1_0_, specimens0_.id as id1_1_0_, specimens0_.id as id1_1_1_, specimens0_.determination as determin2_1_1_, specimens0_.notes as notes3_1_1_, specimens0_.date as date4_1_1_, specimens0_.location as location5_1_1_, specimens0_.user_id as user_id6_1_1_ from specimen specimens0_ where specimens0_.user_id=?
+[DEBUG] 2021-03-02 14:28:27.025 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@23121d14]
+[DEBUG] 2021-03-02 14:28:27.026 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@72af90e8]
+[DEBUG] 2021-03-02 14:28:27.026 [main] MetamodelGraphWalker - Visiting attribute path : password
+[DEBUG] 2021-03-02 14:28:27.026 [main] MetamodelGraphWalker - Visiting attribute path : roles
+[DEBUG] 2021-03-02 14:28:27.026 [main] MetamodelGraphWalker - Property path deemed to be circular : roles
+[DEBUG] 2021-03-02 14:28:27.026 [main] MetamodelGraphWalker - Visiting attribute path : specimens
+[DEBUG] 2021-03-02 14:28:27.026 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@4c635edc]
+[DEBUG] 2021-03-02 14:28:27.026 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:3> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@4245bf68]
+[DEBUG] 2021-03-02 14:28:27.026 [main] MetamodelGraphWalker - Visiting attribute path : username
+[DEBUG] 2021-03-02 14:28:27.026 [main] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2021-03-02 14:28:27.033 [main] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2021-03-02 14:28:27.035 [main] LoadPlanTreePrinter - LoadPlan(collection=bugnet.entity.Role.users)
+    - Returns
+       - CollectionReturnImpl(collection=bugnet.entity.Role.users, querySpaceUid=<gen:0>, path=[bugnet.entity.Role.users])
+          - (collection element) CollectionFetchableElementEntityGraph(entity=bugnet.entity.User, querySpaceUid=<gen:1>, path=[bugnet.entity.Role.users].<elements>)
+             - CollectionAttributeFetchImpl(collection=bugnet.entity.User.specimens, querySpaceUid=<gen:2>, path=[bugnet.entity.Role.users].<elements>.specimens)
+                - (collection element) CollectionFetchableElementEntityGraph(entity=bugnet.entity.Specimen, querySpaceUid=<gen:3>, path=[bugnet.entity.Role.users].<elements>.specimens.<elements>)
+    - QuerySpaces
+       - CollectionQuerySpaceImpl(uid=<gen:0>, collection=bugnet.entity.Role.users)
+          - SQL table alias mapping - users0_
+          - alias suffix - 0_
+          - suffixed key columns - {roles_id2_3_0_}
+          - entity-element alias suffix - 1_
+          - 1_entity-element suffixed key columns - id1_2_1_
+          - JOIN (JoinDefinedByMetadata(elements)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=bugnet.entity.User)
+                - SQL table alias mapping - user1_
+                - alias suffix - 1_
+                - suffixed key columns - {id1_2_1_}
+
+[DEBUG] 2021-03-02 14:28:27.035 [main] CollectionLoader - Static select for collection bugnet.entity.Role.users: select users0_.roles_id as roles_id2_3_0_, users0_.users_id as users_id1_3_0_, user1_.id as id1_2_1_, user1_.password as password2_2_1_, user1_.username as username3_2_1_ from user_role users0_ inner join user user1_ on users0_.users_id=user1_.id where users0_.roles_id=?
+[DEBUG] 2021-03-02 14:28:27.035 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@7ac5b4c]
+[DEBUG] 2021-03-02 14:28:27.035 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@150fc7a7]
+[DEBUG] 2021-03-02 14:28:27.036 [main] MetamodelGraphWalker - Visiting attribute path : roleLevel
+[DEBUG] 2021-03-02 14:28:27.036 [main] MetamodelGraphWalker - Visiting attribute path : roleName
+[DEBUG] 2021-03-02 14:28:27.036 [main] MetamodelGraphWalker - Visiting attribute path : users
+[DEBUG] 2021-03-02 14:28:27.036 [main] MetamodelGraphWalker - Property path deemed to be circular : users
+[DEBUG] 2021-03-02 14:28:27.036 [main] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2021-03-02 14:28:27.036 [main] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2021-03-02 14:28:27.037 [main] LoadPlanTreePrinter - LoadPlan(collection=bugnet.entity.User.roles)
+    - Returns
+       - CollectionReturnImpl(collection=bugnet.entity.User.roles, querySpaceUid=<gen:0>, path=[bugnet.entity.User.roles])
+          - (collection element) CollectionFetchableElementEntityGraph(entity=bugnet.entity.Role, querySpaceUid=<gen:1>, path=[bugnet.entity.User.roles].<elements>)
+    - QuerySpaces
+       - CollectionQuerySpaceImpl(uid=<gen:0>, collection=bugnet.entity.User.roles)
+          - SQL table alias mapping - roles0_
+          - alias suffix - 0_
+          - suffixed key columns - {users_id1_3_0_}
+          - entity-element alias suffix - 1_
+          - 1_entity-element suffixed key columns - id1_0_1_
+          - JOIN (JoinDefinedByMetadata(elements)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=bugnet.entity.Role)
+                - SQL table alias mapping - role1_
+                - alias suffix - 1_
+                - suffixed key columns - {id1_0_1_}
+
+[DEBUG] 2021-03-02 14:28:27.037 [main] CollectionLoader - Static select for collection bugnet.entity.User.roles: select roles0_.users_id as users_id1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_0_1_, role1_.role_level as role_lev2_0_1_, role1_.role_name as role_nam3_0_1_ from user_role roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.users_id=?
+[DEBUG] 2021-03-02 14:28:27.204 [main] SchemaManagementToolCoordinator - No actions specified; doing nothing
+[DEBUG] 2021-03-02 14:28:27.204 [main] JtaPlatformInitiator - No JtaPlatform was specified, checking resolver
+[DEBUG] 2021-03-02 14:28:27.207 [main] JtaPlatformResolverInitiator - No JtaPlatformResolver was specified, using default [org.hibernate.engine.transaction.jta.platform.internal.StandardJtaPlatformResolver]
+[DEBUG] 2021-03-02 14:28:27.217 [main] StandardJtaPlatformResolver - Could not resolve JtaPlatform, using default [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] 2021-03-02 14:28:27.217 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[DEBUG] 2021-03-02 14:28:27.218 [main] NamedQueryRepository - Checking 0 named HQL queries
+[DEBUG] 2021-03-02 14:28:27.218 [main] NamedQueryRepository - Checking 0 named SQL queries
+[DEBUG] 2021-03-02 14:28:27.226 [main] SessionFactoryRegistry - Initializing SessionFactoryRegistry : org.hibernate.internal.SessionFactoryRegistry@3a109ff7
+[DEBUG] 2021-03-02 14:28:27.230 [main] SessionFactoryRegistry - Registering SessionFactory: 58219d2d-1dac-410d-b6a4-e47ad8d793f1 (<unnamed>)
+[DEBUG] 2021-03-02 14:28:27.230 [main] SessionFactoryRegistry - Not binding SessionFactory to JNDI, no JNDI name configured
+[DEBUG] 2021-03-02 14:28:27.361 [main] StatisticsInitiator - Statistics initialized [enabled=false]
+[DEBUG] 2021-03-02 14:28:27.413 [main] CriteriaQueryImpl - Rendered criteria query -> select generatedAlias0 from User as generatedAlias0 where generatedAlias0.username=:param0
+[DEBUG] 2021-03-02 14:28:27.441 [main] QueryTranslatorFactoryInitiator - QueryTranslatorFactory: org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory@781c2497
+[DEBUG] 2021-03-02 14:28:27.466 [main] QueryTranslatorImpl - parse() - HQL: select generatedAlias0 from bugnet.entity.User as generatedAlias0 where generatedAlias0.username=:param0
+[DEBUG] 2021-03-02 14:28:27.475 [main] ErrorTracker - throwQueryException() : no errors
+[DEBUG] 2021-03-02 14:28:27.487 [main] QueryTranslatorImpl - --- HQL AST ---
+ \-[QUERY] Node: 'query'
+    +-[SELECT_FROM] Node: 'SELECT_FROM'
+    |  +-[FROM] Node: 'from'
+    |  |  \-[RANGE] Node: 'RANGE'
+    |  |     +-[DOT] Node: '.'
+    |  |     |  +-[DOT] Node: '.'
+    |  |     |  |  +-[IDENT] Node: 'bugnet'
+    |  |     |  |  \-[IDENT] Node: 'entity'
+    |  |     |  \-[IDENT] Node: 'User'
+    |  |     \-[ALIAS] Node: 'generatedAlias0'
+    |  \-[SELECT] Node: 'select'
+    |     \-[IDENT] Node: 'generatedAlias0'
+    \-[WHERE] Node: 'where'
+       \-[EQ] Node: '='
+          +-[DOT] Node: '.'
+          |  +-[IDENT] Node: 'generatedAlias0'
+          |  \-[IDENT] Node: 'username'
+          \-[COLON] Node: ':'
+             \-[IDENT] Node: 'param0'
+
+[DEBUG] 2021-03-02 14:28:27.507 [main] HqlSqlBaseWalker - select << begin [level=1, statement=select]
+[DEBUG] 2021-03-02 14:28:27.516 [main] FromElement - FromClause{level=1} : bugnet.entity.User (generatedAlias0) -> user0_
+[DEBUG] 2021-03-02 14:28:27.516 [main] FromReferenceNode - Resolved : generatedAlias0 -> user0_.id
+[DEBUG] 2021-03-02 14:28:27.518 [main] FromReferenceNode - Resolved : generatedAlias0 -> user0_.id
+[DEBUG] 2021-03-02 14:28:27.519 [main] DotNode - getDataType() : username -> org.hibernate.type.StringType@75fc1992
+[DEBUG] 2021-03-02 14:28:27.519 [main] FromReferenceNode - Resolved : generatedAlias0.username -> user0_.username
+[DEBUG] 2021-03-02 14:28:27.520 [main] HqlSqlBaseWalker - select : finishing up [level=1, statement=select]
+[DEBUG] 2021-03-02 14:28:27.520 [main] HqlSqlWalker - processQuery() :  ( SELECT ( {select clause} user0_.id ) ( FromClause{level=1} user user0_ ) ( where ( = ( user0_.username user0_.id username ) ? ) ) )
+[DEBUG] 2021-03-02 14:28:27.525 [main] JoinProcessor - Using FROM fragment [user user0_]
+[DEBUG] 2021-03-02 14:28:27.525 [main] HqlSqlBaseWalker - select >> end [level=1, statement=select]
+[DEBUG] 2021-03-02 14:28:27.526 [main] QueryTranslatorImpl - --- SQL AST ---
+ \-[SELECT] QueryNode: 'SELECT'  querySpaces (user)
+    +-[SELECT_CLAUSE] SelectClause: '{select clause}'
+    |  +-[ALIAS_REF] IdentNode: 'user0_.id as id1_2_' {alias=generatedAlias0, className=bugnet.entity.User, tableAlias=user0_}
+    |  \-[SQL_TOKEN] SqlFragment: 'user0_.password as password2_2_, user0_.username as username3_2_'
+    +-[FROM] FromClause: 'from' FromClause{level=1, fromElementCounter=1, fromElements=1, fromElementByClassAlias=[generatedAlias0], fromElementByTableAlias=[user0_], fromElementsByPath=[], collectionJoinFromElementsByPath=[], impliedElements=[]}
+    |  \-[FROM_FRAGMENT] FromElement: 'user user0_' FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=generatedAlias0,role=null,tableName=user,tableAlias=user0_,origin=null,columns={,className=bugnet.entity.User}}
+    \-[WHERE] SqlNode: 'where'
+       \-[EQ] BinaryLogicOperatorNode: '='
+          +-[DOT] DotNode: 'user0_.username' {propertyName=username,dereferenceType=PRIMITIVE,getPropertyPath=username,path=generatedAlias0.username,tableAlias=user0_,className=bugnet.entity.User,classAlias=generatedAlias0}
+          |  +-[ALIAS_REF] IdentNode: 'user0_.id' {alias=generatedAlias0, className=bugnet.entity.User, tableAlias=user0_}
+          |  \-[IDENT] IdentNode: 'username' {originalText=username}
+          \-[NAMED_PARAM] ParameterNode: '?' {name=param0, expectedType=org.hibernate.type.StringType@75fc1992}
+
+[DEBUG] 2021-03-02 14:28:27.526 [main] ErrorTracker - throwQueryException() : no errors
+[DEBUG] 2021-03-02 14:28:27.530 [main] QueryTranslatorImpl - HQL: select generatedAlias0 from bugnet.entity.User as generatedAlias0 where generatedAlias0.username=:param0
+[DEBUG] 2021-03-02 14:28:27.530 [main] QueryTranslatorImpl - SQL: select user0_.id as id1_2_, user0_.password as password2_2_, user0_.username as username3_2_ from user user0_ where user0_.username=?
+[DEBUG] 2021-03-02 14:28:27.530 [main] ErrorTracker - throwQueryException() : no errors
+[DEBUG] 2021-03-02 14:28:27.555 [main] SQL - select user0_.id as id1_2_, user0_.password as password2_2_, user0_.username as username3_2_ from user user0_ where user0_.username=?
+[DEBUG] 2021-03-02 14:28:27.586 [main] Loader - Result set row: 0
+[DEBUG] 2021-03-02 14:28:27.588 [main] Loader - Result row: EntityKey[bugnet.entity.User#3]
+[DEBUG] 2021-03-02 14:28:27.600 [main] TwoPhaseLoad - Resolving attributes for [bugnet.entity.User#3]
+[DEBUG] 2021-03-02 14:28:27.601 [main] TwoPhaseLoad - Processing attribute `password` : value = aaaaaaaa
+[DEBUG] 2021-03-02 14:28:27.601 [main] TwoPhaseLoad - Attribute (`password`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 14:28:27.601 [main] TwoPhaseLoad - Processing attribute `roles` : value = NOT NULL COLLECTION
+[DEBUG] 2021-03-02 14:28:27.605 [main] TwoPhaseLoad - Attribute (`roles`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 14:28:27.619 [main] TwoPhaseLoad - Processing attribute `specimens` : value = NOT NULL COLLECTION
+[DEBUG] 2021-03-02 14:28:27.619 [main] TwoPhaseLoad - Attribute (`specimens`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 14:28:27.620 [main] TwoPhaseLoad - Processing attribute `username` : value = holmquest
+[DEBUG] 2021-03-02 14:28:27.620 [main] TwoPhaseLoad - Attribute (`username`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 14:28:27.621 [main] TwoPhaseLoad - Done materializing entity [bugnet.entity.User#3]
+[DEBUG] 2021-03-02 14:28:27.628 [main] AbstractLoadPlanBasedCollectionInitializer - Loading collection: [bugnet.entity.User.specimens#3]
+[DEBUG] 2021-03-02 14:28:27.628 [main] SQL - select specimens0_.user_id as user_id6_1_0_, specimens0_.id as id1_1_0_, specimens0_.id as id1_1_1_, specimens0_.determination as determin2_1_1_, specimens0_.notes as notes3_1_1_, specimens0_.date as date4_1_1_, specimens0_.location as location5_1_1_, specimens0_.user_id as user_id6_1_1_ from specimen specimens0_ where specimens0_.user_id=?
+[DEBUG] 2021-03-02 14:28:27.634 [main] ResultSetProcessorImpl - Preparing collection initializer : [bugnet.entity.User.specimens#3]
+[DEBUG] 2021-03-02 14:28:27.640 [main] ResultSetProcessorImpl - Starting ResultSet row #0
+[DEBUG] 2021-03-02 14:28:27.641 [main] CollectionReferenceInitializerImpl - Found row of collection: [bugnet.entity.User.specimens#3]
+[DEBUG] 2021-03-02 14:28:27.659 [main] ResultSetProcessorImpl - Starting ResultSet row #1
+[DEBUG] 2021-03-02 14:28:27.659 [main] CollectionReferenceInitializerImpl - Found row of collection: [bugnet.entity.User.specimens#3]
+[DEBUG] 2021-03-02 14:28:27.660 [main] TwoPhaseLoad - Resolving attributes for [bugnet.entity.Specimen#1]
+[DEBUG] 2021-03-02 14:28:27.660 [main] TwoPhaseLoad - Processing attribute `bugName` : value = beetle
+[DEBUG] 2021-03-02 14:28:27.660 [main] TwoPhaseLoad - Attribute (`bugName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 14:28:27.660 [main] TwoPhaseLoad - Processing attribute `bugNotes` : value = eating some grass
+[DEBUG] 2021-03-02 14:28:27.660 [main] TwoPhaseLoad - Attribute (`bugNotes`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 14:28:27.660 [main] TwoPhaseLoad - Processing attribute `collectedDate` : value = 1997-01-01
+[DEBUG] 2021-03-02 14:28:27.660 [main] TwoPhaseLoad - Attribute (`collectedDate`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 14:28:27.660 [main] TwoPhaseLoad - Processing attribute `collectedLocation` : value = madison
+[DEBUG] 2021-03-02 14:28:27.660 [main] TwoPhaseLoad - Attribute (`collectedLocation`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 14:28:27.660 [main] TwoPhaseLoad - Processing attribute `user` : value = 3
+[DEBUG] 2021-03-02 14:28:27.660 [main] TwoPhaseLoad - Attribute (`user`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 14:28:27.660 [main] TwoPhaseLoad - Done materializing entity [bugnet.entity.Specimen#1]
+[DEBUG] 2021-03-02 14:28:27.660 [main] TwoPhaseLoad - Resolving attributes for [bugnet.entity.Specimen#2]
+[DEBUG] 2021-03-02 14:28:27.663 [main] TwoPhaseLoad - Processing attribute `bugName` : value = wasp
+[DEBUG] 2021-03-02 14:28:27.664 [main] TwoPhaseLoad - Attribute (`bugName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 14:28:27.664 [main] TwoPhaseLoad - Processing attribute `bugNotes` : value = predator of buprestid
+[DEBUG] 2021-03-02 14:28:27.664 [main] TwoPhaseLoad - Attribute (`bugNotes`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 14:28:27.664 [main] TwoPhaseLoad - Processing attribute `collectedDate` : value = 2004-04-17
+[DEBUG] 2021-03-02 14:28:27.664 [main] TwoPhaseLoad - Attribute (`collectedDate`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 14:28:27.664 [main] TwoPhaseLoad - Processing attribute `collectedLocation` : value = milwaukee
+[DEBUG] 2021-03-02 14:28:27.664 [main] TwoPhaseLoad - Attribute (`collectedLocation`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 14:28:27.664 [main] TwoPhaseLoad - Processing attribute `user` : value = 3
+[DEBUG] 2021-03-02 14:28:27.664 [main] TwoPhaseLoad - Attribute (`user`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 14:28:27.664 [main] TwoPhaseLoad - Done materializing entity [bugnet.entity.Specimen#2]
+[DEBUG] 2021-03-02 14:28:27.664 [main] CollectionLoadContext - 1 collections were found in result set for role: bugnet.entity.User.specimens
+[DEBUG] 2021-03-02 14:28:27.665 [main] CollectionLoadContext - Collection fully initialized: [bugnet.entity.User.specimens#3]
+[DEBUG] 2021-03-02 14:28:27.666 [main] CollectionLoadContext - 1 collections initialized for role: bugnet.entity.User.specimens
+[DEBUG] 2021-03-02 14:28:27.666 [main] ResourceRegistryStandardImpl - HHH000387: ResultSet's statement was not registered
+[DEBUG] 2021-03-02 14:28:27.666 [main] AbstractLoadPlanBasedCollectionInitializer - Done loading collection
+[DEBUG] 2021-03-02 14:28:27.669 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction

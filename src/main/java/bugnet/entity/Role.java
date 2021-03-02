@@ -19,7 +19,7 @@ public class Role {
     @Column(name = "role_level")
     private int roleLevel;
 
-    @ManyToMany(targetEntity = User.class, mappedBy = "roles")
+    @ManyToMany(targetEntity = User.class)
     private List<User> users = new ArrayList<User>();
 
     public Role() {
