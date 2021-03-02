@@ -1,6 +1,7 @@
 package bugnet.controller;
 
 import bugnet.entity.User;
+import bugnet.persistence.GenericDao;
 import bugnet.persistence.UserDao;
 
 import javax.servlet.RequestDispatcher;
@@ -20,8 +21,8 @@ public class UserDisplay extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        UserDao dao = new UserDao();
-        List<User> users = dao.getAllUsers();
+        GenericDao<User> dao = new GenericDao<>(User.class);
+        List<User> users = dao.getAll();
 
         req.setAttribute("users", users);
         RequestDispatcher dispatcher = req.getRequestDispatcher("/userDisplay.jsp");
