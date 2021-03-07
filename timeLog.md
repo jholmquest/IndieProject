@@ -66,3 +66,9 @@ Tracking Time Spent Working
 
 #Week 7
 2021-03-02 1:30pm - 4:00pm fun time with generic dao, getting many to many working
+
+2021-02-04 12:00pm - 1:00pm readings
+
+2021-03-07 11:30am - 1:30pm exercise
+
+2021-03-07 3:30pm - 4:30pm finishing exercise
