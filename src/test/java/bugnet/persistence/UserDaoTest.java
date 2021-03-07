@@ -97,17 +97,14 @@ public class UserDaoTest {
     }
 
     // Tests getting roles for a user
+    // TODO: Add test
     @Test
     void getRoleTest() {
-        User user = dao.getById(3);
     }
 
     // Tests if deleting a role successfully removes it from user's list of roles without deleting them
+    // TODO: Add test
     @Test
     void deleteRoleCascadeTest() {
-        GenericDao<Role> roleDao = new GenericDao<>(Role.class);
-        Role role = roleDao.getById(1);
-        roleDao.delete(role);
-        User user = dao.getById(3);
     }
 }

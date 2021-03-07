@@ -34,7 +34,8 @@ public class RoleTest {
 
     @Test
     void insertTest() {
-        User user = new User();
+        GenericDao<User> userDao = new GenericDao<>(User.class);
+        User user = userDao.getById(2);
         Role newRole = new Role("Test Role", "admin", user);
         int id = dao.insert(newRole);
         Role createdRole = dao.getById(id);
