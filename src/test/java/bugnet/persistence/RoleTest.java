@@ -34,7 +34,8 @@ public class RoleTest {
 
     @Test
     void insertTest() {
-        Role newRole = new Role("Test Role", 7);
+        User user = new User();
+        Role newRole = new Role("Test Role", "admin", user);
         int id = dao.insert(newRole);
         Role createdRole = dao.getById(id);
         assertEquals(newRole, createdRole);

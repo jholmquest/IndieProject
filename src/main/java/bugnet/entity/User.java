@@ -27,6 +27,10 @@ public class User {
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     private Set<Specimen> specimens = new HashSet<>();
 
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    private Set<Role> roles = new HashSet<>();
+
+    /*
     @ManyToMany(cascade = { CascadeType.ALL }, fetch = FetchType.EAGER)
     @JoinTable(
         name = "user_role",
@@ -34,7 +38,7 @@ public class User {
         inverseJoinColumns = { @JoinColumn( name = "role_id") }
     )
     private Set<Role> roles = new HashSet<Role>();
-
+    */
     /**
      * Instantiate a new user
      */
@@ -115,13 +119,6 @@ public class User {
         this.specimens = specimens;
     }
 
-    public Set<Role> getRoles() {
-        return roles;
-    }
-
-    public void setRoles(Set<Role> roles) {
-        this.roles = roles;
-    }
 
     /**
      * adds specimen to list of specimens
@@ -141,16 +138,23 @@ public class User {
         specimen.setUser(null);
     }
 
+    public Set<Role> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(Set<Role> roles) {
+        this.roles = roles;
+    }
+
     public void addRole(Role role) {
         roles.add(role);
-        role.getUsers().add(this);
+        role.setUser(this);
     }
 
     public void removeRole(Role role) {
         roles.remove(role);
-        role.getUsers().remove(this);
+        role.setUser(null);
     }
-
     /**
      * compares entities
      * @param o another object for comparison
