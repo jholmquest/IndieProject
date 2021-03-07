@@ -19,10 +19,6 @@ public class Role {
     @Column(name = "username")
     private String userName;
 
-    /*
-    @ManyToMany(targetEntity = User.class, fetch = FetchType.EAGER, mappedBy = "roles")
-    private Set<User> users = new HashSet<User>();
-    */
     @ManyToOne
     @JoinColumn(name = "user_id",
             foreignKey = @ForeignKey(name = "role_user_id_fk")
