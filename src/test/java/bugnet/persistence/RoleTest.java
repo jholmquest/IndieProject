@@ -1,7 +1,7 @@
 package bugnet.persistence;
 
-import bugnet.entity.Role;
-import bugnet.entity.User;
+
+import bugnet.entity.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -37,8 +37,5 @@ public class RoleTest {
         GenericDao<User> userDao = new GenericDao<>(User.class);
         User user = userDao.getById(2);
         Role newRole = new Role("Test Role", "admin", user);
-        int id = dao.insert(newRole);
-        Role createdRole = dao.getById(id);
-        assertEquals(newRole, createdRole);
     }
 }
