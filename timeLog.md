@@ -72,3 +72,12 @@ Tracking Time Spent Working
 2021-03-07 11:30am - 1:30pm exercise
 
 2021-03-07 3:30pm - 4:30pm finishing exercise
+
+#Week 8
+2021-03-09 11:30am - 12:00pm readings
+
+2021-03-09 3:30pm - 4:00pm got API working for activity
+
+2021-03-11 12:00pm - 1:00pm worked on API exercise
+
+2021-03-11 2:00pm - 2:45pm finished API exercise
