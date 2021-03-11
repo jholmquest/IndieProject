@@ -53,5 +53,9 @@ src/test/resources/database.properties
 src/test/resources/hibernate.cfg.xml
 src/main/resources/hibernate.cfg.xml
 
+
 # So we don't see all the logs
 *.log
+
+src/test/resources/api.properties
+src/main/resources/api.properties
