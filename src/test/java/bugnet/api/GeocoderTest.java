@@ -7,6 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import bugnet.persistence.PropertyLoader;
 import org.junit.jupiter.api.BeforeEach;
 
+import java.net.URLEncoder;
 import java.util.Properties;
 import java.util.Set;
 
@@ -18,16 +19,15 @@ public class GeocoderTest {
     @Test
     public void makeRequest() throws Exception {
         Client client = ClientBuilder.newClient();
-        WebTarget target =
-                client.target(properties.getProperty("request.url") + "address=Madison,WI&" +
-                        properties.getProperty("api.key"));
+        WebTarget target = client.target(properties.getProperty("request.url") + "Madison,%20WI" +
+                properties.getProperty("api.key"));
         String response = target.request(MediaType.APPLICATION_JSON).get(String.class);
-        assertEquals("???", response);
-    }
+        ObjectMapper mapper = new ObjectMapper();
+        Geocode results = mapper.readValue(response, Geocode.class);
 
-    @Test
-    public void showPropertyNames() throws Exception {
-        Set<String> propertyNames = properties.stringPropertyNames();
-        assertEquals("???", propertyNames);
+        double expectedLatitude = 43.0730517;
+        double expectedLongitude = -89.4012302;
+        assertEquals(expectedLatitude, results.getResults().get(0).getGeometry().getLocation().getLat());
+        assertEquals(expectedLongitude, results.getResults().get(0).getGeometry().getLocation().getLng());
     }
 }
