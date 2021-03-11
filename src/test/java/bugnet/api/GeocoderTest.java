@@ -7,9 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import bugnet.persistence.PropertyLoader;
 import org.junit.jupiter.api.BeforeEach;
 
-import java.net.URLEncoder;
 import java.util.Properties;
-import java.util.Set;
 
 public class GeocoderTest {
 
