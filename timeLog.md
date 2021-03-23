@@ -81,3 +81,11 @@ Tracking Time Spent Working
 2021-03-11 12:00pm - 1:00pm worked on API exercise
 
 2021-03-11 2:00pm - 2:45pm finished API exercise
+
+#Spring Break
+Nothing
+
+#Week 9
+2021-03-22 9:00pm - 10:00pm setup db on deployed app, fixed timezone error
+
+2021-03-23 11:45am - 12:15pm got login setup on deployed app for checkpoint
