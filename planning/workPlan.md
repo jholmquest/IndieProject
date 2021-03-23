@@ -12,18 +12,18 @@
 ~~Week6: Finish DAO/CRUD stuff~~
 - testing not fully done
 
-Week7: SECOND CHECKPOINT - DAO, CRUD, Hibernate, Log4j
-Build UI to allow adding specimens
+~~Week7: SECOND CHECKPOINT - DAO, CRUD, Hibernate, Log4j~~
+~~Build UI to allow adding specimens~~ -> moved
 
-Week8: Work on authentication
+~~Week8: Work on authentication~~
 
-Spring Break: Deploy - did get initial deploy working, not counting fully done
+~~Spring Break: Deploy - did get initial deploy working, not counting fully done~~
 
 Week9: THIRD CHECKPOINT - AWS, Login, JSP displaying data
 
-Week10: Switching between advanced and basic data
+Week10: User creation, user adding specimens
 
-Week11: Implement ITIS integration (flexible if I end up going another route)
+Week11: Implement ITIS integration (flexible if I end up going another route) - Using Maps API instead due to scope of project
 
 Week12: Data filtering
 
