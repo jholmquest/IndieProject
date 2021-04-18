@@ -61,7 +61,7 @@ public class SpecimenDaoTest {
         user.addSpecimen(newSpecimen);
         int id = dao.insert(newSpecimen);
         Specimen createdSpecimen = dao.getById(id);
-        assertEquals(newSpecimen.getBugName(), createdSpecimen.getBugName());
+        assertEquals(newSpecimen, createdSpecimen);
         //assertTrue(createdSpecimen.equals(newSpecimen));
     }
 
