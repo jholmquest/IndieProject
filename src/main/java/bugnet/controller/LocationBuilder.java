@@ -1,15 +1,9 @@
 package bugnet.controller;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class LocationBuilder {
-
-    private String locationName;
-    public LocationBuilder() {
-
-    }
-
-    public LocationBuilder(String locationName) {
-        this.locationName = escapeLocation(locationName);
-    }
 
     // need to replace certain characters for the api
     public String escapeLocation(String locationName) {
@@ -19,5 +13,12 @@ public class LocationBuilder {
         return formattedLocation;
     }
 
+    public Map<LocationKey, String> getCoordinates(String locationName) {
+        LocationKey key = LocationKey.FOUND;
+        String value = "value";
 
+        Map<LocationKey, String> map = new HashMap<>();
+        map.put(key, value);
+        return map;
+    }
 }
