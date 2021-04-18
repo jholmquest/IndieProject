@@ -89,3 +89,24 @@ Nothing
 2021-03-22 9:00pm - 10:00pm setup db on deployed app, fixed timezone error
 
 2021-03-23 11:45am - 12:15pm got login setup on deployed app for checkpoint
+
+2021-03-25 10:45am - 11:30am overviewed week 9 materials
+
+#Week 10
+2021-04-01 2:45pm - 3:15pm did hibernate annotations for group project
+
+#Week 11
+2021-04-08 1:45pm - 3:30pm set up CRUD methods for group project
+
+2021-04-09 4:00pm - 4:30pm meeting
+
+2021-04-10 12:30pm - 2:30pm added more methods for api to use, tried to get xml as a data type but couldn't figure it out
+
+2021-04-11 1:00pm - 2:00pm meeting
+
+#Week12
+2021-04-13 3:00pm - 4:00pm last meeting
+
+2021-04-15 11:00am - 11:45am wrote up some pseudocode to plan methods
+
+2021-04-18 3:00pm - 4:00pm put together basic class for generating a map
