@@ -11,8 +11,12 @@ public class LocationBuilder {
         this.locationName = escapeLocation(locationName);
     }
 
+    // need to replace certain characters for the api
     public String escapeLocation(String locationName) {
-        return locationName.replace(" ", "%20");
+        String formattedLocation = locationName;
+        formattedLocation = formattedLocation.replace("%", "%25");
+        formattedLocation = formattedLocation.replace(" ", "%20");
+        return formattedLocation;
     }
 
 
