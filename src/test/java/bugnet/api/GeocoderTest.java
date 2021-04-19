@@ -17,6 +17,7 @@ public class GeocoderTest {
 
     private static final LocationBuilder builder = new LocationBuilder();
 
+    // Tests finding a known location
     @Test
     public void testBuilder() {
         List<ResultsItem> results = builder.getCoordinates("Madison, WI");
@@ -26,12 +27,14 @@ public class GeocoderTest {
         assertEquals(expectedLongitude, results.get(0).getGeometry().getLocation().getLng());
     }
 
+    // Tests finding a nonexistant location
     @Test
     public void testVoid() {
         List<ResultsItem> results = builder.getCoordinates("feagaega;eaveeofeowa");
         assertEquals(0, results.size());
     }
 
+    // Tests escaping characters properly
     @Test
     public void testEscape() {
         String escape = builder.escapeLocation("A B %");
