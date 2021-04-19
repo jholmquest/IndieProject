@@ -1,6 +1,7 @@
 package bugnet.controller;
 
 import bugnet.api.Geocode;
+import bugnet.api.ResultsItem;
 import bugnet.persistence.PropertyLoader;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.logging.log4j.LogManager;
@@ -10,8 +11,7 @@ import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.MediaType;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 import java.util.Properties;
 
 public class LocationBuilder {
@@ -20,7 +20,11 @@ public class LocationBuilder {
     private final PropertyLoader loader = new PropertyLoader();
     private final Properties properties = loader.loadProperties("/api.properties");
 
-    // need to replace certain characters for the api
+    /**
+     *
+     * @param locationName
+     * @return
+     */
     public String escapeLocation(String locationName) {
         String formattedLocation = locationName;
         formattedLocation = formattedLocation.replace("%", "%25");
@@ -28,10 +32,15 @@ public class LocationBuilder {
         return formattedLocation;
     }
 
-    public Map<LocationKey, String> getCoordinates(String locationName) {
+    /**
+     * Takes a location and searches for it using the Geocode api
+     * @param locationName where an insect was collected
+     * @return list of all results, often one
+     */
+    public List<ResultsItem> getCoordinates(String locationName) {
 
         Client client = ClientBuilder.newClient();
-        Map<LocationKey, String> map = new HashMap<>();
+        List<ResultsItem> results = new ArrayList<>();
 
         try {
             WebTarget target = client.target(
@@ -40,14 +49,9 @@ public class LocationBuilder {
                             properties.getProperty("api.key"));
             String response = target.request(MediaType.APPLICATION_JSON).get(String.class);
             ObjectMapper mapper = new ObjectMapper();
-            Geocode results = mapper.readValue(response, Geocode.class);
+            Geocode queryResults = mapper.readValue(response, Geocode.class);
 
-            String found = results.getStatus();
-            String latitude = String.valueOf(results.getResults().get(0).getGeometry().getLocation().getLat());
-            String longitude = String.valueOf(results.getResults().get(0).getGeometry().getLocation().getLng());
-            map.put(LocationKey.FOUND, found);
-            map.put(LocationKey.LATITUDE, latitude);
-            map.put(LocationKey.LONGITUDE, longitude);
+            results = queryResults.getResults();
 
         } catch(Exception e) {
             logger.error(e);
@@ -57,6 +61,6 @@ public class LocationBuilder {
             }
         }
 
-        return map;
+        return results;
     }
 }
