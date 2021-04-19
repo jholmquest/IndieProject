@@ -49,4 +49,6 @@ public class GeocoderTest {
         List<ResultsItem> results = builder.getCoordinates("feagaega;eaveeofeowa");
         assertEquals(0, results.size());
     }
+
+
 }

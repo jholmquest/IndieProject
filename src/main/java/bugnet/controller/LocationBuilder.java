@@ -22,8 +22,8 @@ public class LocationBuilder {
 
     /**
      *
-     * @param locationName
-     * @return
+     * @param locationName Name of location being escaped
+     * @return string with proper escape characters for a url
      */
     public String escapeLocation(String locationName) {
         String formattedLocation = locationName;
