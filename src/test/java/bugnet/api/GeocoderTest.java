@@ -1,18 +1,13 @@
 package bugnet.api;
+
 import bugnet.controller.LocationBuilder;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Test;
-import javax.ws.rs.client.*;
-import javax.ws.rs.core.MediaType;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNull;
-
-import bugnet.persistence.PropertyLoader;
-import org.junit.jupiter.api.BeforeEach;
-
 import java.util.List;
-import java.util.Properties;
 
+/**
+ * Tests Classes related to Geocoding
+ */
 public class GeocoderTest {
 
     private static final LocationBuilder builder = new LocationBuilder();
