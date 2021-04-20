@@ -38,23 +38,21 @@ public class AddUser {
      * @param newUser User to be added
      * @return message to be output based on results
      */
-    public String add(User newUser) {
+    public int add(User newUser) {
+        int id = 0;
 
         if (uniqueUsername(newUser.getUsername())) {
-            int id = dao.insert(newUser);
+            id = dao.insert(newUser);
 
             if (id != 0) {
                 newUser.setId(id);
                 initializeRole(newUser);
-                return "User created successfully";
             } else {
-
                 logger.error("There was an issue adding the user");
-                return "Something went wrong";
             }
-        } else {
-            return "That username was taken";
         }
+
+        return id;
     }
 
     /**

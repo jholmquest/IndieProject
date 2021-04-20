@@ -1,5 +1,6 @@
 package bugnet.controller;
 
+import bugnet.entity.Role;
 import bugnet.entity.User;
 import bugnet.persistence.Database;
 import bugnet.persistence.GenericDao;
@@ -36,15 +37,23 @@ public class AddUserTest {
     @Test
     public void repeatUserTest() {
         User repeatUser = new User("testuser", "pasword");
-        String message = add.add(repeatUser);
+        int id = add.add(repeatUser);
         List<User> users = userDao.getAll();
 
         assertEquals(3, users.size());
-        assertEquals("That username was taken", message);
+        assertEquals(0, id);
     }
 
     @Test
     public void newUserTest() {
+        User newUser = new User("uniqueUser", "pasword");
+        int id = add.add(newUser);
+        newUser.setId(id);
+        User insertedUser = userDao.getById(id);
+        assertNotNull(insertedUser);
 
+        GenericDao<Role> roleDao = new GenericDao<>(Role.class);
+        List<Role> newRole = roleDao.findByPropertyEqual("username", newUser.getUsername());
+        assertEquals(1, newRole.size());
     }
 }
