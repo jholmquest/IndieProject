@@ -39,7 +39,7 @@ public class AddUser {
      * @return message to be output based on results
      */
     public int add(User newUser) {
-        int id = 0;
+        int id;
 
         if (uniqueUsername(newUser.getUsername())) {
             id = dao.insert(newUser);
@@ -50,9 +50,11 @@ public class AddUser {
             } else {
                 logger.error("There was an issue adding the user");
             }
+
+            return id;
         }
 
-        return id;
+        return 10;
     }
 
     /**

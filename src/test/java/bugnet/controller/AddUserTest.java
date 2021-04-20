@@ -4,7 +4,7 @@ import bugnet.entity.Role;
 import bugnet.entity.User;
 import bugnet.persistence.Database;
 import bugnet.persistence.GenericDao;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 
 import java.util.List;
@@ -14,12 +14,16 @@ import static org.junit.jupiter.api.Assertions.*;
 public class AddUserTest {
 
     private static final AddUser add = new AddUser();
-    private static final GenericDao<User> userDao = new GenericDao<>(User.class);
+    GenericDao<User> dao;
+    List<User> users;
+
     /**
      * cleans db, makes a new dao
      */
     @BeforeEach
     void setUp() {
+        dao = new GenericDao<>(User.class);
+
         Database database = Database.getInstance();
         database.runSQL("clean.sql");
     }
@@ -38,10 +42,9 @@ public class AddUserTest {
     public void repeatUserTest() {
         User repeatUser = new User("testuser", "pasword");
         int id = add.add(repeatUser);
-        List<User> users = userDao.getAll();
+        users = dao.getAll();
 
         assertEquals(3, users.size());
-        assertEquals(0, id);
     }
 
     @Test
@@ -49,11 +52,11 @@ public class AddUserTest {
         User newUser = new User("uniqueUser", "pasword");
         int id = add.add(newUser);
         newUser.setId(id);
-        User insertedUser = userDao.getById(id);
-        assertNotNull(insertedUser);
+        User insertedUser = dao.getById(id);
+        assertEquals(newUser, insertedUser);
 
         GenericDao<Role> roleDao = new GenericDao<>(Role.class);
-        List<Role> newRole = roleDao.findByPropertyEqual("username", newUser.getUsername());
+        List<Role> newRole = roleDao.findByPropertyEqual("userName", newUser.getUsername());
         assertEquals(1, newRole.size());
     }
 }
