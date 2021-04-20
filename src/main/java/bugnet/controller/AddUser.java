@@ -19,11 +19,10 @@ public class AddUser {
         return users.isEmpty();
     }
 
-    public void add(String username, String password) {
-        User newUser = new User(username, password);
+    public void add(User newUser) {
         int id = dao.insert(newUser);
         newUser.setId(id);
-
+        initializeRole(newUser);
     }
 
     public void initializeRole(User newUser) {
