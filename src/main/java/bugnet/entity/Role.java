@@ -1,9 +1,18 @@
 package bugnet.entity;
 
+import lombok.Getter;
+import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
 import java.util.*;
 
+/**
+ * Holds values for the role table
+ *
+ * @author James Holmquest
+ */
+@Getter
+@Setter
 @Entity(name = "Role")
 @Table(name = "role")
 public class Role {
@@ -31,38 +40,6 @@ public class Role {
     public Role(String roleName, String userName, User user) {
         this.roleName = roleName;
         this.userName = userName;
-        this.user = user;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getRoleName() {
-        return roleName;
-    }
-
-    public void setRoleName(String roleName) {
-        this.roleName = roleName;
-    }
-
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
         this.user = user;
     }
 
