@@ -29,6 +29,12 @@ public class Specimen {
     @Column(name = "notes")
     private String bugNotes;
 
+    @Column(name = "latitude")
+    private double latitude;
+
+    @Column(name = "longitude")
+    private double longitude;
+
     @ManyToOne
     @JoinColumn(name = "user_id",
             foreignKey = @ForeignKey(name = "specimen_user_id_fk")
@@ -116,7 +122,7 @@ public class Specimen {
 
     /**
      * sets date insect collected
-     * @param collectedDate
+     * @param collectedDate date insect collected
      */
     public void setCollectedDate(LocalDate collectedDate) {
         this.collectedDate = collectedDate;
