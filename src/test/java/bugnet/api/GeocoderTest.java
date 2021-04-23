@@ -1,6 +1,6 @@
 package bugnet.api;
 
-import bugnet.controller.LocationBuilder;
+import bugnet.persistence.LocationBuilder;
 import org.junit.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import java.util.List;

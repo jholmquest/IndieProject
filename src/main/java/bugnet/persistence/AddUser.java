@@ -1,4 +1,4 @@
-package bugnet.controller;
+package bugnet.persistence;
 
 import bugnet.entity.Role;
 import bugnet.entity.User;

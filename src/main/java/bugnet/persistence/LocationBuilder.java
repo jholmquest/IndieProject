@@ -1,4 +1,4 @@
-package bugnet.controller;
+package bugnet.persistence;
 
 import bugnet.api.Geocode;
 import bugnet.api.ResultsItem;
