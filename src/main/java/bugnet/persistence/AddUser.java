@@ -64,7 +64,7 @@ public class AddUser {
     public void initializeRole(User newUser) {
 
         UserRole defaultRole = UserRole.USER;
-        Role initialRole = new Role(defaultRole.roleName, newUser.getUsername(), newUser);
+        Role initialRole = new Role(defaultRole.getRoleName(), newUser.getUsername(), newUser);
         GenericDao<Role> roleDao = new GenericDao<>(Role.class);
         int roleId = roleDao.insert(initialRole);
         initialRole.setId(roleId);
