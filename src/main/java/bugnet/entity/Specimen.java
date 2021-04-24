@@ -33,11 +33,15 @@ public class Specimen {
     @Column(name = "notes")
     private String bugNotes;
 
+    /*
+    https://stackoverflow.com/questions/3154582/why-do-i-get-a-null-value-was-assigned-to-a-property-of-primitive-type-setter-o
+    need to use non-primitive
+     */
     @Column(name = "latitude")
-    private double latitude;
+    private Double latitude;
 
     @Column(name = "longitude")
-    private double longitude;
+    private Double longitude;
 
     @ManyToOne
     @JoinColumn(name = "user_id",

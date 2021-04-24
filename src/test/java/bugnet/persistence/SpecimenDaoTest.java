@@ -25,8 +25,7 @@ public class SpecimenDaoTest {
         dao = new GenericDao<>(Specimen.class);
 
         Database database = Database.getInstance();
-        database.runSQL("cleanUser.sql");
-        database.runSQL("cleanSpecimen.sql");
+        database.runSQL("clean.sql");
     }
 
     /**
