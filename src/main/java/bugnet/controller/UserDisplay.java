@@ -23,6 +23,7 @@ public class UserDisplay extends HttpServlet {
         GenericDao<User> dao = new GenericDao<>(User.class);
         List<User> users = dao.getAll();
 
+        req.setAttribute("loggedInAs", req.getRemoteUser());
         req.setAttribute("users", users);
         RequestDispatcher dispatcher = req.getRequestDispatcher("/userDisplay.jsp");
         dispatcher.forward(req, resp);

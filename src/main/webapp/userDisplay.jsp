@@ -2,6 +2,7 @@
 <c:import url="template/head.jsp" />
 <html>
 <body>
+<h2>Logged in as ${loggedInAs}</h2>
 <table>
     <tr>
         <th>Username</th>
