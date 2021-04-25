@@ -7,11 +7,12 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-<head>
-    <title>ERROR</title>
-</head>
 <body>
-    <h1>ERROR</h1>
+<c:import url="template/header.jsp" />
+<main>
+    <c:import url="template/nav.jsp" />
+    <h2>ERROR</h2>
     <a href="index.jsp">Return Home</a>
+</main>
 </body>
 </html>

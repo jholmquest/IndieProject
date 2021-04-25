@@ -1,8 +1,10 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<c:import url="template/head.jsp" />
 <html>
 <body>
-<table>
+<c:import url="template/header.jsp" />
+<main>
+    <table>
+    <c:import url="template/nav.jsp" />
     <tr>
         <th>Specimen Name</th>
     </tr>
@@ -12,6 +14,7 @@
         </tr>
     </c:forEach>
 
-</table>
+    </table>
+</main>
 </body>
 </html>
