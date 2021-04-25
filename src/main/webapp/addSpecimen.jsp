@@ -12,6 +12,7 @@
     <input type="date" id="collectedDate">
     <label for="notes">Notes</label>
     <textarea id="notes">Enter additional notes...</textarea>
+    <button type="submit" name="submitSpecimen">Submit</button>
 </form>
 </body>
 </html>

@@ -10,6 +10,7 @@
     <input type="password" id="password1">
     <label for="password2">Confirm Password</label>
     <input type="password" id="password2">
+    <button type="submit" name="submitUser">Submit</button>
 </form>
 </body>
 </html>
