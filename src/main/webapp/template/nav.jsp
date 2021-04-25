@@ -2,7 +2,7 @@
 <nav>
     <ul>
         <c:choose>
-            <c:when test="">
+            <c:when test="${not empty sessionUser}">
 
                 <li><a href="bugs">My Bugs</a></li>
                 <li><a href="newBug">Add a Bug</a></li>
