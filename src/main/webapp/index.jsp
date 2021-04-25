@@ -2,8 +2,9 @@
 <c:import url="template/head.jsp" />
 <html>
 <body>
-<c:import url="template/nav.jsp" />
-<h2>Hello World!</h2>
-<a href="test">Test</a>
+<c:import url="template/header.jsp" />
+<main>
+    <c:import url="template/nav.jsp" />
+</main>
 </body>
 </html>
