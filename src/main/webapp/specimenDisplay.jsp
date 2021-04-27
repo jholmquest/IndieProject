@@ -11,6 +11,8 @@
         <th>Location</th>
         <th>Date</th>
         <th>Notes</th>
+        <th>Latitude</th>
+        <th>Longitude</th>
     </tr>
     <c:forEach var="specimen" items="${specimens}">
         <tr>
@@ -21,6 +23,7 @@
             <td>${specimen.latitude}</td>
             <td>${specimen.longitude}</td>
             <td><a href="editBug?id=${specimen.id}">edit</a></td>
+            <td><a href="deleteBug?id=${specimen.id}">delete</a></td>
         </tr>
     </c:forEach>
 
