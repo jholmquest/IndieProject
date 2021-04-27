@@ -14,7 +14,7 @@
         <input type="date" id="collectedDate" name="collectedDate" value="${specimen.collectedDate}">
         <label for="notes">Notes</label>
         <textarea id="notes" name="notes">${specimen.bugNotes}</textarea>
-        <input type="hidden" value="${specimen.id}">
+        <input type="hidden" value="${specimen.id}" name="id">
         <button type="submit" name="submitSpecimen">Submit</button>
     </form>
 </main>
