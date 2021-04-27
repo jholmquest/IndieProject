@@ -1,9 +1,26 @@
 Bug Collecting App
 
-Problem Statement: Insect Collecting is a multi-step process. 
-You find an insect and record collecting information. 
-After that you transfer that data to a label, generally using a template. 
-Eventually you may upload to some database. 
-The primary goal is to streamline some of that process, while adding other useful features.
+Bug collecting is a popular hobby around the world. People of all ages do it, and some even make a career out of it.
+One of the challenges associate with collecting bugs is keeping track of every last one.
+BugNet is an application designed to store information on insects collected, for access anywhere.
+In it's current form it is very basic, designed for a casual user. Over time the plan is to add more features to make it useful for all levels.
 
-#TODO: List out technologies
+
+#Technologies:
+-Maven
+
+-Hibernate
+
+-Log4j
+
+-JUnit
+
+-Google's Geocoding API
+
+-Tomcat
+
+-Java
+
+-MySQL
+
+-Lombok
