@@ -8,10 +8,16 @@
     <c:import url="template/nav.jsp" />
     <tr>
         <th>Specimen Name</th>
+        <th>Location</th>
+        <th>Date</th>
+        <th>Notes</th>
     </tr>
     <c:forEach var="specimen" items="${specimens}">
         <tr>
             <td>${specimen.bugName}</td>
+            <td>${specimen.collectedLocation}</td>
+            <td>${specimen.collectedDate}</td>
+            <td>${specimen.bugNotes}</td>
         </tr>
     </c:forEach>
 
