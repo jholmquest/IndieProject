@@ -25,6 +25,13 @@ public class AddSpecimen extends HttpServlet {
         dispatcher.forward(req, resp);
     }
 
+    /**
+     * Adds specimen with data that has been filled in
+     * @param req the http request
+     * @param resp the http response
+     * @throws ServletException issue with the servlet
+     * @throws IOException issue with I/O
+     */
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         LocalDate collectedDate = LocalDate.parse(req.getParameter("collectedDate"));
