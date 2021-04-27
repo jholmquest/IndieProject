@@ -24,6 +24,7 @@
             <td>${specimen.longitude}</td>
             <td><a href="editBug?id=${specimen.id}">edit</a></td>
             <td><a href="deleteBug?id=${specimen.id}">delete</a></td>
+            <td><a href="coordinates?id=${specimen.id}">Generate Coordinates(Experimental)</a></td>
         </tr>
     </c:forEach>
 
