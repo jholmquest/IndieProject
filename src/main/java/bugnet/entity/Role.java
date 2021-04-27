@@ -26,7 +26,7 @@ public class Role {
     private String roleName;
 
     @Column(name = "username")
-    private String userName;
+    private String username;
 
     @ManyToOne
     @JoinColumn(name = "user_id",
@@ -39,7 +39,7 @@ public class Role {
 
     public Role(String roleName, String userName, User user) {
         this.roleName = roleName;
-        this.userName = userName;
+        this.username = userName;
         this.user = user;
     }
 
@@ -48,11 +48,11 @@ public class Role {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Role role = (Role) o;
-        return id == role.id && Objects.equals(roleName, role.roleName) && Objects.equals(userName, role.userName);
+        return id == role.id && Objects.equals(roleName, role.roleName) && Objects.equals(username, role.username);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, roleName, userName);
+        return Objects.hash(id, roleName, username);
     }
 }

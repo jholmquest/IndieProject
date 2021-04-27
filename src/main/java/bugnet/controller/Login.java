@@ -1,6 +1,7 @@
 package bugnet.controller;
 
 import bugnet.entity.User;
+import bugnet.persistence.Column;
 import bugnet.persistence.GenericDao;
 
 import javax.servlet.RequestDispatcher;
@@ -21,7 +22,7 @@ public class Login extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         GenericDao<User> dao = new GenericDao<>(User.class);
-        List<User> user = dao.findByPropertyEqual("username", req.getRemoteUser());
+        List<User> user = dao.findByPropertyEqual(Column.USERNAME, req.getRemoteUser());
         req.getSession().setAttribute("sessionUser", user.get(0));
         resp.sendRedirect(".");
     }

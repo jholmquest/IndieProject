@@ -3,6 +3,7 @@ package bugnet.controller;
 import bugnet.entity.Role;
 import bugnet.entity.User;
 import bugnet.persistence.AddUser;
+import bugnet.persistence.Column;
 import bugnet.persistence.Database;
 import bugnet.persistence.GenericDao;
 import org.junit.jupiter.api.Test;
@@ -57,7 +58,7 @@ public class AddUserTest {
         assertEquals(newUser, insertedUser);
 
         GenericDao<Role> roleDao = new GenericDao<>(Role.class);
-        List<Role> newRole = roleDao.findByPropertyEqual("userName", newUser.getUsername());
+        List<Role> newRole = roleDao.findByPropertyEqual(Column.USERNAME, newUser.getUsername());
         assertEquals(1, newRole.size());
     }
 }
