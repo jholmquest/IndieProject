@@ -18,6 +18,9 @@
             <td>${specimen.collectedLocation}</td>
             <td>${specimen.collectedDate}</td>
             <td>${specimen.bugNotes}</td>
+            <td>${specimen.latitude}</td>
+            <td>${specimen.longitude}</td>
+            <td><a href="editBug?id=${specimen.id}">edit</a></td>
         </tr>
     </c:forEach>
 
