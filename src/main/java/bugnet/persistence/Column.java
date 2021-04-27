@@ -9,7 +9,8 @@ import lombok.Getter;
 public enum Column {
     ID("id"),
     USERNAME("username"),
-    USERID("user_id");
+    USERID("user_id"),
+    USER("user");
 
     private final String name;
 

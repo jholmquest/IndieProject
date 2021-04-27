@@ -2,6 +2,7 @@ package bugnet.controller;
 
 import bugnet.entity.Specimen;
 import bugnet.entity.User;
+import bugnet.persistence.Column;
 import bugnet.persistence.GenericDao;
 
 import javax.servlet.RequestDispatcher;
@@ -22,7 +23,8 @@ public class SpecimenDisplay extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         GenericDao<Specimen> dao = new GenericDao<>(Specimen.class);
-        List<Specimen> specimens = dao.getAll();
+        User user = (User)req.getSession().getAttribute("sessionUser");
+        List<Specimen> specimens = dao.findByPropertyEqual(Column.USER, user);
 
         req.setAttribute("specimens", specimens);
         RequestDispatcher dispatcher = req.getRequestDispatcher("/specimenDisplay.jsp");
