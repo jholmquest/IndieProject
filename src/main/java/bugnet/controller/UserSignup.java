@@ -1,6 +1,7 @@
 package bugnet.controller;
 
 import bugnet.entity.User;
+import bugnet.persistence.AddUser;
 import bugnet.persistence.GenericDao;
 
 import javax.servlet.RequestDispatcher;
@@ -25,5 +26,17 @@ public class UserSignup extends HttpServlet {
 
         RequestDispatcher dispatcher = req.getRequestDispatcher("/userSignup.jsp");
         dispatcher.forward(req, resp);
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String password1 = req.getParameter("password1");
+        String password2 = req.getParameter("password2");
+        if (password1.equals(password2)) {
+            User newUser = new User(req.getParameter("username"), password1);
+            AddUser signup = new AddUser();
+            signup.add(newUser);
+        }
+        resp.sendRedirect(".");
     }
 }

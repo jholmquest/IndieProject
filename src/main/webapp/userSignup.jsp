@@ -7,11 +7,11 @@
     <c:import url="template/nav.jsp" />
     <form action="#" method="POST">
         <label for="username">Username</label>
-        <input type="text" id="username">
+        <input type="text" id="username" name="username">
         <label for="password1">Password</label>
-        <input type="password" id="password1">
+        <input type="password" id="password1" name="password1">
         <label for="password2">Confirm Password</label>
-        <input type="password" id="password2">
+        <input type="password" id="password2" name="password2">
         <button type="submit" name="submitUser">Submit</button>
     </form>
 </main>
