@@ -109,16 +109,16 @@ public class GenericDao<T> {
     /**
      * Finds entities by one of its properties.
 
-     * @param propertyName the property name.
+     * @param column the column being searched
      * @param value the value by which to find.
      * @return
      */
-    public List<T> findByPropertyEqual(String propertyName, Object value) {
+    public List<T> findByPropertyEqual(Column column, Object value) {
         Session session = getSession();
         CriteriaBuilder builder = session.getCriteriaBuilder();
         CriteriaQuery<T> query = builder.createQuery(type);
         Root<T> root = query.from(type);
-        query.select(root).where(builder.equal(root.get(propertyName),value));
+        query.select(root).where(builder.equal(root.get(column.getName()),value));
 
         return session.createQuery(query).getResultList();
     }

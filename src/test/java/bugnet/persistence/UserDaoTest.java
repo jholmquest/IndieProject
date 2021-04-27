@@ -47,7 +47,7 @@ public class UserDaoTest {
      */
     @Test
     void getByUsernameTest() {
-        users = dao.findByPropertyEqual("username", "holmquest");
+        users = dao.findByPropertyEqual(Column.USERNAME, "holmquest");
         assertEquals(3, users.get(0).getId());
     }
 

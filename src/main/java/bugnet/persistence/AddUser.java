@@ -28,7 +28,7 @@ public class AddUser {
      * @return true if no username found, otherwise false
      */
     public boolean uniqueUsername(String username) {
-        List<User> users = dao.findByPropertyEqual("username", username);
+        List<User> users = dao.findByPropertyEqual(Column.USERNAME, username);
 
         return users.isEmpty();
     }

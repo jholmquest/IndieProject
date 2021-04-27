@@ -61,7 +61,6 @@ public class SpecimenDaoTest {
         int id = dao.insert(newSpecimen);
         Specimen createdSpecimen = dao.getById(id);
         assertEquals(newSpecimen, createdSpecimen);
-        //assertTrue(createdSpecimen.equals(newSpecimen));
     }
 
     /**
@@ -93,6 +92,6 @@ public class SpecimenDaoTest {
         specimenToUpdate.setBugName("updated beetle");
         dao.saveOrUpdate(specimenToUpdate);
         Specimen updatedSpecimen = dao.getById(1);
-        //assertTrue(updatedSpecimen.equals(specimenToUpdate));
+        assertTrue(updatedSpecimen.equals(specimenToUpdate));
     }
 }
