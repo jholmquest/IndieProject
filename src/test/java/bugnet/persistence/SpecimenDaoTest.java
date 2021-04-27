@@ -69,7 +69,7 @@ public class SpecimenDaoTest {
      */
     @Test
     void getByIdTest() {
-        Specimen specimen = dao.getById(2);
+        Specimen specimen = dao.getById(1);
         assertEquals("beetle", specimen.getBugName());
     }
 
