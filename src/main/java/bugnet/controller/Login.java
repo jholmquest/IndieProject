@@ -22,7 +22,7 @@ public class Login extends HttpServlet {
 
         GenericDao<User> dao = new GenericDao<>(User.class);
         List<User> user = dao.findByPropertyEqual("username", req.getRemoteUser());
-        req.getSession().setAttribute("sessionUser", user);
+        req.getSession().setAttribute("sessionUser", user.get(0));
         resp.sendRedirect(".");
     }
 

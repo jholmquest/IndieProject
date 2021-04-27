@@ -39,5 +39,7 @@ public class AddSpecimen extends HttpServlet {
         GenericDao<Specimen> dao = new GenericDao<>(Specimen.class);
         dao.insert(newSpecimen);
         user.addSpecimen(newSpecimen);
+        RequestDispatcher dispatcher = req.getRequestDispatcher("/.");
+        dispatcher.forward(req, resp);
     }
 }

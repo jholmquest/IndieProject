@@ -11,7 +11,7 @@
     </tr>
     <c:forEach var="specimen" items="${specimens}">
         <tr>
-            <td>${specimen.bugname}</td>
+            <td>${specimen.bugName}</td>
         </tr>
     </c:forEach>
 
