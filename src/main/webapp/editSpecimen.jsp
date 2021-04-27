@@ -7,11 +7,11 @@
     <c:import url="template/nav.jsp" />
     <form action="editBug" method="POST">
         <label for="determination">What is it?</label>
-        <input type="text" id="determination" name="determination" value="${specimen.bugName}">
+        <input type="text" id="determination" name="determination" value="${specimen.bugName}" maxlength="100" required>
         <label for="location">Where did you collect it?</label>
-        <input type="text" id="location" name="location" value="${specimen.collectedLocation}">
+        <input type="text" id="location" name="location" value="${specimen.collectedLocation}" maxlength="50" required>
         <label for="collectedDate">When did you collect it?</label>
-        <input type="date" id="collectedDate" name="collectedDate" value="${specimen.collectedDate}">
+        <input type="date" id="collectedDate" name="collectedDate" value="${specimen.collectedDate}" required>
         <label for="notes">Notes</label>
         <textarea id="notes" name="notes">${specimen.bugNotes}</textarea>
         <input type="hidden" value="${specimen.id}" name="id">
