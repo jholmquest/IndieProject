@@ -16,6 +16,7 @@
     <web-resource-collection>
       <web-resource-name>search</web-resource-name>
       <url-pattern>/test</url-pattern>
+      <url-pattern>/admin</url-pattern>
     </web-resource-collection>
     <auth-constraint>
       <role-name>administrator</role-name>
@@ -23,8 +24,12 @@
   </security-constraint>
   <security-constraint>
     <web-resource-collection>
-      <web-resource-name>login</web-resource-name>
+      <web-resource-name>user resources</web-resource-name>
       <url-pattern>/login</url-pattern>
+      <url-pattern>/bugs</url-pattern>
+      <url-pattern>/newBug</url-pattern>
+      <url-pattern>/deleteBug</url-pattern>
+      <url-pattern>/editBug</url-pattern>
     </web-resource-collection>
     <auth-constraint>
       <role-name>user</role-name>

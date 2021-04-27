@@ -1,0 +1,7 @@
+body {
+    background-color: orange;
+}
+
+nav ul li {
+    display: inline-block;
+}
