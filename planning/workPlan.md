@@ -21,7 +21,7 @@
 
 ~~Week9: THIRD CHECKPOINT - AWS, Login, JSP displaying data~~
 
-Week10: User creation, user adding specimens
+~~Week10: User creation, user adding specimens~~
 
 ~~Week11: Implement ITIS integration (flexible if I end up going another route) - Using Maps API instead due to scope of project~~
 
