@@ -19,6 +19,7 @@ public class LocationBuilder {
     private final Logger logger = LogManager.getLogger(this.getClass());
     private final PropertyLoader loader = new PropertyLoader();
     private final Properties properties = loader.loadProperties("/api.properties");
+    private List<ResultsItem> results;
 
     /**
      *
