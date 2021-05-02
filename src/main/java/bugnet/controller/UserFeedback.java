@@ -11,7 +11,7 @@ import lombok.Getter;
 public enum UserFeedback {
     COORDINATE_SUCCESS("Coordinates Found"),
     COORDINATE_FAILURE("No Coordinates Found"),
-    SIGNUP_SUCCESS("User Created"),
+    SIGNUP_SUCCESS("User Created with an id of "),
     PASSWORDS_DIFFERENT("The passwords must match"),
     GENERIC_FAILURE("Something went wrong");
 

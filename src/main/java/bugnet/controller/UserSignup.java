@@ -28,15 +28,42 @@ public class UserSignup extends HttpServlet {
         dispatcher.forward(req, resp);
     }
 
+    /**
+     * Checks if passwords match, if they do attempts to sign up user
+     * @param req
+     * @param resp
+     * @throws ServletException
+     * @throws IOException
+     */
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String password1 = req.getParameter("password1");
         String password2 = req.getParameter("password2");
+
+        String signupMessage;
         if (password1.equals(password2)) {
             User newUser = new User(req.getParameter("username"), password1);
             AddUser signup = new AddUser();
-            signup.add(newUser);
+            int id = signup.add(newUser);
+            signupMessage = checkId(id);
+        } else {
+            signupMessage = UserFeedback.PASSWORDS_DIFFERENT.getMessage();
         }
-        resp.sendRedirect(".");
+
+        req.getSession().setAttribute("signupMessage", signupMessage);
+        resp.sendRedirect("signup");
+    }
+
+    /**
+     * checks the id passed in to generate feeback
+     * @param id 0 if no record inserted, otherwise id of record
+     * @return feedback message
+     */
+    public String checkId(int id) {
+        if (id == 0) {
+            return UserFeedback.GENERIC_FAILURE.getMessage();
+        } else {
+            return (UserFeedback.SIGNUP_SUCCESS.getMessage() + id);
+        }
     }
 }
