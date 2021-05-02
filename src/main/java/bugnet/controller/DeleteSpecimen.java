@@ -2,6 +2,8 @@ package bugnet.controller;
 
 import bugnet.entity.Specimen;
 import bugnet.persistence.GenericDao;
+import bugnet.util.InputController;
+import bugnet.util.UserFeedback;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,15 +12,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(
-        urlPatterns = {"/deleteBug"}
-)
 /**
  * facilitates the deletion of insects
  *
  * @author James Holmquest
  */
-public class DeleteSpecimen extends HttpServlet {
+@WebServlet(
+        urlPatterns = {"/deleteBug"}
+)
+public class DeleteSpecimen extends HttpServlet implements InputController {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -28,7 +30,12 @@ public class DeleteSpecimen extends HttpServlet {
             int deleteId = Integer.parseInt(idString);
             GenericDao<Specimen> dao = new GenericDao<>(Specimen.class);
             Specimen toDelete = dao.getById(deleteId);
-            dao.delete(toDelete);
+            if (isOwner(toDelete, req)) {
+                dao.delete(toDelete);
+                req.getSession().setAttribute("specimenMessage", UserFeedback.DELETE_SUCCESS.getMessage());
+            } else {
+                illegalAccess(req);
+            }
             resp.sendRedirect("bugs");
         }
 
