@@ -1,7 +1,7 @@
 package bugnet.api;
 
 import bugnet.persistence.LocationBuilder;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

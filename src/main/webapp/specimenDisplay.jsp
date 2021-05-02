@@ -29,6 +29,11 @@
     </c:forEach>
 
     </table>
+
+    <c:if test="${not empty coordinateMessage}">
+        <h3>${coordinateMessage}</h3>
+        <c:remove var="coordinateMessage" />
+    </c:if>
 </main>
 </body>
 </html>
