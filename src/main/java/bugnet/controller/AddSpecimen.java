@@ -3,6 +3,7 @@ package bugnet.controller;
 import bugnet.entity.Specimen;
 import bugnet.entity.User;
 import bugnet.persistence.GenericDao;
+import bugnet.util.UserFeedback;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -44,9 +45,17 @@ public class AddSpecimen extends HttpServlet {
                 user);
 
         GenericDao<Specimen> dao = new GenericDao<>(Specimen.class);
-        dao.insert(newSpecimen);
-        user.addSpecimen(newSpecimen);
-        RequestDispatcher dispatcher = req.getRequestDispatcher("/.");
-        dispatcher.forward(req, resp);
+        int id = dao.insert(newSpecimen);
+
+        String insertMessage;
+        if (id != 0) {
+            insertMessage = UserFeedback.INSERT_SUCCESS.getMessage() + id;
+            user.addSpecimen(newSpecimen);
+        } else {
+            insertMessage = UserFeedback.INSERT_FAILURE.getMessage();
+        }
+
+        req.getSession().setAttribute("insertMessage", insertMessage);
+        resp.sendRedirect("newBug");
     }
 }

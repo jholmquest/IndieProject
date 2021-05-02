@@ -16,6 +16,10 @@
     <textarea id="notes" name="notes">Enter additional notes...</textarea>
     <button type="submit" name="submitSpecimen">Submit</button>
 </form>
+    <c:if test="${not empty insertMessage}">
+        <h3>${insertMessage}</h3>
+        <c:remove var="insertMessage" />
+    </c:if>
 </main>
 </body>
 </html>

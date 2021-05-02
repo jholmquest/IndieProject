@@ -17,6 +17,8 @@ public enum UserFeedback {
     ILLEGAL_ACCESS("You cannot access that specimen"),
     DELETE_SUCCESS("Specimen deleted"),
     NOT_FOUND("This specimen doesn't exit"),
+    INSERT_SUCCESS("Insect added with an id of "),
+    INSERT_FAILURE("Insect not added, something went wrong"),
     GENERIC_FAILURE("Something went wrong");
 
     private final String message;
