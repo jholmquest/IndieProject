@@ -2,7 +2,11 @@ package bugnet.api;
 
 import bugnet.persistence.LocationBuilder;
 import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -10,22 +14,28 @@ import java.util.List;
  */
 public class GeocoderTest {
 
-    private static final LocationBuilder builder = new LocationBuilder();
+    private LocationBuilder builder;
+
+    @BeforeEach
+    void setup() {
+        builder = new LocationBuilder();
+    }
 
     // Tests finding a known location
     @Test
     public void testBuilder() {
-        List<ResultsItem> results = builder.getCoordinates("Madison, WI");
+        builder.findCoordinates("Madison, WI");
         double expectedLatitude = 43.0730517;
         double expectedLongitude = -89.4012302;
-        assertEquals(expectedLatitude, results.get(0).getGeometry().getLocation().getLat());
-        assertEquals(expectedLongitude, results.get(0).getGeometry().getLocation().getLng());
+        assertEquals(expectedLatitude, builder.getLatitude());
+        assertEquals(expectedLongitude, builder.getLongitude());
     }
 
     // Tests finding a nonexistant location
     @Test
     public void testVoid() {
-        List<ResultsItem> results = builder.getCoordinates("feagaega;eaveeofeowa");
+        builder.findCoordinates("feagaega;eaveeofeowa");
+        List<ResultsItem> results = builder.getResults();
         assertEquals(0, results.size());
     }
 

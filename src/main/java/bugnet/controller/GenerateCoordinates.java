@@ -23,7 +23,7 @@ import java.util.List;
 public class GenerateCoordinates extends HttpServlet {
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         String idString = req.getParameter("id");
 
         if (idString != null) {
@@ -31,11 +31,11 @@ public class GenerateCoordinates extends HttpServlet {
             GenericDao<Specimen> dao = new GenericDao<>(Specimen.class);
             Specimen specimen = dao.getById(editId);
 
-            LocationBuilder generateCoordinates = new LocationBuilder();
-            List<ResultsItem> geocodeResults = generateCoordinates.getCoordinates(specimen.getCollectedLocation());
-            if (geocodeResults.size() > 0) {
-                specimen.setLatitude(geocodeResults.get(0).getGeometry().getLocation().getLat());
-                specimen.setLongitude(geocodeResults.get(0).getGeometry().getLocation().getLng());
+            LocationBuilder coordinateGenerator = new LocationBuilder();
+            coordinateGenerator.findCoordinates(specimen.getCollectedLocation());
+            if (coordinateGenerator.getResults().size() > 0) {
+                specimen.setLatitude(coordinateGenerator.getLatitude());
+                specimen.setLongitude(coordinateGenerator.getLongitude());
                 dao.saveOrUpdate(specimen);
             }
         }

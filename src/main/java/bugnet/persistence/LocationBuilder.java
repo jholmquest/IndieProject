@@ -21,6 +21,10 @@ public class LocationBuilder {
     private final Properties properties = loader.loadProperties("/api.properties");
     private List<ResultsItem> results;
 
+    public LocationBuilder() {
+        results = new ArrayList<>();
+    }
+
     /**
      *
      * @param locationName Name of location being escaped
@@ -36,12 +40,10 @@ public class LocationBuilder {
     /**
      * Takes a location and searches for it using the Geocode api
      * @param locationName where an insect was collected
-     * @return list of all results, often one
      */
-    public List<ResultsItem> getCoordinates(String locationName) {
+    public void findCoordinates(String locationName) {
 
         Client client = ClientBuilder.newClient();
-        List<ResultsItem> results = new ArrayList<>();
 
         try {
             WebTarget target = client.target(
@@ -61,7 +63,17 @@ public class LocationBuilder {
                 client.close();
             }
         }
+    }
 
+    public List<ResultsItem> getResults() {
         return results;
+    }
+
+    public double getLatitude() {
+        return results.get(0).getGeometry().getLocation().getLat();
+    }
+
+    public double getLongitude() {
+        return results.get(0).getGeometry().getLocation().getLng();
     }
 }
