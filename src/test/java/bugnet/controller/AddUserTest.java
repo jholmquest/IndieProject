@@ -45,7 +45,7 @@ public class AddUserTest {
         User repeatUser = new User("testuser", "pasword");
         int id = add.add(repeatUser);
         users = dao.getAll();
-
+        assertEquals(-1, id);
         assertEquals(3, users.size());
     }
 

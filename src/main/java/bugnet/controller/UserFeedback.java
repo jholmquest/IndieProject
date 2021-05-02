@@ -13,6 +13,7 @@ public enum UserFeedback {
     COORDINATE_FAILURE("No Coordinates Found"),
     SIGNUP_SUCCESS("User Created with an id of "),
     PASSWORDS_DIFFERENT("The passwords must match"),
+    DUPLICATE_USER("This user already exists"),
     GENERIC_FAILURE("Something went wrong");
 
     private final String message;

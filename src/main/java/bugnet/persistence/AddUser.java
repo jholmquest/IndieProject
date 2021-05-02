@@ -39,7 +39,7 @@ public class AddUser {
      * @return message to be output based on results
      */
     public int add(User newUser) {
-        int id = 0;
+        int id;
 
         if (uniqueUsername(newUser.getUsername())) {
             id = dao.insert(newUser);
@@ -52,6 +52,8 @@ public class AddUser {
             }
 
             return id;
+        } else {
+            id = -1;
         }
 
         return id;

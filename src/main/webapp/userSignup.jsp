@@ -14,6 +14,11 @@
         <input type="password" id="password2" name="password2" maxlength="40" required>
         <button type="submit" name="submitUser">Submit</button>
     </form>
+
+    <c:if test="${not empty signupMessage}">
+        <h3>${signupMessage}</h3>
+        <c:remove var="signupMessage" />
+    </c:if>
 </main>
 </body>
 </html>

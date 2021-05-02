@@ -12,13 +12,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(
-        urlPatterns = {"/signup"}
-)
-
 /**
  * Forwards to the signup page
  */
+@WebServlet(
+        urlPatterns = {"/signup"}
+)
 public class UserSignup extends HttpServlet {
 
     @Override
@@ -30,13 +29,12 @@ public class UserSignup extends HttpServlet {
 
     /**
      * Checks if passwords match, if they do attempts to sign up user
-     * @param req
-     * @param resp
-     * @throws ServletException
-     * @throws IOException
+     * @param req http request object
+     * @param resp http response object
+     * @throws IOException Issue with input/output
      */
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         String password1 = req.getParameter("password1");
         String password2 = req.getParameter("password2");
 
@@ -62,6 +60,8 @@ public class UserSignup extends HttpServlet {
     public String checkId(int id) {
         if (id == 0) {
             return UserFeedback.GENERIC_FAILURE.getMessage();
+        } else if (id == -1) {
+            return UserFeedback.DUPLICATE_USER.getMessage();
         } else {
             return (UserFeedback.SIGNUP_SUCCESS.getMessage() + id);
         }
