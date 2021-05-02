@@ -28,7 +28,11 @@ public class EditSpecimen extends HttpServlet implements InputController {
             GenericDao<Specimen> dao = new GenericDao<>(Specimen.class);
             Specimen toEdit = dao.getById(editId);
 
-            if (isOwner(toEdit, req)) {
+            if (toEdit == null) {
+                specimenNotFound(req);
+                resp.sendRedirect("bugs");
+
+            } else if (isOwner(toEdit, req)) {
 
                 req.setAttribute("specimen", toEdit);
                 RequestDispatcher dispatcher = req.getRequestDispatcher("/editSpecimen.jsp");
@@ -39,6 +43,7 @@ public class EditSpecimen extends HttpServlet implements InputController {
                 resp.sendRedirect("bugs");
             }
         } else {
+
             resp.sendRedirect("bugs");
         }
     }

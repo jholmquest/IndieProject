@@ -16,6 +16,7 @@ public enum UserFeedback {
     DUPLICATE_USER("This user already exists"),
     ILLEGAL_ACCESS("You cannot access that specimen"),
     DELETE_SUCCESS("Specimen deleted"),
+    NOT_FOUND("This specimen doesn't exit"),
     GENERIC_FAILURE("Something went wrong");
 
     private final String message;

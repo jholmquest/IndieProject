@@ -30,7 +30,9 @@ public class DeleteSpecimen extends HttpServlet implements InputController {
             int deleteId = Integer.parseInt(idString);
             GenericDao<Specimen> dao = new GenericDao<>(Specimen.class);
             Specimen toDelete = dao.getById(deleteId);
-            if (isOwner(toDelete, req)) {
+            if (toDelete == null) {
+                specimenNotFound(req);
+            } else if (isOwner(toDelete, req)) {
                 dao.delete(toDelete);
                 req.getSession().setAttribute("specimenMessage", UserFeedback.DELETE_SUCCESS.getMessage());
             } else {

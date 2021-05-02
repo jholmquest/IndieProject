@@ -36,4 +36,8 @@ public interface InputController {
     default void illegalAccess(HttpServletRequest req) {
         req.getSession().setAttribute("specimenMessage", UserFeedback.ILLEGAL_ACCESS.getMessage());
     }
+
+    default void specimenNotFound(HttpServletRequest req) {
+        req.getSession().setAttribute("specimenMessage", UserFeedback.NOT_FOUND.getMessage());
+    }
 }
