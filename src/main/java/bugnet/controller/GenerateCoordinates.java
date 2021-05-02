@@ -48,10 +48,10 @@ public class GenerateCoordinates extends HttpServlet {
             specimen.setLongitude(coordinateGenerator.getLongitude());
             dao.saveOrUpdate(specimen);
 
-            return "coordinates found";
+            return UserFeedback.COORDINATE_SUCCESS.getMessage();
         } else {
 
-            return "no coordinates found";
+            return UserFeedback.COORDINATE_FAILURE.getMessage();
         }
     }
 }
