@@ -38,6 +38,8 @@ public class EditSpecimen extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         LocalDate collectedDate = LocalDate.parse(req.getParameter("collectedDate"));
         int specimenId = Integer.parseInt(req.getParameter("id"));
+        Double latitude = Double.valueOf(req.getParameter("latitude"));
+        Double longitude = Double.valueOf(req.getParameter("longitude"));
         GenericDao<Specimen> dao = new GenericDao<>(Specimen.class);
         Specimen updateSpecimen = dao.getById(specimenId);
 
@@ -45,7 +47,10 @@ public class EditSpecimen extends HttpServlet {
         updateSpecimen.setCollectedLocation(req.getParameter("location"));
         updateSpecimen.setCollectedDate(collectedDate);
         updateSpecimen.setBugNotes(req.getParameter("notes"));
+        updateSpecimen.setLatitude(latitude);
+        updateSpecimen.setLongitude(longitude);
         dao.saveOrUpdate(updateSpecimen);
         resp.sendRedirect("bugs");
     }
+
 }

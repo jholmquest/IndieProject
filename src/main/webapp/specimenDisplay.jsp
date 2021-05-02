@@ -18,10 +18,10 @@
         <tr>
             <td>${specimen.bugName}</td>
             <td>${specimen.collectedLocation}</td>
-            <td>${specimen.collectedDate}</td>
-            <td>${specimen.bugNotes}</td>
             <td>${specimen.latitude}</td>
             <td>${specimen.longitude}</td>
+            <td>${specimen.collectedDate}</td>
+            <td>${specimen.bugNotes}</td>
             <td><a href="editBug?id=${specimen.id}">edit</a></td>
             <td><a href="deleteBug?id=${specimen.id}">delete</a></td>
             <td><a href="coordinates?id=${specimen.id}">Generate Coordinates(Experimental)</a></td>
