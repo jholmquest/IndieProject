@@ -31,15 +31,27 @@ public class GenerateCoordinates extends HttpServlet {
             GenericDao<Specimen> dao = new GenericDao<>(Specimen.class);
             Specimen specimen = dao.getById(editId);
 
-            LocationBuilder coordinateGenerator = new LocationBuilder();
-            coordinateGenerator.findCoordinates(specimen.getCollectedLocation());
-            if (coordinateGenerator.getResults().size() > 0) {
-                specimen.setLatitude(coordinateGenerator.getLatitude());
-                specimen.setLongitude(coordinateGenerator.getLongitude());
-                dao.saveOrUpdate(specimen);
-            }
+            String message = saveCoordinates(specimen, dao);
+            req.getSession().setAttribute("coordinateMessage", message);
         }
         resp.sendRedirect("bugs");
 
+    }
+
+    public String saveCoordinates(Specimen specimen, GenericDao<Specimen> dao) {
+        LocationBuilder coordinateGenerator = new LocationBuilder();
+        coordinateGenerator.findCoordinates(specimen.getCollectedLocation());
+
+        if (coordinateGenerator.getResults().size() > 0) {
+
+            specimen.setLatitude(coordinateGenerator.getLatitude());
+            specimen.setLongitude(coordinateGenerator.getLongitude());
+            dao.saveOrUpdate(specimen);
+
+            return "coordinates found";
+        } else {
+
+            return "no coordinates found";
+        }
     }
 }
