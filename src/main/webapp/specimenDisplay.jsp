@@ -9,10 +9,10 @@
     <tr>
         <th>Specimen Name</th>
         <th>Location</th>
-        <th>Date</th>
-        <th>Notes</th>
         <th>Latitude</th>
         <th>Longitude</th>
+        <th>Date</th>
+        <th>Notes</th>
     </tr>
     <c:forEach var="specimen" items="${specimens}">
         <tr>
