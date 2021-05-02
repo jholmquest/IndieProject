@@ -29,7 +29,7 @@ public class GenerateCoordinates extends HttpServlet {
             Specimen specimen = dao.getById(editId);
 
             String message = saveCoordinates(specimen, dao);
-            req.getSession().setAttribute("coordinateMessage", message);
+            req.getSession().setAttribute("specimenMessage", message);
         }
         resp.sendRedirect("bugs");
 

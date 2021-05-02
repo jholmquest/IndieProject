@@ -30,9 +30,9 @@
 
     </table>
 
-    <c:if test="${not empty coordinateMessage}">
-        <h3>${coordinateMessage}</h3>
-        <c:remove var="coordinateMessage" />
+    <c:if test="${not empty specimenMessage}">
+        <h3>${specimenMessage}</h3>
+        <c:remove var="specimenMessage" />
     </c:if>
 </main>
 </body>

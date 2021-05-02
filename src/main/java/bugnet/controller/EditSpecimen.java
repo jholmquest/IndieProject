@@ -4,6 +4,7 @@ import bugnet.entity.Specimen;
 import bugnet.entity.User;
 import bugnet.persistence.GenericDao;
 import bugnet.util.ConvertInput;
+import bugnet.util.UserFeedback;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -27,9 +28,17 @@ public class EditSpecimen extends HttpServlet implements ConvertInput {
             int editId = Integer.parseInt(idString);
             GenericDao<Specimen> dao = new GenericDao<>(Specimen.class);
             Specimen toEdit = dao.getById(editId);
-            req.setAttribute("specimen", toEdit);
-            RequestDispatcher dispatcher = req.getRequestDispatcher("/editSpecimen.jsp");
-            dispatcher.forward(req, resp);
+
+            if (!toEdit.getUser().equals(req.getSession().getAttribute("sessionUser"))) {
+                req.getSession().setAttribute("specimenMessage", UserFeedback.ILLEGAL_ACCESS.getMessage());
+                resp.sendRedirect("bugs");
+
+            } else {
+
+                req.setAttribute("specimen", toEdit);
+                RequestDispatcher dispatcher = req.getRequestDispatcher("/editSpecimen.jsp");
+                dispatcher.forward(req, resp);
+            }
         } else {
             resp.sendRedirect("bugs");
         }

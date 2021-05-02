@@ -14,6 +14,7 @@ public enum UserFeedback {
     SIGNUP_SUCCESS("User Created with an id of "),
     PASSWORDS_DIFFERENT("The passwords must match"),
     DUPLICATE_USER("This user already exists"),
+    ILLEGAL_ACCESS("You cannot access that specimen"),
     GENERIC_FAILURE("Something went wrong");
 
     private final String message;

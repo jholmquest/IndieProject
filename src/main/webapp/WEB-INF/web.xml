@@ -22,6 +22,7 @@
       <role-name>administrator</role-name>
     </auth-constraint>
   </security-constraint>
+
   <security-constraint>
     <web-resource-collection>
       <web-resource-name>user resources</web-resource-name>
@@ -33,6 +34,17 @@
     </web-resource-collection>
     <auth-constraint>
       <role-name>user</role-name>
+    </auth-constraint>
+  </security-constraint>
+
+  <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>forbidden</web-resource-name>
+      <url-pattern>/addSpecimen.jsp</url-pattern>
+      <url-pattern>/editSpecimen.jsp</url-pattern>
+      <url-pattern>/specimenDisplay.jsp</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
     </auth-constraint>
   </security-constraint>
 
