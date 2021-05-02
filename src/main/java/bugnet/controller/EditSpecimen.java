@@ -3,6 +3,7 @@ package bugnet.controller;
 import bugnet.entity.Specimen;
 import bugnet.entity.User;
 import bugnet.persistence.GenericDao;
+import bugnet.util.ConvertInput;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -16,7 +17,7 @@ import java.time.LocalDate;
 @WebServlet(
         urlPatterns = {"/editBug"}
 )
-public class EditSpecimen extends HttpServlet {
+public class EditSpecimen extends HttpServlet implements ConvertInput {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -53,14 +54,6 @@ public class EditSpecimen extends HttpServlet {
         resp.sendRedirect("bugs");
     }
 
-    public Double setCoordinate(String coordinateText) {
-
-        if (coordinateText.isEmpty()) {
-            return null;
-        } else {
-            return Double.valueOf(coordinateText);
-        }
-    }
 
 
 }
