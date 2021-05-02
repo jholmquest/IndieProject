@@ -1,4 +1,4 @@
-package bugnet.controller;
+package bugnet.util;
 
 import lombok.Getter;
 

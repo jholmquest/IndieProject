@@ -3,7 +3,7 @@ package bugnet.controller;
 import bugnet.entity.Role;
 import bugnet.entity.User;
 import bugnet.persistence.AddUser;
-import bugnet.persistence.Column;
+import bugnet.util.Column;
 import bugnet.persistence.Database;
 import bugnet.persistence.GenericDao;
 import org.junit.jupiter.api.Test;

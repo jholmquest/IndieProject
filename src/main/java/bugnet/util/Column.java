@@ -1,4 +1,4 @@
-package bugnet.persistence;
+package bugnet.util;
 
 import lombok.Getter;
 

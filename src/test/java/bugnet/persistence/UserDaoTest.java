@@ -1,8 +1,8 @@
 package bugnet.persistence;
 
-import bugnet.entity.Role;
 import bugnet.entity.Specimen;
 import bugnet.entity.User;
+import bugnet.util.Column;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

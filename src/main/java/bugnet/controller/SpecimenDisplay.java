@@ -2,7 +2,7 @@ package bugnet.controller;
 
 import bugnet.entity.Specimen;
 import bugnet.entity.User;
-import bugnet.persistence.Column;
+import bugnet.util.Column;
 import bugnet.persistence.GenericDao;
 
 import javax.servlet.RequestDispatcher;

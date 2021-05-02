@@ -2,7 +2,7 @@ package bugnet.controller;
 
 import bugnet.entity.User;
 import bugnet.persistence.AddUser;
-import bugnet.persistence.GenericDao;
+import bugnet.util.UserFeedback;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;

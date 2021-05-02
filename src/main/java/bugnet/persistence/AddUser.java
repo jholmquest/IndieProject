@@ -2,7 +2,8 @@ package bugnet.persistence;
 
 import bugnet.entity.Role;
 import bugnet.entity.User;
-import bugnet.persistence.GenericDao;
+import bugnet.util.Column;
+import bugnet.util.UserRole;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
