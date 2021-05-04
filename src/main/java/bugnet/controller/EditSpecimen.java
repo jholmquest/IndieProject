@@ -3,6 +3,7 @@ package bugnet.controller;
 import bugnet.entity.Specimen;
 import bugnet.persistence.GenericDao;
 import bugnet.util.InputController;
+import bugnet.util.UserFeedback;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -84,6 +85,7 @@ public class EditSpecimen extends HttpServlet implements InputController {
         updateSpecimen.setLatitude(latitude);
         updateSpecimen.setLongitude(longitude);
         dao.saveOrUpdate(updateSpecimen);
+        req.getSession().setAttribute("specimenMessage", UserFeedback.UPDATE_SUCCESS.getMessage());
         resp.sendRedirect("bugs");
     }
 

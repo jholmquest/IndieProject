@@ -16,7 +16,8 @@ public enum UserFeedback {
     DUPLICATE_USER("This user already exists"),
     ILLEGAL_ACCESS("You cannot access that specimen"),
     DELETE_SUCCESS("Specimen deleted"),
-    NOT_FOUND("This specimen doesn't exit"),
+    NOT_FOUND("This specimen doesn't exist"),
+    UPDATE_SUCCESS("Specimen updated"),
     INSERT_SUCCESS("Insect added with an id of "),
     INSERT_FAILURE("Insect not added, something went wrong"),
     GENERIC_FAILURE("Something went wrong");
