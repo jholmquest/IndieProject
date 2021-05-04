@@ -3,7 +3,8 @@
 <html>
 <body class="container">
 <h2>Logged in as ${loggedInAs}</h2>
-<table>
+<h2>If you can see this page you are an admin</h2>
+<table class="table">
     <tr>
         <th>Username</th>
         <th>ID</th>

@@ -15,7 +15,6 @@
   <security-constraint>
     <web-resource-collection>
       <web-resource-name>search</web-resource-name>
-      <url-pattern>/test</url-pattern>
       <url-pattern>/admin</url-pattern>
     </web-resource-collection>
     <auth-constraint>
@@ -43,6 +42,7 @@
       <url-pattern>/addSpecimen.jsp</url-pattern>
       <url-pattern>/editSpecimen.jsp</url-pattern>
       <url-pattern>/specimenDisplay.jsp</url-pattern>
+      <url-pattern>/admin.jsp</url-pattern>
     </web-resource-collection>
     <auth-constraint>
     </auth-constraint>

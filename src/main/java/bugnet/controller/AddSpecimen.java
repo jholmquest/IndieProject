@@ -4,7 +4,6 @@ import bugnet.entity.Specimen;
 import bugnet.entity.User;
 import bugnet.persistence.GenericDao;
 import bugnet.util.InputController;
-import bugnet.util.UserFeedback;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -14,8 +13,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.time.LocalDate;
-import java.util.List;
 
+/**
+ * Facilitates adding of a specimen to the database
+ *
+ * @author James Holmquest
+ */
 @WebServlet(
         urlPatterns = {"/newBug"}
 )
