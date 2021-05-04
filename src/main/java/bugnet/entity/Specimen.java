@@ -9,6 +9,8 @@ import javax.persistence.*;
 
 /**
  * Object representing the specimen table
+ *
+ * @author James Holmquest
  */
 @Getter
 @Setter
@@ -85,6 +87,10 @@ public class Specimen {
         return id == specimen.id && Objects.equals(bugName, specimen.bugName) && Objects.equals(collectedLocation, specimen.collectedLocation) && Objects.equals(collectedDate, specimen.collectedDate) && Objects.equals(bugNotes, specimen.bugNotes) && Objects.equals(user, specimen.user);
     }
 
+    /**
+     * gives a hash code
+     * @return hash code
+     */
     @Override
     public int hashCode() {
         return Objects.hash(id, bugName, collectedLocation, collectedDate, bugNotes, user);

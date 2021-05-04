@@ -69,11 +69,19 @@ public class User {
         specimen.setUser(null);
     }
 
+    /**
+     * adds a specific role
+     * @param role user role
+     */
     public void addRole(Role role) {
         roles.add(role);
         role.setUser(this);
     }
 
+    /**
+     * removes a specific role
+     * @param role user role
+     */
     public void removeRole(Role role) {
         roles.remove(role);
         role.setUser(null);
@@ -91,6 +99,10 @@ public class User {
         return id == user.id && Objects.equals(username, user.username) && Objects.equals(password, user.password);
     }
 
+    /**
+     * gets a hash code
+     * @return hash code
+     */
     @Override
     public int hashCode() {
         return Objects.hash(id, username, password);
