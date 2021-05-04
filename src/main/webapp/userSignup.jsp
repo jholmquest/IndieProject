@@ -5,7 +5,7 @@
 <c:import url="template/header.jsp" />
 <main>
     <c:import url="template/nav.jsp" />
-    <form action="signup" method="POST" class="form">
+    <form action="signup" method="POST" class="form mb-3">
         <div class="row">
             <div class="col-4 mb-3">
                 <label for="username" class="form-label">Username</label>

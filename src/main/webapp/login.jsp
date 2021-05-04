@@ -6,7 +6,7 @@
 <c:import url="template/header.jsp" />
 <main>
     <c:import url="template/nav.jsp" />
-    <FORM ACTION="j_security_check" METHOD="POST" class="form">
+    <FORM ACTION="j_security_check" METHOD="POST" class="form mb-3">
         <div class="row">
             <div class="col-4 mb-3">
                 <label for="j_username" class="form-label">User name:</label>
