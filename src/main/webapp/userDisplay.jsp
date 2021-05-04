@@ -16,5 +16,6 @@
     </c:forEach>
 
 </table>
+<c:import url="template/scripts.jsp"/>
 </body>
 </html>

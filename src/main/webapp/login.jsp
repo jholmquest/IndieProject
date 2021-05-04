@@ -14,5 +14,6 @@
         </TABLE>
     </FORM>
 </main>
+<c:import url="template/scripts.jsp"/>
 </body>
 </html>

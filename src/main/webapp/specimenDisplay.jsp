@@ -35,5 +35,6 @@
         <c:remove var="specimenMessage" />
     </c:if>
 </main>
+<c:import url="template/scripts.jsp"/>
 </body>
 </html>

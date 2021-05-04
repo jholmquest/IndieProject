@@ -22,5 +22,6 @@
         <button type="submit" name="submitSpecimen">Submit</button>
     </form>
 </main>
+<c:import url="template/scripts.jsp"/>
 </body>
 </html>

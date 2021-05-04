@@ -20,5 +20,6 @@
         <c:remove var="signupMessage" />
     </c:if>
 </main>
+<c:import url="template/scripts.jsp"/>
 </body>
 </html>

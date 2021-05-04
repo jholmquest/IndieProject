@@ -9,5 +9,6 @@
     <h2>ERROR</h2>
     <a href="index.jsp">Return Home</a>
 </main>
+<c:import url="template/scripts.jsp"/>
 </body>
 </html>
