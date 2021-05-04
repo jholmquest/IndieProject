@@ -14,6 +14,10 @@ public enum UserRole {
 
     private final String roleName;
 
+    /**
+     * Standard constructor
+     * @param roleName name of role
+     */
     UserRole(String roleName) {
         this.roleName = roleName;
     }

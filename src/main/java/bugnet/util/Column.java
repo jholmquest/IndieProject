@@ -3,7 +3,9 @@ package bugnet.util;
 import lombok.Getter;
 
 /**
- * Holds legal column names
+ * Holds legal column names for get by property
+ *
+ * @author James Holmquest
  */
 @Getter
 public enum Column {

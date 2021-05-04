@@ -24,6 +24,10 @@ public enum UserFeedback {
 
     private final String message;
 
+    /**
+     * Basic constructor
+     * @param message feedback message
+     */
     UserFeedback(String message) {
         this.message = message;
     }

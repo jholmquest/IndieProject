@@ -65,14 +65,26 @@ public class LocationBuilder {
         }
     }
 
+    /**
+     * gets the results from the api
+     * @return list of results
+     */
     public List<ResultsItem> getResults() {
         return results;
     }
 
+    /**
+     * gets latitude found
+     * @return latitude
+     */
     public double getLatitude() {
         return results.get(0).getGeometry().getLocation().getLat();
     }
 
+    /**
+     * gets longitude found
+     * @return longitude
+     */
     public double getLongitude() {
         return results.get(0).getGeometry().getLocation().getLng();
     }
