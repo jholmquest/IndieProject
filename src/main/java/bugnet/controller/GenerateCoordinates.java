@@ -13,12 +13,22 @@ import java.io.IOException;
 
 /**
  * Generates coordinates based on location listed in the table
+ *
+ * @author James Holmquest
  */
 @WebServlet(
         urlPatterns = {"/coordinates"}
 )
 public class GenerateCoordinates extends HttpServlet {
 
+    /**
+     * Receives id of record getting the coordinates generated for
+     * Gets the record from that id for generating
+     *
+     * @param req http request object
+     * @param resp http response object
+     * @throws IOException issue with input/output
+     */
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         String idString = req.getParameter("id");
@@ -35,7 +45,14 @@ public class GenerateCoordinates extends HttpServlet {
 
     }
 
-
+    /**
+     * Sends the location the insect got collected at to get back coordinates
+     * Saves the coordinates to the insect record
+     *
+     * @param specimen Insect being checked
+     * @param dao data access object so insect can be modified
+     * @return message based on results of search
+     */
     public String saveCoordinates(Specimen specimen, GenericDao<Specimen> dao) {
         LocationBuilder coordinateGenerator = new LocationBuilder();
         coordinateGenerator.findCoordinates(specimen.getCollectedLocation());

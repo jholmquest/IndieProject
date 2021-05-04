@@ -3,7 +3,6 @@ package bugnet.controller;
 import bugnet.entity.Specimen;
 import bugnet.persistence.GenericDao;
 import bugnet.util.InputController;
-import bugnet.util.UserFeedback;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -14,11 +13,25 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.time.LocalDate;
 
+/**
+ * Controls the editing of insect records
+ *
+ * @author James Holmquest
+ */
 @WebServlet(
         urlPatterns = {"/editBug"}
 )
 public class EditSpecimen extends HttpServlet implements InputController {
 
+    /**
+     * Gets the insect that's being edited and passes it to the jsp to give current values for editing
+     * Checks to make sure the current user is actually allowed to edit the record
+     *
+     * @param req http request object
+     * @param resp http response object
+     * @throws ServletException issue with the servlet
+     * @throws IOException issue with input/output
+     */
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String idString = req.getParameter("id");
