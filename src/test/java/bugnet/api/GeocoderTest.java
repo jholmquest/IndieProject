@@ -3,10 +3,7 @@ package bugnet.api;
 import bugnet.persistence.LocationBuilder;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -39,10 +36,4 @@ public class GeocoderTest {
         assertEquals(0, results.size());
     }
 
-    // Tests escaping characters properly
-    @Test
-    public void testEscape() {
-        String escape = builder.escapeLocation("A B %");
-        assertEquals("A%20B%20%25", escape);
-    }
 }

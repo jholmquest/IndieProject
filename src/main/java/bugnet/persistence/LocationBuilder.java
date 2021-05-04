@@ -11,6 +11,8 @@ import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.MediaType;
+import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 import java.util.*;
 import java.util.Properties;
 
@@ -25,11 +27,7 @@ public class LocationBuilder {
         results = new ArrayList<>();
     }
 
-    /**
-     *
-     * @param locationName Name of location being escaped
-     * @return string with proper escape characters for a url
-     */
+    /*
     public String escapeLocation(String locationName) {
         String formattedLocation = locationName;
         formattedLocation = formattedLocation.replace("%", "%25");
@@ -37,6 +35,8 @@ public class LocationBuilder {
         return formattedLocation;
     }
 
+    I found out there's a class that already does what I want
+*/
     /**
      * Takes a location and searches for it using the Geocode api
      * @param locationName where an insect was collected
@@ -48,7 +48,7 @@ public class LocationBuilder {
         try {
             WebTarget target = client.target(
                     properties.getProperty("request.url") +
-                            escapeLocation(locationName) +
+                            URLEncoder.encode(locationName, StandardCharsets.UTF_8.toString()) +
                             properties.getProperty("api.key"));
             String response = target.request(MediaType.APPLICATION_JSON).get(String.class);
             ObjectMapper mapper = new ObjectMapper();
