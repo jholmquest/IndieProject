@@ -29,6 +29,14 @@ public interface InputController {
         }
     }
 
+    default String checkId(int id) {
+        if (id != 0) {
+            return UserFeedback.INSERT_SUCCESS.getMessage() + id;
+        } else {
+            return UserFeedback.INSERT_FAILURE.getMessage();
+        }
+    }
+
     default Boolean isOwner(Specimen specimen, HttpServletRequest req) {
         return specimen.getUser().equals(req.getSession().getAttribute("sessionUser"));
     }

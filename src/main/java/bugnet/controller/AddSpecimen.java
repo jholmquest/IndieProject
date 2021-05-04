@@ -3,6 +3,7 @@ package bugnet.controller;
 import bugnet.entity.Specimen;
 import bugnet.entity.User;
 import bugnet.persistence.GenericDao;
+import bugnet.util.InputController;
 import bugnet.util.UserFeedback;
 
 import javax.servlet.RequestDispatcher;
@@ -18,7 +19,7 @@ import java.util.List;
 @WebServlet(
         urlPatterns = {"/newBug"}
 )
-public class AddSpecimen extends HttpServlet {
+public class AddSpecimen extends HttpServlet implements InputController {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -47,15 +48,14 @@ public class AddSpecimen extends HttpServlet {
         GenericDao<Specimen> dao = new GenericDao<>(Specimen.class);
         int id = dao.insert(newSpecimen);
 
-        String insertMessage;
         if (id != 0) {
-            insertMessage = UserFeedback.INSERT_SUCCESS.getMessage() + id;
             user.addSpecimen(newSpecimen);
-        } else {
-            insertMessage = UserFeedback.INSERT_FAILURE.getMessage();
         }
+
+        String insertMessage = checkId(id);
 
         req.getSession().setAttribute("insertMessage", insertMessage);
         resp.sendRedirect("newBug");
     }
+
 }
