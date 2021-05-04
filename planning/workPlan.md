@@ -10,7 +10,6 @@
 ~~Week5: Basic collecting tables working, start working on CRUD~~
 
 ~~Week6: Finish DAO/CRUD stuff~~
-- testing not fully done
 
 ~~Week7: SECOND CHECKPOINT - DAO, CRUD, Hibernate, Log4j~~
 ~~Build UI to allow adding specimens~~ -> moved
@@ -25,12 +24,12 @@
 
 ~~Week11: Implement ITIS integration (flexible if I end up going another route) - Using Maps API instead due to scope of project~~
 
-Week12: Data filtering
+~~Week12: Data filtering~~dropped
 
-Week13: Touch up code, refactor - also catchup
+~~Week13: Touch up code, refactor - also catchup~~
 
-Week14: Code Review - Have all code up and running by now
+~~Week14: Code Review - Have all code up and running by now~~
 
-Week15: Make site look pretty
+~~Week15: Make site look pretty~~ Pretty is debatable but it looks like something
 
 Week16: PROJECT DUE

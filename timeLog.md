@@ -138,3 +138,10 @@ Nothing
 2021-05-02 11:00am - 3:00pm - data validation, user feedback
 
 2021-05-02 - 8:00pm - 8:30pm - got unstyled version of site deployed to make sure everything is working
+
+# Week 15
+2021-05-03 - 10:30pm - 1:00am - styled, made tests, jdoc, refactored some
+
+2021-05-04 - 11:00am - 1:00pm - cleaning up
+
+2021-05-04 - 2:00pm - 3:30pm - deployed, jdoc, took screenshots, recorded video, more finishing touches
