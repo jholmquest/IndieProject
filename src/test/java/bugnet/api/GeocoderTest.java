@@ -18,7 +18,9 @@ public class GeocoderTest {
         builder = new LocationBuilder();
     }
 
-    // Tests finding a known location
+    /**
+     * finding a known location
+     */
     @Test
     public void testBuilder() {
         builder.findCoordinates("Madison, WI");
@@ -28,7 +30,9 @@ public class GeocoderTest {
         assertEquals(expectedLongitude, builder.getLongitude());
     }
 
-    // Tests finding a nonexistant location
+    /**
+     * not find a location
+     */
     @Test
     public void testVoid() {
         builder.findCoordinates("feagaega;eaveeofeowa");
