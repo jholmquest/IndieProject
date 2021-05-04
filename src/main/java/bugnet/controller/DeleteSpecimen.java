@@ -3,6 +3,7 @@ package bugnet.controller;
 import bugnet.entity.Specimen;
 import bugnet.persistence.GenericDao;
 import bugnet.util.InputController;
+import bugnet.util.MessageAttribute;
 import bugnet.util.UserFeedback;
 
 import javax.servlet.annotation.WebServlet;
@@ -43,7 +44,7 @@ public class DeleteSpecimen extends HttpServlet implements InputController {
                 specimenNotFound(req);
             } else if (isOwner(toDelete, req)) {
                 dao.delete(toDelete);
-                req.getSession().setAttribute("specimenMessage", UserFeedback.DELETE_SUCCESS.getMessage());
+                req.getSession().setAttribute(MessageAttribute.SPECIMEN.getAttribute(), UserFeedback.DELETE_SUCCESS.getMessage());
             } else {
                 illegalAccess(req);
             }

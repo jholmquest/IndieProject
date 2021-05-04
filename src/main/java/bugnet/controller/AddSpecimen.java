@@ -4,6 +4,7 @@ import bugnet.entity.Specimen;
 import bugnet.entity.User;
 import bugnet.persistence.GenericDao;
 import bugnet.util.InputController;
+import bugnet.util.MessageAttribute;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -57,7 +58,7 @@ public class AddSpecimen extends HttpServlet implements InputController {
 
         String insertMessage = checkId(id);
 
-        req.getSession().setAttribute("insertMessage", insertMessage);
+        req.getSession().setAttribute(MessageAttribute.INSERT.getAttribute(), insertMessage);
         resp.sendRedirect("newBug");
     }
 

@@ -3,6 +3,7 @@ package bugnet.controller;
 import bugnet.entity.Specimen;
 import bugnet.persistence.GenericDao;
 import bugnet.persistence.LocationBuilder;
+import bugnet.util.MessageAttribute;
 import bugnet.util.UserFeedback;
 
 import javax.servlet.annotation.WebServlet;
@@ -39,7 +40,7 @@ public class GenerateCoordinates extends HttpServlet {
             Specimen specimen = dao.getById(editId);
 
             String message = saveCoordinates(specimen, dao);
-            req.getSession().setAttribute("specimenMessage", message);
+            req.getSession().setAttribute(MessageAttribute.SPECIMEN.getAttribute(), message);
         }
         resp.sendRedirect("bugs");
 

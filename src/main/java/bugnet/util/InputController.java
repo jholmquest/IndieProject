@@ -1,10 +1,7 @@
 package bugnet.util;
 
 import bugnet.entity.Specimen;
-
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
 
 /**
  * Contains methods with basic logic for making form input usable
@@ -42,10 +39,12 @@ public interface InputController {
     }
 
     default void illegalAccess(HttpServletRequest req) {
-        req.getSession().setAttribute("specimenMessage", UserFeedback.ILLEGAL_ACCESS.getMessage());
+        req.getSession().setAttribute(MessageAttribute.SPECIMEN.getAttribute(),
+                UserFeedback.ILLEGAL_ACCESS.getMessage());
     }
 
     default void specimenNotFound(HttpServletRequest req) {
-        req.getSession().setAttribute("specimenMessage", UserFeedback.NOT_FOUND.getMessage());
+        req.getSession().setAttribute(MessageAttribute.SPECIMEN.getAttribute(),
+                UserFeedback.NOT_FOUND.getMessage());
     }
 }

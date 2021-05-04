@@ -2,6 +2,7 @@ package bugnet.controller;
 
 import bugnet.entity.User;
 import bugnet.persistence.AddUser;
+import bugnet.util.MessageAttribute;
 import bugnet.util.UserFeedback;
 
 import javax.servlet.RequestDispatcher;
@@ -48,7 +49,7 @@ public class UserSignup extends HttpServlet {
             signupMessage = UserFeedback.PASSWORDS_DIFFERENT.getMessage();
         }
 
-        req.getSession().setAttribute("signupMessage", signupMessage);
+        req.getSession().setAttribute(MessageAttribute.SIGNUP.getAttribute(), signupMessage);
         resp.sendRedirect("signup");
     }
 
