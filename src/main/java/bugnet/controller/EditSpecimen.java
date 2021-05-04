@@ -48,8 +48,15 @@ public class EditSpecimen extends HttpServlet implements InputController {
         }
     }
 
+    /**
+     * collects parameter from form and updates the associated specimen
+     *
+     * @param req the http request
+     * @param resp the http response
+     * @throws IOException issue with input/output
+     */
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         LocalDate collectedDate = LocalDate.parse(req.getParameter("collectedDate"));
         int specimenId = Integer.parseInt(req.getParameter("id"));
         Double latitude = setCoordinate(req.getParameter("latitude"));
