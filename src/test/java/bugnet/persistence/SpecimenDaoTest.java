@@ -61,7 +61,6 @@ public class SpecimenDaoTest {
         int id = dao.insert(newSpecimen);
         Specimen createdSpecimen = dao.getById(id);
         assertEquals(newSpecimen, createdSpecimen);
-        System.out.println(createdSpecimen.getCollectedDate());
     }
 
     /**
