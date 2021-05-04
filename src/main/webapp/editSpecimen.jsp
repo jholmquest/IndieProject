@@ -23,8 +23,8 @@
                 <label for="latitude" class="form-label">Latitude</label>
                 <input type="text" id="latitude" name="latitude" class="form-control" value="${specimen.latitude}" pattern="^[\+\-]?[\d]+\.?[\d]*$" title="decimal format">
             </div>
-            <div class="mb-3 col-4" class="form-label">
-                <label for="longitude">Longitude</label>
+            <div class="mb-3 col-4">
+                <label for="longitude" class="form-label">Longitude</label>
                 <input type="text" id="longitude" name="longitude" class="form-control" value="${specimen.longitude}" pattern="^[\+\-]?[\d]+\.?[\d]*$" title="decimal format">
             </div>
             <div class="mb-3 col-6">
