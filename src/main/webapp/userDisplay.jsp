@@ -1,7 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:import url="template/head.jsp" />
 <html>
-<body>
+<body class="container">
 <h2>Logged in as ${loggedInAs}</h2>
 <table>
     <tr>
