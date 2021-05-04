@@ -5,7 +5,6 @@ import bugnet.persistence.GenericDao;
 import bugnet.util.InputController;
 import bugnet.util.UserFeedback;
 
-import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -22,8 +21,18 @@ import java.io.IOException;
 )
 public class DeleteSpecimen extends HttpServlet implements InputController {
 
+    /**
+     * Deletes the record associated with the id passed in through the URL
+     * Does not attempt to delete if the specimen either doesn't belong to the user
+     * or the specimen does not exist
+     * Relevant feedback is provided
+     *
+     * @param req the http request
+     * @param resp the http response
+     * @throws IOException issue with input/output
+     */
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         String idString = req.getParameter("id");
 
         if (idString != null) {
@@ -38,9 +47,7 @@ public class DeleteSpecimen extends HttpServlet implements InputController {
             } else {
                 illegalAccess(req);
             }
-            resp.sendRedirect("bugs");
         }
-
-
+        resp.sendRedirect("bugs");
     }
 }

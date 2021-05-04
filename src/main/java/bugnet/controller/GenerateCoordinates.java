@@ -35,6 +35,7 @@ public class GenerateCoordinates extends HttpServlet {
 
     }
 
+
     public String saveCoordinates(Specimen specimen, GenericDao<Specimen> dao) {
         LocationBuilder coordinateGenerator = new LocationBuilder();
         coordinateGenerator.findCoordinates(specimen.getCollectedLocation());
