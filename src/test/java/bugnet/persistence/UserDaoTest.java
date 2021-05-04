@@ -1,5 +1,6 @@
 package bugnet.persistence;
 
+import bugnet.entity.Role;
 import bugnet.entity.Specimen;
 import bugnet.entity.User;
 import bugnet.util.Column;
@@ -101,15 +102,35 @@ public class UserDaoTest {
         assertEquals(insertedUser, newUser);
     }
 
-    // Tests getting roles for a user
-    // TODO: Add test
+    /**
+     * tests getting roles for a user
+     */
     @Test
     void getRoleTest() {
+        User roleUser = dao.getById(3);
+        Set<Role> userRoles = roleUser.getRoles();
+        GenericDao<Role> roleDao = new GenericDao<>(Role.class);
+        Role role1 = roleDao.getById(1);
+        Role role2 = roleDao.getById(3);
+
+        assertTrue(userRoles.contains(role1));
+        assertTrue(userRoles.contains(role2));
     }
 
-    // Tests if deleting a role successfully removes it from user's list of roles without deleting them
-    // TODO: Add test
+    /**
+     * tests if roles are deleted upon deleting associated user
+     */
     @Test
     void deleteRoleCascadeTest() {
+
+        User toDelete = dao.getById(3);
+        dao.delete(toDelete);
+
+        GenericDao<Role> roleDao = new GenericDao<>(Role.class);
+        Role role1 = roleDao.getById(1);
+        Role role2 = roleDao.getById(3);
+
+        assertNull(role1);
+        assertNull(role2);
     }
 }
