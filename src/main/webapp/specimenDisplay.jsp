@@ -4,8 +4,8 @@
 <body class="container">
 <c:import url="template/header.jsp" />
 <main>
-    <table>
     <c:import url="template/nav.jsp" />
+    <table class="table table-hover">
     <tr>
         <th>Specimen Name</th>
         <th>Location</th>
@@ -13,6 +13,9 @@
         <th>Longitude</th>
         <th>Date</th>
         <th>Notes</th>
+        <th>Edit</th>
+        <th>Delete</th>
+        <th>Magic</th>
     </tr>
     <c:forEach var="specimen" items="${specimens}">
         <tr>
@@ -24,7 +27,7 @@
             <td>${specimen.bugNotes}</td>
             <td><a href="editBug?id=${specimen.id}">edit</a></td>
             <td><a href="deleteBug?id=${specimen.id}">delete</a></td>
-            <td><a href="coordinates?id=${specimen.id}">Generate Coordinates(Experimental)</a></td>
+            <td><a href="coordinates?id=${specimen.id}">Generate Coordinates (Experimental)</a></td>
         </tr>
     </c:forEach>
 
