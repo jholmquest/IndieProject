@@ -58,7 +58,7 @@ public class RoleTest {
         assertNull(deletedRole);
 
         User user = userDao.getById(3);
-        assertEquals(1, user.getRoles().size());
+        assertFalse(user.getRoles().contains(toDelete));
     }
 
     /**
