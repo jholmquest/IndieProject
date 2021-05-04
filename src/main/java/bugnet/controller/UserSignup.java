@@ -14,7 +14,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * Forwards to the signup page
+ * Facilitates user registration
+ *
+ * @author James Holmquest
  */
 @WebServlet(
         urlPatterns = {"/signup"}
