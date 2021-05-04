@@ -21,7 +21,7 @@
         </div>
         <div class="mb-3 col-6">
             <label for="notes" class="form-label">Notes</label>
-            <textarea id="notes" name="notes"class="form-control" rows="3">Enter additional notes...</textarea>
+            <textarea id="notes" name="notes" class="form-control" rows="3">Enter additional notes...</textarea>
         </div>
     </div>
     <button type="submit" name="submitSpecimen" class="btn btn-primary">Submit</button>
