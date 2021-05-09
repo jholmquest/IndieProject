@@ -13,6 +13,11 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * tests methods that control adding users
+ *
+ * @author James Holmquest
+ */
 public class AddUserTest {
 
     private static final AddUser add = new AddUser();
@@ -30,16 +35,25 @@ public class AddUserTest {
         database.runSQL("clean.sql");
     }
 
+    /**
+     * tests if a unique username is properly detected
+     */
     @Test
     public void uniqueUsernameTest() {
         assertTrue(add.uniqueUsername("afeaeafefewafaweawef"));
     }
 
+    /**
+     * tests if a repeat username is properly detected
+     */
     @Test
     public void repeatUsernameTest() {
         assertFalse(add.uniqueUsername("testuser"));
     }
 
+    /**
+     * tests that an id of -1 is returned when attempting to add a duplicate user
+     */
     @Test
     public void repeatUserTest() {
         User repeatUser = new User("testuser", "pasword");
@@ -49,6 +63,9 @@ public class AddUserTest {
         assertEquals(3, users.size());
     }
 
+    /**
+     * tests creating a user by passing in a username and password
+     */
     @Test
     public void newUserTest() {
         User newUser = new User("uniqueUser", "pasword");

@@ -13,6 +13,11 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.time.LocalDate;
 import java.util.*;
 
+/**
+ * tests modifying the user
+ *
+ * @author James Holmquest
+ */
 public class UserDaoTest {
 
     GenericDao<User> dao;
@@ -37,11 +42,6 @@ public class UserDaoTest {
         assertEquals(3, users.size());
     }
 
-    @Test
-    void lombokTest() {
-        User user = new User();
-        user.setId(10);
-    }
     /**
      * verifies successful get of a single user by username;
      * important for login

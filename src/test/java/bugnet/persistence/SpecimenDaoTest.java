@@ -11,7 +11,9 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
- * Tests the methods in SpecimenDao
+ * tests modifying specimens via hibernate
+ *
+ * @author James Holmquest
  */
 public class SpecimenDaoTest {
 

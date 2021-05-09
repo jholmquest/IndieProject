@@ -7,7 +7,9 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.util.*;
 
 /**
- * Tests for modifying the role table
+ * tests modifying role objects with hibernate
+ *
+ * @author James Holmquest
  */
 public class RoleTest {
 

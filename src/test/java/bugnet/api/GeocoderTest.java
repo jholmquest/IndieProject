@@ -7,7 +7,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import java.util.List;
 
 /**
- * Tests Classes related to Geocoding
+ * tests finding coordinates via the google maps geocoding API
+ *
+ * @author James Holmquest
  */
 public class GeocoderTest {
 
