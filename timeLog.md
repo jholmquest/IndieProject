@@ -145,3 +145,7 @@ Nothing
 2021-05-04 - 11:00am - 1:00pm - cleaning up
 
 2021-05-04 - 2:00pm - 3:30pm - deployed, jdoc, took screenshots, recorded video, more finishing touches
+
+2021-05-08 - 7:00pm - 8:00pm - javadoc added to classes that were missing some
+
+2021-05-09 - 10:30am - 11:00am - recorded demo
