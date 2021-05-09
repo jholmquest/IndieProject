@@ -7,6 +7,8 @@ In it's current form it is very basic, designed for a casual user. Over time the
 
 Demo: https://youtu.be/F_MGggEhVms
 
+Site: http://3.142.33.172:8080/IndieProject/
+
 # Technologies:
 -Maven
 
