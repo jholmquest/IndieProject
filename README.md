@@ -5,8 +5,9 @@ One of the challenges associate with collecting bugs is keeping track of every l
 BugNet is an application designed to store information on insects collected, for access anywhere.
 In it's current form it is very basic, designed for a casual user. Over time the plan is to add more features to make it useful for all levels.
 
+Demo: https://youtu.be/F_MGggEhVms
 
-#Technologies:
+# Technologies:
 -Maven
 
 -Hibernate
