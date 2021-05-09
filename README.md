@@ -1,4 +1,4 @@
-Bug Collecting App
+# Bug Collecting App
 
 Bug collecting is a popular hobby around the world. People of all ages do it, and some even make a career out of it.
 One of the challenges associate with collecting bugs is keeping track of every last one.
